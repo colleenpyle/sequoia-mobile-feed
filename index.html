@@ -272,6 +272,7 @@
     height: 8px;
     border-radius: 50%;
   }
+  .status-col-completed { background: rgba(9,43,46,0.025); }
   .indicator-done { background: var(--accessible-teal); }
   .indicator-progress { background: var(--blue); }
   .indicator-deck { background: var(--yellow); }
@@ -655,45 +656,6 @@
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header">
-        <span class="indicator indicator-done"></span>
-        Completed
-      </div>
-      <div class="status-item">
-        <strong>Data layer architecture</strong>
-        <div class="detail">Repository, networking, DTOs — diagrammed &amp; merged</div>
-      </div>
-      <div class="status-item">
-        <strong>UI architecture merged</strong>
-        <div class="detail">Modular SwiftUI feed card system — validated by iOS team</div>
-      </div>
-      <div class="status-item">
-        <strong>Full component mapping in Miro</strong>
-        <div class="detail">~40 components identified across all card types</div>
-      </div>
-      <div class="status-item">
-        <strong>New feed live behind feature flag</strong>
-        <div class="detail">ios_feed_refactor — loading real data in internal app</div>
-      </div>
-      <div class="status-item">
-        <strong>Post Detail: full rewrite decision</strong>
-        <div class="detail">98% component reuse with feed cards — single codebase</div>
-      </div>
-      <div class="status-item">
-        <strong>Filter UI component added</strong>
-        <div class="detail">Ready to wire to data layer</div>
-      </div>
-      <div class="status-item">
-        <strong>Float Action Button interactions</strong>
-        <div class="detail">Flow-based actions working end-to-end</div>
-      </div>
-      <div class="status-item">
-        <strong>Unsupported card type fallback</strong>
-        <div class="detail">Graceful placeholders for unbuilt card types</div>
-      </div>
-    </div>
-
-    <div class="status-col">
-      <div class="status-col-header">
         <span class="indicator indicator-progress"></span>
         In Progress
       </div>
@@ -743,6 +705,45 @@
       <div class="status-item">
         <strong>Caching &amp; Core Data layers</strong>
         <div class="detail">Part of ongoing data layer buildout</div>
+      </div>
+    </div>
+
+    <div class="status-col status-col-completed">
+      <div class="status-col-header">
+        <span class="indicator indicator-done"></span>
+        Completed
+      </div>
+      <div class="status-item">
+        <strong>Data layer architecture</strong>
+        <div class="detail">Repository, networking, DTOs — diagrammed &amp; merged</div>
+      </div>
+      <div class="status-item">
+        <strong>UI architecture merged</strong>
+        <div class="detail">Modular SwiftUI feed card system — validated by iOS team</div>
+      </div>
+      <div class="status-item">
+        <strong>Full component mapping in Miro</strong>
+        <div class="detail">~40 components identified across all card types</div>
+      </div>
+      <div class="status-item">
+        <strong>New feed live behind feature flag</strong>
+        <div class="detail">ios_feed_refactor — loading real data in internal app</div>
+      </div>
+      <div class="status-item">
+        <strong>Post Detail: full rewrite decision</strong>
+        <div class="detail">98% component reuse with feed cards — single codebase</div>
+      </div>
+      <div class="status-item">
+        <strong>Filter UI component added</strong>
+        <div class="detail">Ready to wire to data layer</div>
+      </div>
+      <div class="status-item">
+        <strong>Float Action Button interactions</strong>
+        <div class="detail">Flow-based actions working end-to-end</div>
+      </div>
+      <div class="status-item">
+        <strong>Unsupported card type fallback</strong>
+        <div class="detail">Graceful placeholders for unbuilt card types</div>
       </div>
     </div>
   </div>
@@ -815,33 +816,6 @@
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header">
-        <span class="indicator indicator-done"></span>
-        Completed
-      </div>
-      <div class="status-item">
-        <strong>Phase 1: Foundation</strong>
-        <div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div>
-      </div>
-      <div class="status-item">
-        <strong>Saved Posts screen — fully converted</strong>
-        <div class="detail">First screen live on new Compose pipeline</div>
-      </div>
-      <div class="status-item">
-        <strong>Poll cards in Compose</strong>
-        <div class="detail">Full unit test coverage — 1,700+ lines of dead code removed</div>
-      </div>
-      <div class="status-item">
-        <strong>Figma → Compose design system mapping</strong>
-        <div class="detail">40+ component mappings, all tokens documented</div>
-      </div>
-      <div class="status-item">
-        <strong>Phase 2: Simple Screen Conversions</strong>
-        <div class="detail">Post Detail, Member Feed, Pinned Feed — all converted</div>
-      </div>
-    </div>
-
-    <div class="status-col">
-      <div class="status-col-header">
         <span class="indicator indicator-progress"></span>
         In Progress
       </div>
@@ -883,6 +857,33 @@
       <div class="status-item">
         <strong>Accessibility pass</strong>
         <div class="detail">TalkBack verification across all card types</div>
+      </div>
+    </div>
+
+    <div class="status-col status-col-completed">
+      <div class="status-col-header">
+        <span class="indicator indicator-done"></span>
+        Completed
+      </div>
+      <div class="status-item">
+        <strong>Phase 1: Foundation</strong>
+        <div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div>
+      </div>
+      <div class="status-item">
+        <strong>Saved Posts screen — fully converted</strong>
+        <div class="detail">First screen live on new Compose pipeline</div>
+      </div>
+      <div class="status-item">
+        <strong>Poll cards in Compose</strong>
+        <div class="detail">Full unit test coverage — 1,700+ lines of dead code removed</div>
+      </div>
+      <div class="status-item">
+        <strong>Figma → Compose design system mapping</strong>
+        <div class="detail">40+ component mappings, all tokens documented</div>
+      </div>
+      <div class="status-item">
+        <strong>Phase 2: Simple Screen Conversions</strong>
+        <div class="detail">Post Detail, Member Feed, Pinned Feed — all converted</div>
       </div>
     </div>
   </div>
