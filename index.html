@@ -323,6 +323,26 @@
     color: rgba(9,43,46,0.3);
   }
 
+  /* ─── PLATFORM RESOURCES ─── */
+  .platform-resources {
+    padding: 14px 28px 18px;
+    background: rgba(0,167,139,0.03);
+    border-top: 1px solid rgba(9,43,46,0.06);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .platform-resource-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accessible-teal);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .platform-resource-link:hover { text-decoration: underline; }
+
   /* ─── DEVX WINS ─── */
   .scoreboard {
     background: var(--white);
@@ -535,7 +555,7 @@
       <h1>Sequoia <span>Mobile Feed</span></h1>
     </div>
     <div class="header-meta">
-      <div class="updated-token">Updated March 31, 2026</div>
+      <div class="updated-token">Updated April 1, 2026</div>
       <div class="target-badge">
         <span class="dot"></span>
         iOS Target General Release-Ready: June 3
@@ -736,6 +756,11 @@
     <div class="risk-item">Post Event Card design specs still being finalized with Bradley (event description, livestream badges) — blocking component build.</div>
     <div class="risk-item">Filter screen UI is functional but dated — decision pending on whether to recreate in new design.</div>
   </div>
+  <div class="platform-resources">
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 →</a>
+    <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board →</a>
+  </div>
 </div>
 
 <!-- ═══════════ ANDROID SECTION ═══════════ -->
@@ -871,6 +896,10 @@
     <div class="risk-item">Profile Prompt carousel is the highest-complexity special card — horizontal carousel with dynamic item sizing.</div>
     <div class="risk-item">Android feed engagement tracking data looks off — Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
   </div>
+  <div class="platform-resources">
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 →</a>
+  </div>
 </div>
 
 <!-- ═══════════ DEVX WINS ═══════════ -->
@@ -913,40 +942,20 @@
     <div class="resources-title">&#128206; Resources</div>
   </div>
   <div class="resources-grid">
-    <a class="resource-item" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">
-      <div class="resource-label">Project Doc</div>
-      <div class="resource-name">iOS Feed Refactor →</div>
-    </a>
-    <a class="resource-item" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">
-      <div class="resource-label">Project Doc</div>
-      <div class="resource-name">Android Feed Refactor →</div>
-    </a>
     <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0AGMPYAGCE" target="_blank">
-      <div class="resource-label">Slack</div>
+      <div class="resource-label">Slack Project Channel</div>
       <div class="resource-name">#mobile_feed_refactor →</div>
-    </a>
-    <a class="resource-item" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">
-      <div class="resource-label">Component Map</div>
-      <div class="resource-name">Miro Board (iOS) →</div>
     </a>
     <a class="resource-item" href="https://www.figma.com/design/orchjRMhCEZNehSpGipZht/Components?node-id=3634-31084&m=dev" target="_blank">
       <div class="resource-label">Designs</div>
       <div class="resource-name">Figma Components →</div>
     </a>
-    <a class="resource-item" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">
-      <div class="resource-label">Jira Epic</div>
-      <div class="resource-name">iOS: SEQ-12940 →</div>
-    </a>
-    <a class="resource-item" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">
-      <div class="resource-label">Jira Epic</div>
-      <div class="resource-name">Android: SEQ-12995 →</div>
-    </a>
-    <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0A83MZSX1B" target="_blank">
-      <div class="resource-label">Slack</div>
-      <div class="resource-name">#devex →</div>
+    <a class="resource-item" href="https://mn.productboard.com/timeline/MTpUaW1lbGluZVJvYWRtYXBCb2FyZDozMmMwNmUyNC02NjRiLTRlZTktODlhNi04NDZkMmVlNDZkZTA=" target="_blank">
+      <div class="resource-label">Roadmap</div>
+      <div class="resource-name">ProductBoard Timeline →</div>
     </a>
     <div class="resource-item" style="cursor: default;">
-      <div class="resource-label">Analytics</div>
+      <div class="resource-label">Analytics Dashboard</div>
       <div class="resource-name" style="color: rgba(9,43,46,0.35); font-style: italic;">Coming Soon</div>
     </div>
   </div>
