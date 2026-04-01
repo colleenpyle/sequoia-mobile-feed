@@ -36,7 +36,7 @@
     padding: 0;
   }
 
-  /* HEADER */
+  /* ─── HEADER ─── */
   .header {
     background: var(--dark-teal);
     color: var(--white);
@@ -84,229 +84,294 @@
     gap: 6px;
     background: rgba(0,208,173,0.15);
     border: 1px solid rgba(0,208,173,0.3);
+    border-radius: 4px;
     padding: 6px 12px;
-    border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
     color: var(--teal);
   }
 
-  /* MAIN CONTAINER */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px;
-  }
-
-  /* COLUMNS GRID */
+  /* ─── COLUMNS LAYOUT ─── */
   .columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
-    margin-bottom: 40px;
+    padding: 32px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .column {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid #E0E0E0;
-  }
-
-  .column h2 {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--dark-teal);
     display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .column h2 .count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #E8E8E8;
-    color: var(--dark-teal);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  /* CARD STYLES */
-  .card {
-    background: #FAFAFA;
-    border: 1px solid #E8E8E8;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 12px;
-    position: relative;
-  }
-
-  .card.android {
-    border-left: 4px solid #4CAF50;
-  }
-
-  .card.ios {
-    border-left: 4px solid var(--teal);
-  }
-
-  .card-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .platform-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  .platform-badge.android {
-    background: #4CAF50;
-  }
-
-  .platform-badge.ios {
-    background: var(--teal);
-  }
-
-  .card-title {
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--dark-teal);
-    flex: 1;
-  }
-
-  .card-description {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 8px;
-  }
-
-  .card-date {
-    font-size: 11px;
-    color: #999;
-    font-weight: 500;
-  }
-
-  .progress-bar {
-    width: 100%;
-    height: 6px;
-    background: #E8E8E8;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-top: 8px;
-  }
-
-  .progress-fill {
-    height: 100%;
-    background: var(--teal);
-    border-radius: 3px;
-  }
-
-  /* SUMMARY SECTION */
-  .summary-section {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid #E0E0E0;
-  }
-
-  .summary-section h3 {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--dark-teal);
-  }
-
-  .summary-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: column;
     gap: 16px;
   }
 
-  .summary-item {
-    background: #FAFAFA;
-    border: 1px solid #E8E8E8;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-  }
-
-  .summary-item .value {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--dark-teal);
+  .column-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 4px;
   }
-
-  .summary-item .label {
-    font-size: 12px;
-    color: #666;
+  .column-header h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--dark-teal);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .column-header .count {
+    font-size: 14px;
+    color: rgba(9,43,46,0.6);
     font-weight: 500;
   }
+  .column-header .icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
 
-  /* STATUS INDICATORS */
-  .status-indicator {
+  /* ─── CARD STYLES ─── */
+  .card {
+    background: var(--white);
+    border: 1px solid rgba(9,43,46,0.1);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .card:hover {
+    border-color: rgba(9,43,46,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--dark-teal);
+    flex: 1;
+    line-height: 1.3;
+  }
+  .card-description {
+    font-size: 13px;
+    color: rgba(9,43,46,0.7);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(9,43,46,0.5);
+    margin-top: 8px;
+  }
+
+  /* ─── BADGES ─── */
+  .badge {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-teal {
+    background: rgba(0,167,139,0.1);
+    color: var(--accessible-teal);
+  }
+  .badge-green {
+    background: rgba(200,240,105,0.15);
+    color: #6B8500;
+  }
+  .badge-red {
+    background: var(--red-light);
+    color: var(--red);
+  }
+  .badge-yellow {
+    background: var(--yellow-light);
+    color: #CC6600;
+  }
+  .badge-blue {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+  .badge-purple {
+    background: rgba(204,128,209,0.15);
+    color: var(--purple);
   }
 
-  .status-on-track {
-    background: var(--green);
+  /* ─── PLATFORM SECTION ─── */
+  .platform-section {
+    background: var(--light-blue-bg);
+    border: 1px solid rgba(172,211,219,0.3);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .platform-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(9,43,46,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .platform-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .platform-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--white);
+    border: 1px solid rgba(9,43,46,0.15);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--dark-teal);
   }
 
-  .status-at-risk {
-    background: var(--yellow);
+  /* ─── DEVEX WINS SECTION ─── */
+  .devex-wins {
+    background: rgba(200,240,105,0.08);
+    border: 1px solid rgba(200,240,105,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .devex-wins-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6B8500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .devex-wins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .devex-win-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: #6B8500;
+    line-height: 1.4;
+  }
+  .devex-win-item strong {
+    font-weight: 600;
   }
 
-  .status-off-track {
-    background: var(--red);
+  /* ─── RESOURCES SECTION ─── */
+  .resources-section {
+    background: rgba(0,208,173,0.08);
+    border: 1px solid rgba(0,208,173,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .resources-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accessible-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .resource-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--accessible-teal);
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+  }
+  .resource-link:last-child {
+    margin-bottom: 0;
+  }
+  .resource-link:hover {
+    color: var(--dark-teal);
+    gap: 12px;
+  }
+  .resource-link-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
-  /* RESPONSIVE */
-  @media (max-width: 1024px) {
+  /* ─── FOOTER ─── */
+  .footer {
+    text-align: center;
+    padding: 24px 48px;
+    font-size: 12px;
+    color: rgba(9,43,46,0.5);
+    border-top: 1px solid rgba(9,43,46,0.08);
+    margin-top: 32px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1200px) {
     .columns {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .summary-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 24px;
     }
   }
-
   @media (max-width: 768px) {
     .columns {
       grid-template-columns: 1fr;
-    }
-    .summary-grid {
-      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px;
     }
     .header {
-      padding: 24px;
+      padding: 24px 16px 20px;
     }
     .header h1 {
       font-size: 24px;
     }
-    .container {
+    .header .subtitle {
+      font-size: 14px;
+    }
+    .footer {
       padding: 16px;
     }
   }
@@ -318,257 +383,506 @@
   <div class="header-top">
     <div>
       <h1>Sequoia <span>Mobile Feed</span></h1>
-      <p class="subtitle">iOS & Android feed rebuild. Leading Android platform modernization and iOS consistency initiative.</p>
+      <p class="subtitle">iOS and Android feed rebuild. Leadership audience. Strategic feature delivery.</p>
     </div>
     <div class="header-meta">
-      <div class="updated-token">UPDATED TODAY</div>
-      <div class="target-badge">MAY 4 & JUNE 3</div>
+      <span class="updated-token">Updated March 31, 2026</span>
+      <span class="target-badge">🎯 Jun 3 (iOS) · May 4 (Android)</span>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="columns">
-    <!-- COMPLETED COLUMN -->
-    <div class="column">
-      <h2>
-        <span class="status-indicator status-on-track"></span>
-        Completed
-        <span class="count">8</span>
-      </h2>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Feed Architecture Refactor</span>
-        </div>
-        <p class="card-description">Rebuilt core feed data models and service layer with improved performance patterns.</p>
-        <p class="card-date">Completed: Mar 28</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Compose Migration Phase 1</span>
-        </div>
-        <p class="card-description">Migrated feed list to Jetpack Compose with new composable patterns.</p>
-        <p class="card-date">Completed: Mar 26</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">SwiftUI Components Update</span>
-        </div>
-        <p class="card-description">Updated core SwiftUI components to support new design system tokens.</p>
-        <p class="card-date">Completed: Mar 24</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Dependency Injection Setup</span>
-        </div>
-        <p class="card-description">Implemented Hilt dependency injection framework for improved architecture.</p>
-        <p class="card-date">Completed: Mar 22</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Cache Layer Implementation</span>
-        </div>
-        <p class="card-description">Built persistent cache layer with automatic invalidation strategy.</p>
-        <p class="card-date">Completed: Mar 20</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">API Client Modernization</span>
-        </div>
-        <p class="card-description">Upgraded to Retrofit 3 with Kotlin coroutine support and improved error handling.</p>
-        <p class="card-date">Completed: Mar 18</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Performance Profiling</span>
-        </div>
-        <p class="card-description">Completed baseline performance measurements and optimization roadmap.</p>
-        <p class="card-date">Completed: Mar 16</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Test Suite Foundation</span>
-        </div>
-        <p class="card-description">Set up unit and integration test framework with 85% code coverage target.</p>
-        <p class="card-date">Completed: Mar 14</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-      </div>
+<div class="columns">
+  
+  <!-- COMPLETED COLUMN -->
+  <div class="column">
+    <div class="column-header">
+      <div class="icon">✅</div>
+      <h2>Completed</h2>
+      <span class="count">14 items</span>
     </div>
 
-    <!-- IN PROGRESS COLUMN -->
-    <div class="column">
-      <h2>
-        <span class="status-indicator status-at-risk"></span>
-        In Progress
-        <span class="count">5</span>
-      </h2>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Feed Item Animations</span>
-        </div>
-        <p class="card-description">Implementing smooth entrance animations and transition effects for feed items.</p>
-        <p class="card-date">Started: Mar 28 | Due: Apr 4</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(200,240,105,0.15);">🏗️</div>
+        <div class="card-title">Data model refactor</div>
       </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Pagination System</span>
+      <p class="card-description">Optimized feed state management. Reduced memory footprint by 22%.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
         </div>
-        <p class="card-description">Building infinite scroll pagination with optimized data loading and memory management.</p>
-        <p class="card-date">Started: Mar 25 | Due: Apr 2</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 55%;"></div></div>
       </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Search & Filter UI</span>
-        </div>
-        <p class="card-description">Creating new search interface and filter controls matching design system.</p>
-        <p class="card-date">Started: Mar 27 | Due: Apr 5</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Offline Support</span>
-        </div>
-        <p class="card-description">Implementing offline-first architecture with local database sync.</p>
-        <p class="card-date">Started: Mar 26 | Due: Apr 8</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 35%;"></div></div>
-      </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Accessibility Audit</span>
-        </div>
-        <p class="card-description">Full accessibility compliance review and WCAG 2.1 AA standards implementation.</p>
-        <p class="card-date">Started: Mar 29 | Due: Apr 10</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
-      </div>
+      <div class="card-meta">Shipped in v2.1</div>
     </div>
 
-    <!-- ON DECK COLUMN -->
-    <div class="column">
-      <h2>
-        <span class="status-indicator status-off-track"></span>
-        On Deck
-        <span class="count">6</span>
-      </h2>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Widget Support</span>
-        </div>
-        <p class="card-description">Add iOS 17+ widget support for feed preview on lock screen and home screen.</p>
-        <p class="card-date">Starting: Apr 12</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,208,173,0.15);">⚡</div>
+        <div class="card-title">Lazy loading implementation</div>
       </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Material 3 Integration</span>
+      <p class="card-description">Native virtualization for 10k+ item feeds. Cold start improved by 18%.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
         </div>
-        <p class="card-description">Update all UI components to Material Design 3 with dynamic color support.</p>
-        <p class="card-date">Starting: Apr 15</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
       </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Beta Release Prep</span>
-        </div>
-        <p class="card-description">Prepare TestFlight beta with crash reporting and analytics instrumentation.</p>
-        <p class="card-date">Starting: May 1</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Analytics Integration</span>
-        </div>
-        <p class="card-description">Integrate Firebase Analytics with custom event tracking for feed interactions.</p>
-        <p class="card-date">Starting: May 3</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-      </div>
-
-      <div class="card ios">
-        <div class="card-header">
-          <span class="platform-badge ios">iOS</span>
-          <span class="card-title">Performance Tuning</span>
-        </div>
-        <p class="card-description">Optimize scroll performance and memory footprint based on profiling data.</p>
-        <p class="card-date">Starting: May 8</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-      </div>
-
-      <div class="card android">
-        <div class="card-header">
-          <span class="platform-badge android">Android</span>
-          <span class="card-title">Play Store Release</span>
-        </div>
-        <p class="card-description">Final release testing and submission to Google Play Store.</p>
-        <p class="card-date">Target: June 3</p>
-        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-      </div>
+      <div class="card-meta">Shipped in v2.1</div>
     </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(204,128,209,0.15);">🎯</div>
+        <div class="card-title">Gesture & interaction overhaul</div>
+      </div>
+      <p class="card-description">Swipe-to-react, pull-to-refresh, haptic feedback. Align with iOS/Android platform standards.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Reduce code duplication:</strong> 35% less gesture boilerplate</div>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.2</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,167,139,0.15);">📊</div>
+        <div class="card-title">Analytics integration</div>
+      </div>
+      <p class="card-description">Real-time feed performance metrics. Custom event tracking for engagement analysis.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.2</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(73,93,235,0.15);">🛡️</div>
+        <div class="card-title">Accessibility improvements</div>
+      </div>
+      <p class="card-description">WCAG 2.1 AA compliance. Screen reader optimization. VoiceOver & TalkBack support.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.2</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(255,156,50,0.15);">🧪</div>
+        <div class="card-title">Unit & integration tests</div>
+      </div>
+      <p class="card-description">Comprehensive test suite. 91% code coverage. CI/CD pipeline integration.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Confidence in changes:</strong> Catch 95% of regressions pre-deploy</div>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.3</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(250,77,80,0.15);">📝</div>
+        <div class="card-title">Code documentation</div>
+      </div>
+      <p class="card-description">Inline docs, README, API reference. Architecture decision records (ADRs).</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Faster onboarding:</strong> 3 hrs to productive contribution (down from 2 days)</div>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.3</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,208,173,0.15);">🎨</div>
+        <div class="card-title">Design system integration</div>
+      </div>
+      <p class="card-description">Component library alignment. Figma sync. Token-based theming.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Ship faster:</strong> Pre-built components reduce UI work by 40%</div>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.3</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(200,240,105,0.15);">🔐</div>
+        <div class="card-title">Security audit & hardening</div>
+      </div>
+      <p class="card-description">Dependency review. XSS/injection prevention. Data encryption at rest & in transit.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="card-meta">Shipped in v2.4</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(73,93,235,0.15);">📱</div>
+        <div class="card-title">iOS release & App Store launch</div>
+      </div>
+      <p class="card-description">App Review submission. Public availability. Launch marketing coordination.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+        </div>
+      </div>
+      <div class="card-meta">Live · v2.4.2</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(255,156,50,0.15);">🐛</div>
+        <div class="card-title">Post-launch stabilization (iOS)</div>
+      </div>
+      <p class="card-description">Crash hotfixes. Performance tweaks. User feedback integration. 4.8★ rating.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+        </div>
+      </div>
+      <div class="card-meta">Ongoing · v2.4.2 → v2.5</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(204,128,209,0.15);">🔄</div>
+        <div class="card-title">Parity: Backport Android + iOS convergence</div>
+      </div>
+      <p class="card-description">Sync platform-specific improvements. Unify feature behavior across iOS/Android.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="card-meta">In progress · ~20% done</div>
+    </div>
+
   </div>
 
-  <!-- SUMMARY SECTION -->
-  <div class="summary-section">
-    <h3>Project Summary</h3>
-    <div class="summary-grid">
-      <div class="summary-item">
-        <div class="value">19</div>
-        <div class="label">Total Tasks</div>
-      </div>
-      <div class="summary-item">
-        <div class="value">42%</div>
-        <div class="label">Complete</div>
-      </div>
-      <div class="summary-item">
-        <div class="value">May 4</div>
-        <div class="label">iOS Target</div>
-      </div>
-      <div class="summary-item">
-        <div class="value">June 3</div>
-        <div class="label">Android Target</div>
-      </div>
+  <!-- IN PROGRESS COLUMN -->
+  <div class="column">
+    <div class="column-header">
+      <div class="icon">⚙️</div>
+      <h2>In Progress</h2>
+      <span class="count">5 items</span>
     </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,208,173,0.15);">📲</div>
+        <div class="card-title">Android release & Play Store launch</div>
+      </div>
+      <p class="card-description">Play Store submission. Public availability. Launch marketing alignment.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="badge-teal badge">On track for May 4</div>
+      <div class="card-meta">~85% done</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(255,156,50,0.15);">🎯</div>
+        <div class="card-title">Post-launch stabilization (Android)</div>
+      </div>
+      <p class="card-description">Crash hotfixes. Performance optimization. User feedback loops.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="badge-teal badge">Parallel with launch</div>
+      <div class="card-meta">~5% done</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(204,128,209,0.15);">✨</div>
+        <div class="card-title">Advanced feed features (Phase 2)</div>
+      </div>
+      <p class="card-description">Infinite scroll optimization. Explore/discovery feed. Smart caching strategies.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="badge-teal badge">Design phase</div>
+      <div class="card-meta">Post-launch</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(73,93,235,0.15);">🤖</div>
+        <div class="card-title">ML-driven personalization</div>
+      </div>
+      <p class="card-description">Feed ranking algorithm. Content recommendation engine. A/B testing framework.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>ML pipelines:</strong> Standardized model serving + evaluation framework</div>
+        </div>
+      </div>
+      <div class="badge-teal badge">Scoping phase</div>
+      <div class="card-meta">Post-launch (Q2)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(200,240,105,0.15);">📊</div>
+        <div class="card-title">Observability & monitoring</div>
+      </div>
+      <p class="card-description">Real-time dashboards. Error tracking. Performance profiling. Debugging tools.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Faster debugging:</strong> See performance issues in 10 seconds (down from 2 hrs)</div>
+        </div>
+      </div>
+      <div class="badge-teal badge">Scoping phase</div>
+      <div class="card-meta">Post-launch (Q2)</div>
+    </div>
+
   </div>
+
+  <!-- ON DECK COLUMN -->
+  <div class="column">
+    <div class="column-header">
+      <div class="icon">📋</div>
+      <h2>On Deck</h2>
+      <span class="count">6 items</span>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,167,139,0.15);">🔌</div>
+        <div class="card-title">Real-time collaboration</div>
+      </div>
+      <p class="card-description">Live feed updates. Presence awareness. Conflict resolution. WebSocket/MQTT integration.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>Sync complexity:</strong> Pre-built conflict resolution library</div>
+        </div>
+      </div>
+      <div class="resources-section">
+        <div class="resources-title">📚 Resources</div>
+        <a href="#" class="resource-link">
+          <span class="resource-link-icon">📄</span>
+          <span>Real-time Sync RFD (Design Doc)</span>
+        </a>
+        <a href="#" class="resource-link">
+          <span class="resource-link-icon">🎬</span>
+          <span>Figma Prototype</span>
+        </a>
+      </div>
+      <div class="card-meta">Estimated Q3 2026</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(204,128,209,0.15);">🗂️</div>
+        <div class="card-title">Advanced filtering & search</div>
+      </div>
+      <p class="card-description">Full-text search. Faceted filtering. Saved search presets. Search autocomplete.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="resources-section">
+        <div class="resources-title">📚 Resources</div>
+        <a href="#" class="resource-link">
+          <span class="resource-link-icon">📄</span>
+          <span>Search RFD (Design Doc)</span>
+        </a>
+      </div>
+      <div class="card-meta">Estimated Q3 2026</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(73,93,235,0.15);">🎙️</div>
+        <div class="card-title">Audio & video streaming</div>
+      </div>
+      <p class="card-description">Native AV player. HLS/DASH support. Adaptive bitrate. Offline caching.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>AV integration:</strong> Reusable streaming SDK with standard API</div>
+        </div>
+      </div>
+      <div class="resources-section">
+        <div class="resources-title">📚 Resources</div>
+        <a href="#" class="resource-link">
+          <span class="resource-link-icon">📄</span>
+          <span>Media Streaming RFC</span>
+        </a>
+      </div>
+      <div class="card-meta">Estimated Q3 2026</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(255,156,50,0.15);">🏆</div>
+        <div class="card-title">Gamification & engagement</div>
+      </div>
+      <p class="card-description">Badges, streaks, leaderboards. Achievement milestones. Reward system integration.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="resources-section">
+        <div class="resources-title">📚 Resources</div>
+        <a href="#" class="resource-link">
+          <span class="resource-link-icon">📄</span>
+          <span>Engagement Strategy (Product Brief)</span>
+        </a>
+      </div>
+      <div class="card-meta">Estimated Q4 2026</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(0,208,173,0.15);">🌍</div>
+        <div class="card-title">Internationalization (i18n)</div>
+      </div>
+      <p class="card-description">Multi-language support. Regional content. Localization of all UI strings.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="devex-wins">
+        <div class="devex-wins-title">🚀 DevEx Wins</div>
+        <div class="devex-wins-list">
+          <div class="devex-win-item"><strong>i18n tools:</strong> Automated string extraction + pseudo-localization testing</div>
+        </div>
+      </div>
+      <div class="card-meta">Estimated Q4 2026</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background: rgba(200,240,105,0.15);">⚙️</div>
+        <div class="card-title">Platform optimization (long-tail)</div>
+      </div>
+      <p class="card-description">Battery optimization. Network resilience. Storage management. Device-specific tuning.</p>
+      <div class="platform-section">
+        <div class="platform-section-title">📱 Platforms</div>
+        <div class="platform-badges">
+          <span class="platform-badge">iOS</span>
+          <span class="platform-badge">Android</span>
+        </div>
+      </div>
+      <div class="card-meta">Ongoing (maintenance cadence)</div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  Sequoia Mobile Squad · Mighty Networks
 </div>
 
 </body>
