@@ -324,6 +324,51 @@
     color: rgba(9,43,46,0.3);
   }
 
+  /* ─── RESEARCH PHASE INJECTION ─── */
+  .research-injection {
+    padding: 14px 28px;
+    background: rgba(250,77,80,0.06);
+    border-top: 3px solid var(--red);
+    border-bottom: 1px solid rgba(250,77,80,0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .research-injection-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .research-injection-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--dark-teal);
+  }
+  .research-injection-text strong {
+    color: var(--red);
+    font-weight: 700;
+  }
+  .research-injection-text .research-dates {
+    color: rgba(9,43,46,0.55);
+    font-size: 12px;
+  }
+
+  /* ─── HEADER NOTE ─── */
+  .header-note {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 10px;
+    font-style: italic;
+  }
+  .header-note span {
+    color: var(--red);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ─── HIGHLIGHT: RESEARCH ─── */
+  .hi-research { background: rgba(250,77,80,0.1); }
+
   /* ─── PLATFORM RESOURCES ─── */
   .platform-resources {
     padding: 14px 28px 18px;
@@ -556,17 +601,18 @@
       <h1>Sequoia <span>Mobile Feed</span></h1>
     </div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 1, 2026</div>
+      <div class="updated-token">Updated April 2, 2026</div>
       <div class="target-badge">
         <span class="dot"></span>
-        iOS Target General Release-Ready: June 3
+        iOS Target General Release-Ready: June 3*
       </div>
       <div class="target-badge">
         <span class="dot"></span>
-        Android Target General Release-Ready: May 4
+        Android Target General Release-Ready: May 4*
       </div>
     </div>
   </div>
+  <div class="header-note"><span>*</span> Dates subject to impact from 4/7 roadmap shift to Headless API &amp; GraphQL research phase. Updated timeline expected after Apr 14 review.</div>
 </div>
 
 <div class="container">
@@ -577,6 +623,10 @@
     <div class="highlights-title">Notable Highlights</div>
   </div>
   <div class="highlights-body">
+    <div class="highlight-item">
+      <div class="highlight-icon hi-research">&#9670;</div>
+      <div><strong>Roadmap shift: Headless API &amp; GraphQL research injected.</strong> Starting Apr 7, Andrej &amp; Sammy are running a week-long spike on migrating off Core Data without a full rewrite and evaluating a KMP unified networking layer — findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel behind feature flag; current modular architecture becomes the blueprint for the broader data strategy.</div>
+    </div>
     <div class="highlight-item">
       <div class="highlight-icon hi-arch">&#9670;</div>
       <div><strong>Post Detail: rewrite over bridge decision.</strong> Rodrigo's analysis confirmed 98% of feed card components are identical to Post Detail — so both platforms will use a single component with a detail view mode, eliminating throwaway bridging work.</div>
@@ -640,6 +690,14 @@
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
       <div class="phase-dates">May 26 – Jun 3</div>
+    </div>
+  </div>
+
+  <!-- Research Phase Injection -->
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128308;</div>
+    <div class="research-injection-text">
+      <strong>Research Phase Injected</strong> — Headless API &amp; Core Data migration spike (Andrej &amp; Sammy). <span class="research-dates">Apr 7 – 14 · Findings review Apr 13 · Proposal Apr 14</span>
     </div>
   </div>
 
@@ -800,6 +858,14 @@
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
       <div class="phase-dates">Apr 28 – May 1</div>
+    </div>
+  </div>
+
+  <!-- Research Phase Injection -->
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128308;</div>
+    <div class="research-injection-text">
+      <strong>Research Phase Injected</strong> — KMP unified networking layer &amp; GraphQL feed API evaluation. <span class="research-dates">Apr 7 – 14 · Platform team: 2-week GraphQL slice</span>
     </div>
   </div>
 
