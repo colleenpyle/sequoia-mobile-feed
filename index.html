@@ -605,7 +605,7 @@
       <h1>Sequoia <span>Mobile Feed</span></h1>
     </div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 2, 2026</div>
+      <div class="updated-token">Updated April 6, 2026</div>
       <div class="target-badge">
         <span class="dot"></span>
         iOS Target General Release-Ready: June 3*
@@ -614,7 +614,7 @@
         <span class="dot"></span>
         Android Target General Release-Ready: May 4*
       </div>
-      <div class="header-note"><span>*</span> Dates subject to impact from 4/7 roadmap shift to Headless API &amp; GraphQL research phase. Updated timeline expected after Apr 14 review.</div>
+      <div class="header-note"><span>*</span> Headless API &amp; GraphQL research phase kicks off Apr 7. Andrej &amp; Sammy shift to a week-long spike; findings review Apr 14. Updated timeline expected after review.</div>
     </div>
   </div>
 </div>
@@ -629,31 +629,35 @@
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon hi-research">&#9670;</div>
-      <div><strong>Roadmap shift: Headless API &amp; GraphQL research injected.</strong> As Mighty moves forward with GraphQL and the headless API project, mobile needs to determine the approach and architecture to adopt the new API for each platform — especially iOS and how we move past Core Data. Andrej &amp; Sammy kick off a week-long spike Apr 7; findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel behind feature flag.</div>
+      <div><strong>Headless API &amp; GraphQL research starts tomorrow (Apr 7).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon hi-arch">&#9670;</div>
-      <div><strong>Post Detail: rewrite over bridge decision.</strong> Rodrigo's analysis confirmed 98% of feed card components are identical to Post Detail — so both platforms will use a single component with a detail view mode, eliminating throwaway bridging work.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon hi-devex">&#9670;</div>
-      <div><strong>Figma → Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last!</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon hi-devex">&#9670;</div>
-      <div><strong>Claude skills compounding.</strong> Both platforms have AI skills that encode architecture knowledge (data layer patterns, migration playbooks, DTO scaffolding). New feed screens get ~85-90% of boilerplate generated automatically.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon hi-data">&#9670;</div>
-      <div><strong>Feed prompt card tracking:</strong> engagement dashboard in the works (Colleen working with Kelsey).</div>
+      <div><strong>iOS router refactoring: Core Data removal in motion.</strong> Andrej shipped PRs refactoring the factory method out of the router, removing its dependency on Core Data. End goal: the entire new UI stack becomes 100% unit testable and fully separated from Core Data.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon hi-arch">&#9670;</div>
-      <div><strong>iOS icon migration underway.</strong> Cleaning out ~200 legacy icons and removing the friction of reviewing multiple icon systems — which introduced bugs, naming variations, and unnecessary decision-making across the app.</div>
+      <div><strong>Android Phase 2 complete &mdash; Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting April 18.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon hi-devex">&#9670;</div>
+      <div><strong>Android test coverage dashboard live.</strong> Mate built an auto-updating test coverage dashboard that recalculates on every merge &mdash; giving the team real-time visibility into testing health across the platform.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon hi-devex">&#9670;</div>
+      <div><strong>Figma &rarr; Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon hi-devex">&#9670;</div>
+      <div><strong>Claude skills compounding.</strong> iOS data layer skills one-shotted a full new repository plan (DTOs, enums, repository, factory, composition root, and tests) &mdash; zero back-and-forth. Both platforms now generate ~85-90% of boilerplate automatically.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon hi-collab">&#9670;</div>
-      <div><strong>Connecting with Mammoth 4/1</strong> on coordination efforts ahead of their editorial feed projects.</div>
+      <div><strong>Mammoth/Sequoia editorial feed coordination locked in.</strong> Editorial feed will be its own standalone system sharing components with the new feed. Discovery cards &amp; carousel prioritized. All relevant components targeted ready (with mock data) by end of April. Mammoth project start ~April 30.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon hi-data">&#9670;</div>
+      <div><strong>Feed performance instrumentation shipped (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation &mdash; baseline production numbers expected after ~1-2 weeks of data collection.</div>
     </div>
   </div>
 </div>
@@ -673,27 +677,27 @@
     <div class="phase-item">
       <div class="phase-dot completed">&#10003;</div>
       <div class="phase-label">Discovery &amp; Architecture</div>
-      <div class="phase-dates">Mar 4 – 20</div>
+      <div class="phase-dates">Mar 4 &ndash; 20</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot in-progress">2</div>
       <div class="phase-label">Component Building</div>
-      <div class="phase-dates">Mar 23 – Apr 24</div>
+      <div class="phase-dates">Mar 23 &ndash; Apr 24</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">3</div>
       <div class="phase-label">Integration</div>
-      <div class="phase-dates">Apr 25 – May 15</div>
+      <div class="phase-dates">Apr 25 &ndash; May 15</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">4</div>
       <div class="phase-label">Polish &amp; Analytics</div>
-      <div class="phase-dates">May 16 – 25</div>
+      <div class="phase-dates">May 16 &ndash; 25</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">May 26 – Jun 3</div>
+      <div class="phase-dates">May 26 &ndash; Jun 3</div>
     </div>
   </div>
 
@@ -701,17 +705,17 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> — Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 – 14 · Findings review Apr 13 · Proposal Apr 14</span>
+      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 &ndash; 14 &middot; Findings review Apr 13 &middot; Proposal Apr 14</span>
     </div>
   </div>
 
   <!-- Progress Bar -->
   <div class="progress-bar-section">
     <div class="progress-track">
-      <div class="progress-fill phase-active" style="width: 28%;"></div>
+      <div class="progress-fill phase-active" style="width: 32%;"></div>
     </div>
-    <div class="progress-pct">~28%</div>
-    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro →</a>
+    <div class="progress-pct">~32%</div>
+    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
 
   <!-- Status Columns -->
@@ -722,24 +726,24 @@
         In Progress
       </div>
       <div class="status-item">
-        <strong>Global icon refactor</strong>
-        <div class="detail">Rodrigo migrating all legacy icons to updated Figma set — app-wide</div>
+        <strong>Router factory refactoring</strong>
+        <div class="detail">Andrej extracting factory method from router, removing Core Data dependency</div>
+      </div>
+      <div class="status-item">
+        <strong>Event Header extraction</strong>
+        <div class="detail">Henrique building event card content &mdash; PRs incoming for Post Card Event Content</div>
       </div>
       <div class="status-item">
         <strong>Post Event Card component</strong>
-        <div class="detail">Clarifying design specs (event description, livestream CTAs)</div>
+        <div class="detail">Design specs clarified (event description, livestream CTAs)</div>
       </div>
       <div class="status-item">
         <strong>FeedViewRouter dependency extraction</strong>
-        <div class="detail">Henrique pushing CoreData dependencies out of composition</div>
-      </div>
-      <div class="status-item">
-        <strong>PostDetail skeleton screen</strong>
-        <div class="detail">Card tap → PostDetail navigation wired up</div>
+        <div class="detail">Pushing CoreData dependencies out of composition layer</div>
       </div>
       <div class="status-item">
         <strong>Feed Realtime Service</strong>
-        <div class="detail">Architecture visualized — integrating with data &amp; MVVM layers</div>
+        <div class="detail">Architecture visualized &mdash; integrating with data &amp; MVVM layers</div>
       </div>
     </div>
 
@@ -747,6 +751,14 @@
       <div class="status-col-header">
         <span class="indicator indicator-deck"></span>
         On Deck
+      </div>
+      <div class="status-item">
+        <strong>Discovery cards</strong>
+        <div class="detail">Thursday standup review with Bradley &mdash; prioritized for Mammoth editorial</div>
+      </div>
+      <div class="status-item">
+        <strong>Carousel component</strong>
+        <div class="detail">Next priority after discovery cards &mdash; Bradley syncing on designs</div>
       </div>
       <div class="status-item">
         <strong>Remaining ~30 card components</strong>
@@ -757,16 +769,8 @@
         <div class="detail">Standalone component needed for Post Detail</div>
       </div>
       <div class="status-item">
-        <strong>Web content rendering (SwiftUI)</strong>
-        <div class="detail">PoC complete — needs production implementation</div>
-      </div>
-      <div class="status-item">
         <strong>Filter data wiring</strong>
         <div class="detail">Connect filter UI to data layer logic</div>
-      </div>
-      <div class="status-item">
-        <strong>Caching &amp; Core Data layers</strong>
-        <div class="detail">Part of ongoing data layer buildout</div>
       </div>
     </div>
 
@@ -776,12 +780,24 @@
         Completed
       </div>
       <div class="status-item">
+        <strong>Global icon refactor</strong>
+        <div class="detail">Rodrigo migrated all legacy icons to updated Figma set &mdash; app-wide</div>
+      </div>
+      <div class="status-item">
+        <strong>UI Library feed preview</strong>
+        <div class="detail">New Feed option in UI Library with Quick Post &amp; Unsupported Content samples</div>
+      </div>
+      <div class="status-item">
+        <strong>Data layer docs updated</strong>
+        <div class="detail">Realtime Service, API Service &amp; FlexSpaceRepository patterns documented</div>
+      </div>
+      <div class="status-item">
         <strong>Data layer architecture</strong>
-        <div class="detail">Repository, networking, DTOs — diagrammed &amp; merged</div>
+        <div class="detail">Repository, networking, DTOs &mdash; diagrammed &amp; merged</div>
       </div>
       <div class="status-item">
         <strong>UI architecture merged</strong>
-        <div class="detail">Modular SwiftUI feed card system — validated by iOS team</div>
+        <div class="detail">Modular SwiftUI feed card system &mdash; validated by iOS team</div>
       </div>
       <div class="status-item">
         <strong>Full component mapping in Miro</strong>
@@ -789,11 +805,11 @@
       </div>
       <div class="status-item">
         <strong>New feed live behind feature flag</strong>
-        <div class="detail">ios_feed_refactor — loading real data in internal app</div>
+        <div class="detail">ios_feed_refactor &mdash; loading real data in internal app</div>
       </div>
       <div class="status-item">
         <strong>Post Detail: full rewrite decision</strong>
-        <div class="detail">98% component reuse with feed cards — single codebase</div>
+        <div class="detail">98% component reuse with feed cards &mdash; single codebase</div>
       </div>
       <div class="status-item">
         <strong>Filter UI component added</strong>
@@ -815,14 +831,14 @@
     <div class="risks-header">
       &#9888; Risks &amp; Notes
     </div>
-    <div class="risk-item">Icon refactor touches entire app — risk of unexpected color issues or missing icons post-merge. Call for broader testing to help flag issues.</div>
-    <div class="risk-item">Post Event Card design specs still being finalized.</div>
-    <div class="risk-item">Filter screen UI is functional but dated — decision pending on whether to recreate in new design.</div>
+    <div class="risk-item">Research phase starts Apr 7 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
+    <div class="risk-item">Post Event Card design specs still being finalized (event description, livestream CTAs).</div>
+    <div class="risk-item">Filter screen UI is functional but dated &mdash; decision pending on whether to recreate in new design.</div>
   </div>
   <div class="platform-resources">
-    <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
-    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 →</a>
-    <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board →</a>
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 &rarr;</a>
+    <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board &rarr;</a>
   </div>
 </div>
 
@@ -841,27 +857,27 @@
     <div class="phase-item">
       <div class="phase-dot completed">&#10003;</div>
       <div class="phase-label">Foundation &amp; Saved Posts</div>
-      <div class="phase-dates">Mar 3 – 14</div>
+      <div class="phase-dates">Mar 3 &ndash; 14</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot completed">&#10003;</div>
       <div class="phase-label">Simple Screens</div>
-      <div class="phase-dates">Mar 17 – 28</div>
+      <div class="phase-dates">Mar 17 &ndash; 28</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot in-progress">3</div>
       <div class="phase-label">Special Cards &amp; Complex</div>
-      <div class="phase-dates">Mar 31 – Apr 18</div>
+      <div class="phase-dates">Mar 31 &ndash; Apr 18</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">4</div>
       <div class="phase-label">Integration &amp; Polish</div>
-      <div class="phase-dates">Apr 21 – 28</div>
+      <div class="phase-dates">Apr 21 &ndash; 28</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">Apr 28 – May 1</div>
+      <div class="phase-dates">Apr 28 &ndash; May 1</div>
     </div>
   </div>
 
@@ -869,17 +885,17 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> — Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 – 14 · Platform team: 2-week GraphQL slice</span>
+      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 &ndash; 14 &middot; Platform team: 2-week GraphQL slice</span>
     </div>
   </div>
 
   <!-- Progress Bar -->
   <div class="progress-bar-section">
     <div class="progress-track">
-      <div class="progress-fill phase-active" style="width: 52%;"></div>
+      <div class="progress-fill phase-active" style="width: 55%;"></div>
     </div>
-    <div class="progress-pct">~52%</div>
-    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro →</a>
+    <div class="progress-pct">~55%</div>
+    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
 
   <!-- Status Columns -->
@@ -914,11 +930,11 @@
       </div>
       <div class="status-item">
         <strong>Global Feed conversion</strong>
-        <div class="detail">Main home feed — invite buttons, live events, coaching overlays</div>
+        <div class="detail">Main home feed &mdash; invite buttons, live events, coaching overlays</div>
       </div>
       <div class="status-item">
         <strong>Analytics wiring</strong>
-        <div class="detail">Impression tracking, interaction events → ViewModels</div>
+        <div class="detail">Impression tracking, interaction events &rarr; ViewModels</div>
       </div>
       <div class="status-item">
         <strong>More Menu system parity</strong>
@@ -936,24 +952,28 @@
         Completed
       </div>
       <div class="status-item">
+        <strong>Phase 2: Simple Screen Conversions</strong>
+        <div class="detail">Post Detail, Member Feed, Pinned Feed &mdash; all converted to Compose</div>
+      </div>
+      <div class="status-item">
+        <strong>Feed performance instrumentation</strong>
+        <div class="detail">Firebase Performance traces, JankStats scroll jank, Crashlytics screen tagging</div>
+      </div>
+      <div class="status-item">
         <strong>Phase 1: Foundation</strong>
         <div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div>
       </div>
       <div class="status-item">
-        <strong>Saved Posts screen — fully converted</strong>
+        <strong>Saved Posts screen &mdash; fully converted</strong>
         <div class="detail">First screen live on new Compose pipeline</div>
       </div>
       <div class="status-item">
         <strong>Poll cards in Compose</strong>
-        <div class="detail">Full unit test coverage — 1,700+ lines of dead code removed</div>
+        <div class="detail">Full unit test coverage &mdash; 1,700+ lines of dead code removed</div>
       </div>
       <div class="status-item">
-        <strong>Figma → Compose design system mapping</strong>
+        <strong>Figma &rarr; Compose design system mapping</strong>
         <div class="detail">40+ component mappings, all tokens documented</div>
-      </div>
-      <div class="status-item">
-        <strong>Phase 2: Simple Screen Conversions</strong>
-        <div class="detail">Post Detail, Member Feed, Pinned Feed — all converted</div>
       </div>
     </div>
   </div>
@@ -963,13 +983,14 @@
     <div class="risks-header">
       &#9888; Risks &amp; Notes
     </div>
-    <div class="risk-item">Nested scroll coordination — Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
-    <div class="risk-item">Profile Prompt carousel is the highest-complexity special card — horizontal carousel with dynamic item sizing.</div>
-    <div class="risk-item">Android feed engagement tracking data looks off — Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
+    <div class="risk-item">Research phase starts Apr 7 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
+    <div class="risk-item">Nested scroll coordination &mdash; Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
+    <div class="risk-item">Profile Prompt carousel is the highest-complexity special card &mdash; horizontal carousel with dynamic item sizing.</div>
+    <div class="risk-item">Android feed engagement tracking data looks off &mdash; Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
   </div>
   <div class="platform-resources">
-    <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
-    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 →</a>
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 &rarr;</a>
   </div>
 </div>
 
@@ -977,31 +998,31 @@
 <div class="scoreboard">
   <div class="scoreboard-header">
     <div class="scoreboard-title">DevEx Wins</div>
-    <a class="scoreboard-link" href="https://mightynetworks.slack.com/archives/C0A83MZSX1B" target="_blank">View #devex →</a>
+    <a class="scoreboard-link" href="https://mightynetworks.slack.com/archives/C0A83MZSX1B" target="_blank">View #devex &rarr;</a>
   </div>
   <div class="scoreboard-body">
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">iOS</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">120</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">137</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Update DTO and data layer skills with new helpers</li>
-        <li>ios-feed-content — end-to-end feed card workflow</li>
-        <li>ios-figma-mapper — Figma → SwiftUI with MightyControls</li>
+        <li>Bug System: Fix &amp; Maintenance automated workflows</li>
+        <li>ios-create-dto &amp; ios-create-data-layer &mdash; one-shot repo scaffolding</li>
+        <li>Pre-commit hook fix: staged-files-only scanning</li>
       </ul>
     </div>
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">Android</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">129</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">142</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>android-upload-build skill &amp; uploadPreBuilt docs</li>
-        <li>android-figma-to-component — Figma → Compose</li>
-        <li>android-figma-extract — design system token mapping</li>
+        <li>Bug System Fix &amp; Maintenance automated workflows</li>
+        <li>Test coverage dashboard &mdash; auto-updates on every merge</li>
+        <li>Worktree setup fix for Claude Code remote sessions</li>
       </ul>
     </div>
   </div>
@@ -1015,27 +1036,27 @@
   <div class="resources-grid">
     <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0AGMPYAGCE" target="_blank">
       <div class="resource-label">Slack Project Channel</div>
-      <div class="resource-name">#mobile_feed_refactor →</div>
+      <div class="resource-name">#mobile_feed_refactor &rarr;</div>
     </a>
     <a class="resource-item" href="https://www.figma.com/design/orchjRMhCEZNehSpGipZht/Components?node-id=3634-31084&m=dev" target="_blank">
       <div class="resource-label">Designs</div>
-      <div class="resource-name">Figma Components →</div>
+      <div class="resource-name">Figma Components &rarr;</div>
     </a>
     <a class="resource-item" href="https://mn.productboard.com/timeline/MTpUaW1lbGluZVJvYWRtYXBCb2FyZDozMmMwNmUyNC02NjRiLTRlZTktODlhNi04NDZkMmVlNDZkZTA=" target="_blank">
       <div class="resource-label">Roadmap</div>
-      <div class="resource-name">ProductBoard Timeline →</div>
+      <div class="resource-name">ProductBoard Timeline &rarr;</div>
     </a>
-    <div class="resource-item" style="cursor: default;">
-      <div class="resource-label">Analytics Dashboard</div>
-      <div class="resource-name" style="color: rgba(9,43,46,0.35); font-style: italic;">Coming Soon</div>
-    </div>
+    <a class="resource-item" href="https://turbo-adventure-l4m3rk7.pages.github.io/" target="_blank">
+      <div class="resource-label">Android Test Coverage</div>
+      <div class="resource-name">Coverage Dashboard &rarr;</div>
+    </a>
   </div>
 </div>
 
 </div>
 
 <div class="footer">
-  Sequoia Mobile Squad · Mighty Networks
+  Sequoia Mobile Squad &middot; Mighty Networks
 </div>
 
 </body>
