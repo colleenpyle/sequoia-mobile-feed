@@ -318,7 +318,7 @@
     position: relative;
   }
   .risk-item::before {
-    content: '\2014';
+    content: '—';
     position: absolute;
     left: 0;
     color: rgba(9,43,46,0.3);
@@ -372,6 +372,34 @@
 
   /* ─── HIGHLIGHT: RESEARCH ─── */
   .hi-research { background: rgba(250,77,80,0.1); }
+
+  /* ─── HIGHLIGHT LEGEND ─── */
+  .highlight-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 2px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(9,43,46,0.55);
+    letter-spacing: 0.02em;
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .legend-dot.ld-research { background: rgba(250,77,80,0.45); }
+  .legend-dot.ld-arch { background: rgba(73,93,235,0.45); }
+  .legend-dot.ld-devex { background: rgba(200,240,105,0.8); }
+  .legend-dot.ld-data { background: rgba(255,156,50,0.5); }
+  .legend-dot.ld-collab { background: rgba(204,128,209,0.55); }
 
   /* ─── PLATFORM RESOURCES ─── */
   .platform-resources {
@@ -485,7 +513,7 @@
     color: rgba(9,43,46,0.7);
   }
   .score-pr-list li::before {
-    content: '\2022';
+    content: '•';
     position: absolute;
     left: 0;
     color: var(--teal);
@@ -614,7 +642,7 @@
         <span class="dot"></span>
         Android Target General Release-Ready: May 4*
       </div>
-      <div class="header-note"><span>*</span> Headless API &amp; GraphQL research phase kicks off Apr 7. Andrej &amp; Sammy shift to a week-long spike; findings review Apr 14. Updated timeline expected after review.</div>
+      <div class="header-note"><span>*</span> Headless API &amp; GraphQL research phase kicks off Apr 6. Andrej &amp; Sammy shift to a week-long spike; findings review Apr 14. Updated timeline expected after review.</div>
     </div>
   </div>
 </div>
@@ -625,11 +653,18 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">Notable Highlights</div>
+    <div class="highlight-legend">
+      <div class="legend-item"><div class="legend-dot ld-research"></div>Research</div>
+      <div class="legend-item"><div class="legend-dot ld-arch"></div>Architecture</div>
+      <div class="legend-item"><div class="legend-dot ld-devex"></div>DevEx</div>
+      <div class="legend-item"><div class="legend-dot ld-data"></div>Data / Analytics</div>
+      <div class="legend-item"><div class="legend-dot ld-collab"></div>Collaboration</div>
+    </div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon hi-research">&#9670;</div>
-      <div><strong>Headless API &amp; GraphQL research starts tomorrow (Apr 7).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
+      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon hi-arch">&#9670;</div>
@@ -705,7 +740,7 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 &ndash; 14 &middot; Findings review Apr 13 &middot; Proposal Apr 14</span>
+      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6 &ndash; 14 &middot; Findings review Apr 13 &middot; Proposal Apr 14</span>
     </div>
   </div>
 
@@ -831,7 +866,7 @@
     <div class="risks-header">
       &#9888; Risks &amp; Notes
     </div>
-    <div class="risk-item">Research phase starts Apr 7 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
+    <div class="risk-item">Research phase starts Apr 6 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
     <div class="risk-item">Post Event Card design specs still being finalized (event description, livestream CTAs).</div>
     <div class="risk-item">Filter screen UI is functional but dated &mdash; decision pending on whether to recreate in new design.</div>
   </div>
@@ -885,7 +920,7 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 7 &ndash; 14 &middot; Platform team: 2-week GraphQL slice</span>
+      <strong>Research Phase Injected</strong> &mdash; Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6 &ndash; 14 &middot; Platform team: 2-week GraphQL slice</span>
     </div>
   </div>
 
@@ -983,7 +1018,7 @@
     <div class="risks-header">
       &#9888; Risks &amp; Notes
     </div>
-    <div class="risk-item">Research phase starts Apr 7 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
+    <div class="risk-item">Research phase starts Apr 6 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
     <div class="risk-item">Nested scroll coordination &mdash; Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
     <div class="risk-item">Profile Prompt carousel is the highest-complexity special card &mdash; horizontal carousel with dynamic item sizing.</div>
     <div class="risk-item">Android feed engagement tracking data looks off &mdash; Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
