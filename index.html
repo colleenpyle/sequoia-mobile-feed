@@ -370,36 +370,7 @@
     font-weight: 600;
   }
 
-  /* ─── HIGHLIGHT: RESEARCH ─── */
-  .hi-research { background: rgba(250,77,80,0.1); }
-
-  /* ─── HIGHLIGHT LEGEND ─── */
-  .highlight-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 2px;
-  }
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    font-weight: 500;
-    color: rgba(9,43,46,0.55);
-    letter-spacing: 0.02em;
-  }
-  .legend-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-  .legend-dot.ld-research { background: rgba(250,77,80,0.45); }
-  .legend-dot.ld-arch { background: rgba(73,93,235,0.45); }
-  .legend-dot.ld-devex { background: rgba(200,240,105,0.8); }
-  .legend-dot.ld-data { background: rgba(255,156,50,0.5); }
-  .legend-dot.ld-collab { background: rgba(204,128,209,0.55); }
+  /* ─── HIGHLIGHT ALTERNATING COLORS (nth-child) ─── */
 
   /* ─── PLATFORM RESOURCES ─── */
   .platform-resources {
@@ -562,10 +533,8 @@
     font-size: 14px;
     margin-top: 1px;
   }
-  .hi-arch { background: rgba(73,93,235,0.1); }
-  .hi-devex { background: rgba(200,240,105,0.3); }
-  .hi-data { background: rgba(255,156,50,0.12); }
-  .hi-collab { background: rgba(204,128,209,0.15); }
+  .highlight-item:nth-child(odd) .highlight-icon { background: rgba(0,208,173,0.12); }
+  .highlight-item:nth-child(even) .highlight-icon { background: rgba(73,93,235,0.1); }
 
   /* ─── RESOURCES ─── */
   .resources {
@@ -653,46 +622,39 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">Notable Highlights</div>
-    <div class="highlight-legend">
-      <div class="legend-item"><div class="legend-dot ld-research"></div>Research</div>
-      <div class="legend-item"><div class="legend-dot ld-arch"></div>Architecture</div>
-      <div class="legend-item"><div class="legend-dot ld-devex"></div>DevEx</div>
-      <div class="legend-item"><div class="legend-dot ld-data"></div>Data / Analytics</div>
-      <div class="legend-item"><div class="legend-dot ld-collab"></div>Collaboration</div>
-    </div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
-      <div class="highlight-icon hi-research">&#9670;</div>
-      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a "RemoteObject hijack" middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-arch">&#9670;</div>
+      <div class="highlight-icon">&#9670;</div>
       <div><strong>iOS router refactoring: Core Data removal in motion.</strong> Andrej shipped PRs refactoring the factory method out of the router, removing its dependency on Core Data. End goal: the entire new UI stack becomes 100% unit testable and fully separated from Core Data.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-arch">&#9670;</div>
-      <div><strong>Android Phase 2 complete &mdash; Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting April 18.</div>
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Android Phase 2 complete -- Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting April 18.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-devex">&#9670;</div>
-      <div><strong>Android test coverage dashboard live.</strong> Mate built an auto-updating test coverage dashboard that recalculates on every merge &mdash; giving the team real-time visibility into testing health across the platform.</div>
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Android test coverage dashboard live.</strong> Mate built an auto-updating test coverage dashboard that recalculates on every merge -- giving the team real-time visibility into testing health across the platform.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-devex">&#9670;</div>
+      <div class="highlight-icon">&#9670;</div>
       <div><strong>Figma &rarr; Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-devex">&#9670;</div>
-      <div><strong>Claude skills compounding.</strong> iOS data layer skills one-shotted a full new repository plan (DTOs, enums, repository, factory, composition root, and tests) &mdash; zero back-and-forth. Both platforms now generate ~85-90% of boilerplate automatically.</div>
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Claude skills compounding.</strong> iOS data layer skills one-shotted a full new repository plan (DTOs, enums, repository, factory, composition root, and tests) -- zero back-and-forth. Both platforms now generate ~85-90% of boilerplate automatically.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-collab">&#9670;</div>
+      <div class="highlight-icon">&#9670;</div>
       <div><strong>Mammoth/Sequoia editorial feed coordination locked in.</strong> Editorial feed will be its own standalone system sharing components with the new feed. Discovery cards &amp; carousel prioritized. Downloading with Tom on Tuesday 4/7 for discovery cards. All relevant components targeted ready (with mock data) by end of April. Mammoth project start ~April 30.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon hi-data">&#9670;</div>
-      <div><strong>Feed performance instrumentation shipped (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation &mdash; baseline production numbers expected after ~1-2 weeks of data collection.</div>
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Feed performance instrumentation shipped (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation -- baseline production numbers expected after ~1-2 weeks of data collection.</div>
     </div>
   </div>
 </div>
@@ -901,8 +863,8 @@
     </div>
     <div class="phase-item">
       <div class="phase-dot in-progress">3</div>
-      <div class="phase-label">Special Cards &amp; Complex</div>
-      <div class="phase-dates">Mar 31 &ndash; Apr 18</div>
+      <div class="phase-label">Complex Cards &amp; Feeds</div>
+      <div class="phase-dates">Mar 31 &ndash; Apr 24</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">4</div>
