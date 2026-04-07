@@ -104,58 +104,6 @@
     padding: 32px 24px 48px;
   }
 
-  /* ─── KEY MILESTONES SECTION ─── */
-  .milestones {
-    background: var(--white);
-    border-radius: 16px;
-    margin-bottom: 24px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
-  }
-  .milestones-header {
-    padding: 20px 28px;
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-  }
-  .milestones-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .milestones-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-  }
-  .milestone-card {
-    padding: 20px 24px;
-    border-right: 1px solid rgba(9,43,46,0.06);
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-  }
-  .milestone-card:nth-child(3n) {
-    border-right: none;
-  }
-  .milestone-card:nth-child(n+4) {
-    border-bottom: none;
-  }
-  .milestone-platform {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--dark-teal);
-    margin-bottom: 4px;
-  }
-  .milestone-label {
-    font-size: 12px;
-    color: rgba(9,43,46,0.6);
-    margin-bottom: 6px;
-  }
-  .milestone-target-date {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--accessible-teal);
-  }
-
   /* ─── PLATFORM SECTION ─── */
   .platform-section {
     background: var(--white);
@@ -370,7 +318,7 @@
     position: relative;
   }
   .risk-item::before {
-    content: '—';
+    content: '\2014';
     position: absolute;
     left: 0;
     color: rgba(9,43,46,0.3);
@@ -536,11 +484,155 @@
     color: rgba(9,43,46,0.7);
   }
   .score-pr-list li::before {
-    content: '•';
+    content: '\2022';
     position: absolute;
     left: 0;
     color: var(--teal);
     font-weight: 700;
+  }
+
+  /* ─── KEY MILESTONES ─── */
+  .milestones {
+    background: var(--dark-teal);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(9,43,46,0.12);
+  }
+  .milestones-header {
+    padding: 20px 28px 0;
+  }
+  .milestones-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: -0.3px;
+  }
+  .milestones-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+  .milestones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 20px 28px 24px;
+  }
+  .milestone-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+  .milestone-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .milestone-platform {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--white);
+  }
+  .milestone-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .milestone-status.on-track {
+    background: rgba(0,208,173,0.2);
+    color: var(--teal);
+  }
+  .milestone-status.at-risk {
+    background: rgba(255,156,50,0.2);
+    color: var(--yellow);
+  }
+  .milestone-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .milestone-status.on-track .milestone-status-dot { background: var(--teal); }
+  .milestone-status.at-risk .milestone-status-dot { background: var(--yellow); }
+  .milestone-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 14px;
+  }
+  .milestone-date-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .milestone-date-row:last-child { border-bottom: none; }
+  .milestone-date-row.primary .ms-date {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--teal);
+    font-family: 'Inter Tight', sans-serif;
+    letter-spacing: -0.3px;
+  }
+  .milestone-date-row.primary .ms-label {
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+  .ms-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+  }
+  .ms-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Inter Tight', sans-serif;
+  }
+  .milestone-detail {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .milestone-detail strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+  }
+  .milestone-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .milestone-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .milestone-progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--teal);
+  }
+  .milestone-progress-pct {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal);
+    min-width: 36px;
+    text-align: right;
   }
 
   /* ─── HIGHLIGHTS ─── */
@@ -654,16 +746,16 @@
       <h1>Sequoia <span>Mobile Feed</span></h1>
     </div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 6, 2026</div>
+      <div class="updated-token">Updated April 7, 2026</div>
       <div class="target-badge">
         <span class="dot"></span>
-        iOS Target General Release-Ready: June 10*
+        iOS Deploy Train: June 15*
       </div>
       <div class="target-badge">
         <span class="dot"></span>
-        Android Target General Release-Ready: May 11*
+        Android Deploy Train: May 11*
       </div>
-      <div class="header-note"><span>*</span> Headless API &amp; GraphQL research phase kicks off Apr 6. Andrej &amp; Sammy shift to a week-long spike; findings review Apr 14. Updated timeline expected after review.</div>
+      <div class="header-note"><span>*</span> Dates shifted +1 week due to Headless API &amp; GraphQL research phase (Apr 7). Andrej &amp; Sammy on week-long spike; findings review Apr 14.</div>
     </div>
   </div>
 </div>
@@ -674,22 +766,58 @@
 <div class="milestones">
   <div class="milestones-header">
     <div class="milestones-title">Key Milestones</div>
+    <div class="milestones-subtitle">Are we on track? When is this in production?</div>
   </div>
   <div class="milestones-grid">
     <div class="milestone-card">
-      <div class="milestone-platform">iOS</div>
-      <div class="milestone-label">General Release-Ready</div>
-      <div class="milestone-target-date">June 10</div>
+      <div class="milestone-card-header">
+        <div class="milestone-platform">iOS Feed Refactor</div>
+        <div class="milestone-status on-track"><div class="milestone-status-dot"></div> On Track</div>
+      </div>
+      <div class="milestone-dates">
+        <div class="milestone-date-row">
+          <div class="ms-label">Full Platform Internal Testing</div>
+          <div class="ms-date">June 2</div>
+        </div>
+        <div class="milestone-date-row">
+          <div class="ms-label">General Release-Ready</div>
+          <div class="ms-date">June 10</div>
+        </div>
+        <div class="milestone-date-row primary">
+          <div class="ms-label">General Deploy Train</div>
+          <div class="ms-date">June 15</div>
+        </div>
+      </div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Research spike this week (Andrej)&mdash;one-week pause, then resuming build.</div>
+      <div class="milestone-progress-row">
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:28%"></div></div>
+        <div class="milestone-progress-pct">28%</div>
+      </div>
     </div>
     <div class="milestone-card">
-      <div class="milestone-platform">Android</div>
-      <div class="milestone-label">General Release-Ready</div>
-      <div class="milestone-target-date">May 11</div>
-    </div>
-    <div class="milestone-card">
-      <div class="milestone-platform">Research Phase</div>
-      <div class="milestone-label">GraphQL &amp; Headless API</div>
-      <div class="milestone-target-date">Apr 14</div>
+      <div class="milestone-card-header">
+        <div class="milestone-platform">Android Compose Feed</div>
+        <div class="milestone-status on-track"><div class="milestone-status-dot"></div> On Track</div>
+      </div>
+      <div class="milestone-dates">
+        <div class="milestone-date-row">
+          <div class="ms-label">Full Platform Internal Testing</div>
+          <div class="ms-date">May 4</div>
+        </div>
+        <div class="milestone-date-row">
+          <div class="ms-label">General Release-Ready</div>
+          <div class="ms-date">May 8</div>
+        </div>
+        <div class="milestone-date-row primary">
+          <div class="ms-label">General Deploy Train</div>
+          <div class="ms-date">May 11</div>
+        </div>
+      </div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Research spike this week (Sammy)&mdash;build continues with remaining squad.</div>
+      <div class="milestone-progress-row">
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:52%"></div></div>
+        <div class="milestone-progress-pct">52%</div>
+      </div>
     </div>
   </div>
 </div>
@@ -697,12 +825,13 @@
 <!-- ═══════════ HIGHLIGHTS ═══════════ -->
 <div class="highlights">
   <div class="highlights-header">
-    <div class="highlights-title">Notable Highlights</div>
+    <div class="highlights-title">This Week's Highlights</div>
+    <div style="font-size:13px; color:rgba(9,43,46,0.45); margin-top:2px;">Rolling updates from the last 7 days</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a "RemoteObject hijack" middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
+      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -742,7 +871,7 @@
       <div class="platform-icon ios-icon">i</div>
       <span class="platform-name">iOS Feed Refactor</span>
     </div>
-    <div class="platform-target">Target General Release-Ready: June 10</div>
+    <div class="platform-target">Deploy Train: June 15</div>
   </div>
 
   <!-- Phase Timeline -->
@@ -755,22 +884,22 @@
     <div class="phase-item">
       <div class="phase-dot in-progress">2</div>
       <div class="phase-label">Component Building</div>
-      <div class="phase-dates">Mar 23 &ndash; Apr 24</div>
+      <div class="phase-dates">Mar 23 &ndash; May 1</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">3</div>
       <div class="phase-label">Integration</div>
-      <div class="phase-dates">Apr 25 &ndash; May 22</div>
+      <div class="phase-dates">May 4 &ndash; 22</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">4</div>
       <div class="phase-label">Polish &amp; Analytics</div>
-      <div class="phase-dates">May 23 &ndash; Jun 1</div>
+      <div class="phase-dates">May 26 &ndash; Jun 1</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">Jun 2 &ndash; Jun 10</div>
+      <div class="phase-dates">Jun 4 &ndash; 10</div>
     </div>
   </div>
 
@@ -791,6 +920,16 @@
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
 
+  <!-- Risks / Notes -->
+  <div class="risks-section">
+    <div class="risks-header">
+      &#9888; Risks &amp; Notes
+    </div>
+    <div class="risk-item">Research phase starts Apr 6 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
+    <div class="risk-item">Discovery card designs still in progress &mdash; blocking component build on both platforms.</div>
+    <div class="risk-item">Filter screen UI is functional but dated &mdash; decision pending on whether to recreate in new design.</div>
+  </div>
+
   <!-- Status Columns -->
   <div class="status-columns">
     <div class="status-col">
@@ -805,10 +944,6 @@
       <div class="status-item">
         <strong>Event Header extraction</strong>
         <div class="detail">Henrique building event card content &mdash; PRs incoming for Post Card Event Content</div>
-      </div>
-      <div class="status-item">
-        <strong>Post Event Card component</strong>
-        <div class="detail">Design specs clarified (event description, livestream CTAs)</div>
       </div>
       <div class="status-item">
         <strong>FeedViewRouter dependency extraction</strong>
@@ -851,6 +986,10 @@
       <div class="status-col-header">
         <span class="indicator indicator-done"></span>
         Completed
+      </div>
+      <div class="status-item">
+        <strong>Post Event Card component</strong>
+        <div class="detail">Event description, livestream CTAs &mdash; shipped</div>
       </div>
       <div class="status-item">
         <strong>Global icon refactor</strong>
@@ -898,16 +1037,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Risks / Notes -->
-  <div class="risks-section">
-    <div class="risks-header">
-      &#9888; Risks &amp; Notes
-    </div>
-    <div class="risk-item">Research phase starts Apr 6 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
-    <div class="risk-item">Post Event Card design specs still being finalized (event description, livestream CTAs).</div>
-    <div class="risk-item">Filter screen UI is functional but dated &mdash; decision pending on whether to recreate in new design.</div>
-  </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
     <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 &rarr;</a>
@@ -922,7 +1051,7 @@
       <div class="platform-icon android-icon">A</div>
       <span class="platform-name">Android Compose Feed</span>
     </div>
-    <div class="platform-target">Target General Release-Ready: May 11</div>
+    <div class="platform-target">Deploy Train: May 11</div>
   </div>
 
   <!-- Phase Timeline -->
@@ -944,13 +1073,13 @@
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">4</div>
-      <div class="phase-label">Integration &amp; Polish</div>
-      <div class="phase-dates">May 2 &ndash; May 8</div>
+      <div class="phase-label">Integration</div>
+      <div class="phase-dates">Apr 27 &ndash; May 1</div>
     </div>
     <div class="phase-item">
       <div class="phase-dot upcoming">5</div>
       <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">May 8 &ndash; May 11</div>
+      <div class="phase-dates">May 4 &ndash; 8</div>
     </div>
   </div>
 
@@ -969,6 +1098,18 @@
     </div>
     <div class="progress-pct">~55%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
+  </div>
+
+  <!-- Risks / Notes -->
+  <div class="risks-section">
+    <div class="risks-header">
+      &#9888; Risks &amp; Notes
+    </div>
+    <div class="risk-item">Research phase starts Apr 6 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
+    <div class="risk-item">Discovery card designs still in progress &mdash; blocking component build on both platforms.</div>
+    <div class="risk-item">Nested scroll coordination &mdash; Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
+    <div class="risk-item">Profile Prompt carousel is the highest-complexity special card &mdash; horizontal carousel with dynamic item sizing.</div>
+    <div class="risk-item">Android feed engagement tracking data looks off &mdash; Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
   </div>
 
   <!-- Status Columns -->
@@ -1049,17 +1190,6 @@
         <div class="detail">40+ component mappings, all tokens documented</div>
       </div>
     </div>
-  </div>
-
-  <!-- Risks / Notes -->
-  <div class="risks-section">
-    <div class="risks-header">
-      &#9888; Risks &amp; Notes
-    </div>
-    <div class="risk-item">Research phase starts Apr 6 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
-    <div class="risk-item">Nested scroll coordination &mdash; Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
-    <div class="risk-item">Profile Prompt carousel is the highest-complexity special card &mdash; horizontal carousel with dynamic item sizing.</div>
-    <div class="risk-item">Android feed engagement tracking data looks off &mdash; Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
