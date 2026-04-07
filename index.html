@@ -318,7 +318,7 @@
     position: relative;
   }
   .risk-item::before {
-    content: '\2014';
+    content: '—';
     position: absolute;
     left: 0;
     color: rgba(9,43,46,0.3);
@@ -484,7 +484,7 @@
     color: rgba(9,43,46,0.7);
   }
   .score-pr-list li::before {
-    content: '\2022';
+    content: '•';
     position: absolute;
     left: 0;
     color: var(--teal);
@@ -553,6 +553,11 @@
     background: rgba(0,208,173,0.2);
     color: var(--teal);
   }
+  .milestone-status.date-moved {
+    background: rgba(250,77,80,0.2);
+    color: var(--red);
+  }
+  .milestone-status.date-moved .milestone-status-dot { background: var(--red); }
   .milestone-status.at-risk {
     background: rgba(255,156,50,0.2);
     color: var(--yellow);
@@ -747,15 +752,6 @@
     </div>
     <div class="header-meta">
       <div class="updated-token">Updated April 7, 2026</div>
-      <div class="target-badge">
-        <span class="dot"></span>
-        iOS Deploy Train: June 15*
-      </div>
-      <div class="target-badge">
-        <span class="dot"></span>
-        Android Deploy Train: May 11*
-      </div>
-      <div class="header-note"><span>*</span> Dates shifted +1 week due to Headless API &amp; GraphQL research phase (Apr 7). Andrej &amp; Sammy on week-long spike; findings review Apr 14.</div>
     </div>
   </div>
 </div>
@@ -766,13 +762,12 @@
 <div class="milestones">
   <div class="milestones-header">
     <div class="milestones-title">Key Milestones</div>
-    <div class="milestones-subtitle">Are we on track? When is this in production?</div>
   </div>
   <div class="milestones-grid">
     <div class="milestone-card">
       <div class="milestone-card-header">
         <div class="milestone-platform">iOS Feed Refactor</div>
-        <div class="milestone-status on-track"><div class="milestone-status-dot"></div> On Track</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row">
@@ -788,7 +783,7 @@
           <div class="ms-date">June 15</div>
         </div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Research spike this week (Andrej)&mdash;one-week pause, then resuming build.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5) with focus on article and discovery cards. Research spike this week for Headless API (one-week pause for the data layer track).</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:28%"></div></div>
         <div class="milestone-progress-pct">28%</div>
@@ -797,7 +792,7 @@
     <div class="milestone-card">
       <div class="milestone-card-header">
         <div class="milestone-platform">Android Compose Feed</div>
-        <div class="milestone-status on-track"><div class="milestone-status-dot"></div> On Track</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row">
@@ -813,7 +808,7 @@
           <div class="ms-date">May 11</div>
         </div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Research spike this week (Sammy)&mdash;build continues with remaining squad.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Research spike this week for Headless API &mdash; build on the Global Feed on deck. Code complete on Space Feed and in testing. Article and discovery cards on deck.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:52%"></div></div>
         <div class="milestone-progress-pct">52%</div>
@@ -831,15 +826,15 @@
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a &ldquo;RemoteObject hijack&rdquo; middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
+      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a "RemoteObject hijack" middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>iOS router refactoring: Core Data removal in motion.</strong> Andrej shipped PRs refactoring the factory method out of the router, removing its dependency on Core Data. End goal: the entire new UI stack becomes 100% unit testable and fully separated from Core Data.</div>
+      <div><strong>iOS router refactoring: Core Data removal in motion.</strong> Andrej merged PRs refactoring the factory method out of the router, removing its dependency on Core Data. End goal: the entire new UI stack becomes 100% unit testable and fully separated from Core Data.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Android Phase 2 complete -- Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting April 18.</div>
+      <div><strong>Android Phase 2 complete -- Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting May 1 completion.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -859,7 +854,11 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Feed performance instrumentation shipped (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation -- baseline production numbers expected after ~1-2 weeks of data collection.</div>
+      <div><strong>Feed performance instrumentation merged (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation -- baseline production numbers expected after ~1-2 weeks of data collection.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Event Content is merged and available for preview in our Feed View library.</strong></div>
     </div>
   </div>
 </div>
@@ -926,7 +925,7 @@
       &#9888; Risks &amp; Notes
     </div>
     <div class="risk-item">Research phase starts Apr 6 &mdash; Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
-    <div class="risk-item">Discovery card designs still in progress &mdash; blocking component build on both platforms.</div>
+    <div class="risk-item">Discovery card designs still in progress &mdash; will prioritize build to unblock Mammoth upcoming project.</div>
     <div class="risk-item">Filter screen UI is functional but dated &mdash; decision pending on whether to recreate in new design.</div>
   </div>
 
@@ -989,7 +988,7 @@
       </div>
       <div class="status-item">
         <strong>Post Event Card component</strong>
-        <div class="detail">Event description, livestream CTAs &mdash; shipped</div>
+        <div class="detail">Event description, livestream CTAs &mdash; merged</div>
       </div>
       <div class="status-item">
         <strong>Global icon refactor</strong>
@@ -1106,7 +1105,7 @@
       &#9888; Risks &amp; Notes
     </div>
     <div class="risk-item">Research phase starts Apr 6 &mdash; Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
-    <div class="risk-item">Discovery card designs still in progress &mdash; blocking component build on both platforms.</div>
+    <div class="risk-item">Discovery card designs still in progress &mdash; will prioritize build to unblock Mammoth upcoming project.</div>
     <div class="risk-item">Nested scroll coordination &mdash; Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
     <div class="risk-item">Profile Prompt carousel is the highest-complexity special card &mdash; horizontal carousel with dynamic item sizing.</div>
     <div class="risk-item">Android feed engagement tracking data looks off &mdash; Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
