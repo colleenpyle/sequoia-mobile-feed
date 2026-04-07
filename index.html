@@ -104,6 +104,58 @@
     padding: 32px 24px 48px;
   }
 
+  /* ─── KEY MILESTONES SECTION ─── */
+  .milestones {
+    background: var(--white);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
+  }
+  .milestones-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba(9,43,46,0.06);
+  }
+  .milestones-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .milestones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .milestone-card {
+    padding: 20px 24px;
+    border-right: 1px solid rgba(9,43,46,0.06);
+    border-bottom: 1px solid rgba(9,43,46,0.06);
+  }
+  .milestone-card:nth-child(3n) {
+    border-right: none;
+  }
+  .milestone-card:nth-child(n+4) {
+    border-bottom: none;
+  }
+  .milestone-platform {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark-teal);
+    margin-bottom: 4px;
+  }
+  .milestone-label {
+    font-size: 12px;
+    color: rgba(9,43,46,0.6);
+    margin-bottom: 6px;
+  }
+  .milestone-target-date {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--accessible-teal);
+  }
+
   /* ─── PLATFORM SECTION ─── */
   .platform-section {
     background: var(--white);
@@ -617,6 +669,30 @@
 </div>
 
 <div class="container">
+
+<!-- ═══════════ KEY MILESTONES ═══════════ -->
+<div class="milestones">
+  <div class="milestones-header">
+    <div class="milestones-title">Key Milestones</div>
+  </div>
+  <div class="milestones-grid">
+    <div class="milestone-card">
+      <div class="milestone-platform">iOS</div>
+      <div class="milestone-label">General Release-Ready</div>
+      <div class="milestone-target-date">June 10</div>
+    </div>
+    <div class="milestone-card">
+      <div class="milestone-platform">Android</div>
+      <div class="milestone-label">General Release-Ready</div>
+      <div class="milestone-target-date">May 11</div>
+    </div>
+    <div class="milestone-card">
+      <div class="milestone-platform">Research Phase</div>
+      <div class="milestone-label">GraphQL &amp; Headless API</div>
+      <div class="milestone-target-date">Apr 14</div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════ HIGHLIGHTS ═══════════ -->
 <div class="highlights">
