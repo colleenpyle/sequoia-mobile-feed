@@ -111,7 +111,10 @@
     margin-bottom: 24px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(9,43,46,0.06);
+    border-top: 4px solid transparent;
   }
+  .platform-section.ios-section { border-top-color: var(--blue); }
+  .platform-section.android-section { border-top-color: var(--accessible-teal); }
   .platform-header {
     display: flex;
     align-items: center;
@@ -134,7 +137,7 @@
     font-size: 18px;
     font-weight: 700;
   }
-  .ios-icon { background: var(--dark-teal); color: var(--white); }
+  .ios-icon { background: var(--blue); color: var(--white); }
   .android-icon { background: var(--accessible-teal); color: var(--white); }
   .platform-name {
     font-family: 'Inter Tight', sans-serif;
@@ -526,6 +529,8 @@
     border-radius: 12px;
     padding: 20px 22px;
   }
+  .milestone-card.ios-milestone { border-top: 3px solid var(--blue); }
+  .milestone-card.android-milestone { border-top: 3px solid var(--accessible-teal); }
   .milestone-card-header {
     display: flex;
     justify-content: space-between;
@@ -751,7 +756,7 @@
       <h1>Sequoia <span>Mobile Feed</span></h1>
     </div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 7, 2026</div>
+      <div class="updated-token">Updated April 8, 2026</div>
     </div>
   </div>
 </div>
@@ -764,9 +769,9 @@
     <div class="milestones-title">Key Milestones</div>
   </div>
   <div class="milestones-grid">
-    <div class="milestone-card">
+    <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
-        <div class="milestone-platform">iOS Feed Refactor</div>
+        <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
         <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
@@ -789,9 +794,9 @@
         <div class="milestone-progress-pct">~32%</div>
       </div>
     </div>
-    <div class="milestone-card">
+    <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
-        <div class="milestone-platform">Android Compose Feed</div>
+        <div class="milestone-platform">&#129302; Android Compose Feed</div>
         <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
@@ -842,7 +847,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Figma &rarr; Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last.</div>
+      <div><strong>Figma → Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -864,7 +869,7 @@
 </div>
 
 <!-- ═══════════ iOS SECTION ═══════════ -->
-<div class="platform-section">
+<div class="platform-section ios-section">
   <div class="platform-header">
     <div class="platform-header-left">
       <div class="platform-icon ios-icon">&#128241;</div>
@@ -1045,7 +1050,7 @@
 </div>
 
 <!-- ═══════════ ANDROID SECTION ═══════════ -->
-<div class="platform-section">
+<div class="platform-section android-section">
   <div class="platform-header">
     <div class="platform-header-left">
       <div class="platform-icon android-icon">&#129302;</div>
