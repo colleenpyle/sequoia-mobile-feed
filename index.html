@@ -36,7 +36,6 @@
     padding: 0;
   }
 
-  /* ─── HEADER ─── */
   .header {
     background: var(--dark-teal);
     color: var(--white);
@@ -55,15 +54,7 @@
     letter-spacing: -0.5px;
     margin-bottom: 6px;
   }
-  .header h1 span {
-    color: var(--teal);
-  }
-  .header .subtitle {
-    font-size: 16px;
-    color: rgba(255,255,255,0.7);
-    font-weight: 400;
-    max-width: 500px;
-  }
+  .header h1 span { color: var(--teal); }
   .header-meta {
     text-align: right;
     display: flex;
@@ -78,33 +69,11 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  .target-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(0,208,173,0.15);
-    border: 1px solid rgba(0,208,173,0.3);
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--teal);
-  }
-  .target-badge .dot {
-    width: 6px;
-    height: 6px;
-    background: var(--teal);
-    border-radius: 50%;
-  }
-
-  /* ─── MAIN CONTENT ─── */
   .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 32px 24px 48px;
   }
-
-  /* ─── PLATFORM SECTION ─── */
   .platform-section {
     background: var(--white);
     border-radius: 16px;
@@ -122,72 +91,34 @@
     padding: 20px 28px;
     border-bottom: 1px solid rgba(9,43,46,0.06);
   }
-  .platform-header-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .platform-header-left { display: flex; align-items: center; gap: 12px; }
   .platform-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 700;
+    width: 36px; height: 36px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700;
   }
   .ios-icon { background: var(--blue); color: var(--white); }
   .android-icon { background: var(--accessible-teal); color: var(--white); }
-  .platform-name {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
+  .platform-name { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
   .platform-target {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accessible-teal);
-    background: rgba(0,167,139,0.08);
-    padding: 4px 12px;
-    border-radius: 12px;
+    font-size: 13px; font-weight: 600; color: var(--accessible-teal);
+    background: rgba(0,167,139,0.08); padding: 4px 12px; border-radius: 12px;
   }
-
-  /* ─── PHASE TIMELINE ─── */
   .phase-timeline {
-    display: flex;
-    gap: 0;
-    padding: 20px 28px;
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-    overflow-x: auto;
+    display: flex; gap: 0; padding: 20px 28px;
+    border-bottom: 1px solid rgba(9,43,46,0.06); overflow-x: auto;
   }
   .phase-item {
-    flex: 1;
-    min-width: 0;
-    position: relative;
-    text-align: center;
-    padding: 0 8px;
+    flex: 1; min-width: 0; position: relative; text-align: center; padding: 0 8px;
   }
   .phase-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 14px;
-    right: -4px;
-    width: 8px;
-    height: 2px;
-    background: rgba(9,43,46,0.15);
+    content: ''; position: absolute; top: 14px; right: -4px;
+    width: 8px; height: 2px; background: rgba(9,43,46,0.15);
   }
   .phase-dot {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    margin: 0 auto 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--white);
+    width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--white);
   }
   .phase-dot.completed { background: var(--accessible-teal); }
   .phase-dot.in-progress { background: var(--blue); animation: pulse 2s ease-in-out infinite; }
@@ -196,578 +127,150 @@
     0%, 100% { box-shadow: 0 0 0 0 rgba(73,93,235,0.3); }
     50% { box-shadow: 0 0 0 6px rgba(73,93,235,0); }
   }
-  .phase-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--dark-teal);
-    line-height: 1.3;
-  }
-  .phase-dates {
-    font-size: 10px;
-    color: rgba(9,43,46,0.45);
-    margin-top: 2px;
-  }
-
-  /* ─── PROGRESS BAR ─── */
+  .phase-label { font-size: 11px; font-weight: 600; color: var(--dark-teal); line-height: 1.3; }
+  .phase-dates { font-size: 10px; color: rgba(9,43,46,0.45); margin-top: 2px; }
   .progress-bar-section {
-    padding: 16px 28px;
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    padding: 16px 28px; border-bottom: 1px solid rgba(9,43,46,0.06);
+    display: flex; align-items: center; gap: 16px;
   }
   .progress-track {
-    flex: 1;
-    height: 10px;
-    background: rgba(9,43,46,0.06);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
+    flex: 1; height: 10px; background: rgba(9,43,46,0.06); border-radius: 6px; overflow: hidden;
   }
-  .progress-fill {
-    height: 100%;
-    border-radius: 6px;
-    transition: width 0.6s ease;
-  }
-  .progress-fill.phase-complete { background: var(--accessible-teal); }
+  .progress-fill { height: 100%; border-radius: 6px; }
   .progress-fill.phase-active { background: var(--blue); }
-  .progress-pct {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--dark-teal);
-    white-space: nowrap;
-  }
-  .progress-miro {
-    font-size: 12px;
-    color: var(--accessible-teal);
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-  }
+  .progress-pct { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; }
+  .progress-miro { font-size: 12px; color: var(--accessible-teal); text-decoration: none; font-weight: 500; white-space: nowrap; }
   .progress-miro:hover { text-decoration: underline; }
-
-  /* ─── STATUS COLUMNS ─── */
-  .status-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0;
-    padding: 0;
-  }
-  .status-col {
-    padding: 20px 24px;
-    border-right: 1px solid rgba(9,43,46,0.06);
-  }
+  .status-columns { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .status-col { padding: 20px 24px; border-right: 1px solid rgba(9,43,46,0.06); }
   .status-col:last-child { border-right: none; }
   .status-col-header {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
   }
-  .status-col-header .indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
+  .status-col-header .indicator { width: 8px; height: 8px; border-radius: 50%; }
   .status-col-completed { background: rgba(9,43,46,0.025); }
   .indicator-done { background: var(--accessible-teal); }
   .indicator-progress { background: var(--blue); }
   .indicator-deck { background: var(--yellow); }
-
-  .status-item {
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(9,43,46,0.04);
-  }
+  .status-item { font-size: 13px; line-height: 1.5; padding: 6px 0; border-bottom: 1px solid rgba(9,43,46,0.04); }
   .status-item:last-child { border-bottom: none; }
-  .status-item strong {
-    font-weight: 600;
-  }
-  .status-item .detail {
-    color: rgba(9,43,46,0.55);
-    font-size: 12px;
-  }
-
-  /* ─── RISKS / NOTES ─── */
-  .risks-section {
-    padding: 16px 28px 20px;
-    background: rgba(9,43,46,0.02);
-    border-top: 1px solid rgba(9,43,46,0.06);
-  }
+  .status-item strong { font-weight: 600; }
+  .status-item .detail { color: rgba(9,43,46,0.55); font-size: 12px; }
+  .risks-section { padding: 16px 28px 20px; background: rgba(9,43,46,0.02); border-top: 1px solid rgba(9,43,46,0.06); }
   .risks-header {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 8px;
-    color: var(--red);
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; color: var(--red);
+    display: flex; align-items: center; gap: 6px;
   }
-  .risk-item {
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 4px 0;
-    padding-left: 16px;
-    position: relative;
-  }
-  .risk-item::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: rgba(9,43,46,0.3);
-  }
-
-  /* ─── RESEARCH PHASE INJECTION ─── */
+  .risk-item { font-size: 13px; line-height: 1.5; padding: 4px 0 4px 16px; position: relative; }
+  .risk-item::before { content: '&#8212;'; position: absolute; left: 0; color: rgba(9,43,46,0.3); }
   .research-injection {
-    padding: 14px 28px;
-    background: rgba(250,77,80,0.06);
-    border-top: 3px solid var(--red);
-    border-bottom: 1px solid rgba(250,77,80,0.15);
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    padding: 14px 28px; background: rgba(250,77,80,0.06);
+    border-top: 3px solid var(--red); border-bottom: 1px solid rgba(250,77,80,0.15);
+    display: flex; align-items: flex-start; gap: 10px;
   }
-  .research-injection-icon {
-    font-size: 16px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .research-injection-text {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--dark-teal);
-  }
-  .research-injection-text strong {
-    color: var(--red);
-    font-weight: 700;
-  }
-  .research-injection-text .research-dates {
-    color: rgba(9,43,46,0.55);
-    font-size: 12px;
-  }
-
-  /* ─── HEADER NOTE ─── */
-  .header-note {
-    font-size: 11px;
-    color: rgba(255,255,255,0.45);
-    margin-top: 6px;
-    font-style: italic;
-    text-align: right;
-    max-width: 420px;
-    margin-left: auto;
-    line-height: 1.4;
-  }
-  .header-note span {
-    color: var(--red);
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  /* ─── HIGHLIGHT ALTERNATING COLORS (nth-child) ─── */
-
-  /* ─── PLATFORM RESOURCES ─── */
+  .research-injection-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .research-injection-text { font-size: 13px; line-height: 1.5; }
+  .research-injection-text strong { color: var(--red); font-weight: 700; }
+  .research-injection-text .research-dates { color: rgba(9,43,46,0.55); font-size: 12px; }
   .platform-resources {
-    padding: 14px 28px 18px;
-    background: rgba(0,167,139,0.03);
-    border-top: 1px solid rgba(9,43,46,0.06);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    padding: 14px 28px 18px; background: rgba(0,167,139,0.03);
+    border-top: 1px solid rgba(9,43,46,0.06); display: flex; flex-wrap: wrap; gap: 16px;
   }
-  .platform-resource-link {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--accessible-teal);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
+  .platform-resource-link { font-size: 12px; font-weight: 500; color: var(--accessible-teal); text-decoration: none; }
   .platform-resource-link:hover { text-decoration: underline; }
-
-  /* ─── DEVX WINS ─── */
   .scoreboard {
-    background: var(--white);
-    border-radius: 16px;
-    margin-bottom: 24px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
+    background: var(--white); border-radius: 16px; margin-bottom: 24px;
+    overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06);
   }
-  .scoreboard-header {
-    padding: 20px 28px;
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .scoreboard-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .scoreboard-link {
-    font-size: 13px;
-    color: var(--accessible-teal);
-    text-decoration: none;
-    font-weight: 500;
-  }
+  .scoreboard-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); display: flex; align-items: center; justify-content: space-between; }
+  .scoreboard-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
+  .scoreboard-link { font-size: 13px; color: var(--accessible-teal); text-decoration: none; font-weight: 500; }
   .scoreboard-link:hover { text-decoration: underline; }
-  .scoreboard-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-  .score-card {
-    padding: 24px 28px 28px;
-    border-right: 1px solid rgba(9,43,46,0.06);
-  }
+  .scoreboard-body { display: grid; grid-template-columns: 1fr 1fr; }
+  .score-card { padding: 24px 28px 28px; border-right: 1px solid rgba(9,43,46,0.06); }
   .score-card:last-child { border-right: none; }
-  .score-card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
-  }
-  .score-platform {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--dark-teal);
-  }
-  .score-count {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--dark-teal);
-  }
-  .score-count a {
-    color: var(--dark-teal);
-    text-decoration: none;
-    border-bottom: 2px solid var(--teal);
-    transition: border-color 0.15s;
-    padding-bottom: 2px;
-  }
+  .score-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .score-platform { font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 600; }
+  .score-count { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; }
+  .score-count a { color: var(--dark-teal); text-decoration: none; border-bottom: 2px solid var(--teal); padding-bottom: 2px; }
   .score-count a:hover { border-color: var(--dark-teal); }
-  .score-count .count-label {
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(9,43,46,0.45);
-    margin-left: 4px;
-    letter-spacing: 0.3px;
-  }
-  .score-recent-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: rgba(9,43,46,0.35);
-    margin-bottom: 6px;
-  }
-  .score-pr-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .score-pr-list li {
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 4px 0;
-    padding-left: 14px;
-    position: relative;
-    color: rgba(9,43,46,0.7);
-  }
-  .score-pr-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--teal);
-    font-weight: 700;
-  }
-
-  /* ─── KEY MILESTONES ─── */
+  .score-count .count-label { font-size: 12px; font-weight: 500; color: rgba(9,43,46,0.45); margin-left: 4px; }
+  .score-recent-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(9,43,46,0.35); margin-bottom: 6px; }
+  .score-pr-list { list-style: none; padding: 0; margin: 0; }
+  .score-pr-list li { font-size: 13px; line-height: 1.5; padding: 4px 0 4px 14px; position: relative; color: rgba(9,43,46,0.7); }
+  .score-pr-list li::before { content: '&#8226;'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
   .milestones {
-    background: var(--dark-teal);
-    border-radius: 16px;
-    margin-bottom: 24px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(9,43,46,0.12);
+    background: var(--dark-teal); border-radius: 16px; margin-bottom: 24px;
+    overflow: hidden; box-shadow: 0 2px 8px rgba(9,43,46,0.12);
   }
-  .milestones-header {
-    padding: 20px 28px 0;
-  }
-  .milestones-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--white);
-    letter-spacing: -0.3px;
-  }
-  .milestones-subtitle {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 4px;
-  }
-  .milestones-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    padding: 20px 28px 24px;
-  }
-  .milestone-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 20px 22px;
-  }
+  .milestones-header { padding: 20px 28px 0; }
+  .milestones-title { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: var(--white); }
+  .milestones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px 28px 24px; }
+  .milestone-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 22px; }
   .milestone-card.ios-milestone { border-top: 3px solid var(--blue); }
   .milestone-card.android-milestone { border-top: 3px solid var(--accessible-teal); }
-  .milestone-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-  }
-  .milestone-platform {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--white);
-  }
+  .milestone-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .milestone-platform { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 15px; color: var(--white); }
   .milestone-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 12px;
-    border-radius: 20px;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 12px; border-radius: 20px;
   }
-  .milestone-status.on-track {
-    background: rgba(0,208,173,0.2);
-    color: var(--teal);
-  }
-  .milestone-status.date-moved {
-    background: rgba(250,77,80,0.2);
-    color: var(--red);
-  }
+  .milestone-status.date-moved { background: rgba(250,77,80,0.2); color: var(--red); }
   .milestone-status.date-moved .milestone-status-dot { background: var(--red); }
-  .milestone-status.at-risk {
-    background: rgba(255,156,50,0.2);
-    color: var(--yellow);
-  }
-  .milestone-status-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-  }
-  .milestone-status.on-track .milestone-status-dot { background: var(--teal); }
-  .milestone-status.at-risk .milestone-status-dot { background: var(--yellow); }
-  .milestone-dates {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 14px;
-  }
-  .milestone-date-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
+  .milestone-status-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .milestone-dates { display: flex; flex-direction: column; margin-bottom: 14px; }
+  .milestone-date-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .milestone-date-row:last-child { border-bottom: none; }
-  .milestone-date-row.primary .ms-date {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--teal);
-    font-family: 'Inter Tight', sans-serif;
-    letter-spacing: -0.3px;
-  }
-  .milestone-date-row.primary .ms-label {
-    font-weight: 600;
-    color: rgba(255,255,255,0.85);
-  }
-  .ms-label {
-    font-size: 13px;
-    color: rgba(255,255,255,0.55);
-    font-weight: 500;
-  }
-  .ms-date {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.75);
-    font-family: 'Inter Tight', sans-serif;
-  }
-  .milestone-detail {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.5;
-  }
-  .milestone-detail strong {
-    color: rgba(255,255,255,0.85);
-    font-weight: 600;
-  }
-  .milestone-progress-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 12px;
-  }
-  .milestone-progress-bar {
-    flex: 1;
-    height: 6px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .milestone-progress-fill {
-    height: 100%;
-    border-radius: 3px;
-    background: var(--teal);
-  }
-  .milestone-progress-pct {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--teal);
-    min-width: 36px;
-    text-align: right;
-  }
-
-  /* ─── HIGHLIGHTS ─── */
-  .highlights {
-    background: var(--white);
-    border-radius: 16px;
-    margin-bottom: 24px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
-    border: 2px solid var(--green);
-  }
-  .highlights-header {
-    padding: 20px 28px;
-    border-bottom: 1px solid rgba(200,240,105,0.35);
-    background: rgba(200,240,105,0.08);
-  }
-  .highlights-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .highlights-body {
-    padding: 20px 28px;
-  }
-  .highlight-item {
-    display: flex;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(9,43,46,0.04);
-    font-size: 14px;
-    line-height: 1.55;
-  }
+  .milestone-date-row.primary .ms-date { font-size: 22px; font-weight: 700; color: var(--teal); font-family: 'Inter Tight', sans-serif; }
+  .milestone-date-row.primary .ms-label { font-weight: 600; color: rgba(255,255,255,0.85); }
+  .ms-label { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
+  .ms-date { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.75); font-family: 'Inter Tight', sans-serif; }
+  .milestone-detail { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+  .milestone-detail strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+  .milestone-progress-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  .milestone-progress-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+  .milestone-progress-fill { height: 100%; border-radius: 3px; background: var(--teal); }
+  .milestone-progress-pct { font-size: 13px; font-weight: 600; color: var(--teal); min-width: 36px; text-align: right; }
+  .highlights { background: var(--white); border-radius: 16px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); border: 2px solid var(--green); }
+  .highlights-header { padding: 20px 28px; border-bottom: 1px solid rgba(200,240,105,0.35); background: rgba(200,240,105,0.08); }
+  .highlights-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
+  .highlights-body { padding: 20px 28px; }
+  .highlight-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(9,43,46,0.04); font-size: 14px; line-height: 1.55; }
   .highlight-item:last-child { border-bottom: none; }
-  .highlight-icon {
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    margin-top: 1px;
-  }
+  .highlight-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 1px; }
   .highlight-item:nth-child(odd) .highlight-icon { background: rgba(200,240,105,0.25); }
   .highlight-item:nth-child(even) .highlight-icon { background: rgba(200,240,105,0.15); }
-
-  /* ─── RESOURCES ─── */
-  .resources {
-    background: var(--white);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
-    margin-bottom: 32px;
-  }
-  .resources-header {
-    padding: 20px 28px;
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-  }
-  .resources-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .resources-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    padding: 0;
-  }
-  .resource-item {
-    padding: 16px 24px;
-    border-right: 1px solid rgba(9,43,46,0.06);
-    border-bottom: 1px solid rgba(9,43,46,0.06);
-    text-decoration: none;
-    color: var(--dark-teal);
-    transition: background 0.15s;
-  }
+  .resources { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); margin-bottom: 32px; }
+  .resources-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); }
+  .resources-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
+  .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .resource-item { padding: 16px 24px; border-right: 1px solid rgba(9,43,46,0.06); border-bottom: 1px solid rgba(9,43,46,0.06); text-decoration: none; color: var(--dark-teal); transition: background 0.15s; }
   .resource-item:hover { background: var(--warm-grey); }
-  .resource-item[style*="cursor: default"]:hover { background: var(--white); }
   .resource-item:nth-child(3n) { border-right: none; }
-  .resource-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    font-weight: 600;
-    color: rgba(9,43,46,0.4);
-    margin-bottom: 2px;
-  }
-  .resource-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--accessible-teal);
-  }
-
-  /* ─── FOOTER ─── */
-  .footer {
-    text-align: center;
-    padding: 16px;
-    font-size: 11px;
-    color: rgba(9,43,46,0.3);
-  }
+  .resource-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; font-weight: 600; color: rgba(9,43,46,0.4); margin-bottom: 2px; }
+  .resource-name { font-size: 14px; font-weight: 500; color: var(--accessible-teal); }
+  .footer { text-align: center; padding: 16px; font-size: 11px; color: rgba(9,43,46,0.3); }
 </style>
 </head>
 <body>
 
-<!-- ═══════════ HEADER ═══════════ -->
 <div class="header">
   <div class="header-top">
-    <div>
-      <h1>Sequoia <span>Mobile Feed</span></h1>
-    </div>
+    <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 8, 2026</div>
+      <div class="updated-token">Updated April 10, 2026</div>
     </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- ═══════════ KEY MILESTONES ═══════════ -->
+<!-- KEY MILESTONES -->
 <div class="milestones">
-  <div class="milestones-header">
-    <div class="milestones-title">Key Milestones</div>
-  </div>
+  <div class="milestones-header"><div class="milestones-title">Key Milestones</div></div>
   <div class="milestones-grid">
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
@@ -775,23 +278,14 @@
         <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
-        <div class="milestone-date-row">
-          <div class="ms-label">Full Platform Internal Testing</div>
-          <div class="ms-date">June 2</div>
-        </div>
-        <div class="milestone-date-row">
-          <div class="ms-label">General Release-Ready</div>
-          <div class="ms-date">June 10</div>
-        </div>
-        <div class="milestone-date-row primary">
-          <div class="ms-label">General Deploy Train</div>
-          <div class="ms-date">June 15</div>
-        </div>
+        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 2</div></div>
+        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 10</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5) with focus on article and discovery cards.<br>*Target date moved back a week: Headless API research project added to roadmap (one-week pause for the data layer track).</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Poll cards and EmbeddedLinkView (24 variations) in progress. Prompt cards dropped from scope. Headless API research wrapping up Apr 14.<br>*Target moved back one week due to Headless API research sprint.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:32%"></div></div>
-        <div class="milestone-progress-pct">~32%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:35%"></div></div>
+        <div class="milestone-progress-pct">~35%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
@@ -800,75 +294,66 @@
         <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
       </div>
       <div class="milestone-dates">
-        <div class="milestone-date-row">
-          <div class="ms-label">Full Platform Internal Testing</div>
-          <div class="ms-date">May 4</div>
-        </div>
-        <div class="milestone-date-row">
-          <div class="ms-label">General Release-Ready</div>
-          <div class="ms-date">May 8</div>
-        </div>
-        <div class="milestone-date-row primary">
-          <div class="ms-label">General Deploy Train</div>
-          <div class="ms-date">May 11</div>
-        </div>
+        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 4</div></div>
+        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">May 8</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">May 11</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Code complete on Space Feed and in testing. Article, discovery cards and global feed on deck.<br>*Target date moved back a week: Headless API research project added to roadmap (one-week pause for the complex feed cards).</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed in Review. Poll parity gaps next, then small cards. Prompt cards dropped from scope.<br>*Target moved back one week due to Headless API research sprint.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:55%"></div></div>
-        <div class="milestone-progress-pct">~55%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:60%"></div></div>
+        <div class="milestone-progress-pct">~60%</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════ HIGHLIGHTS ═══════════ -->
+<!-- HIGHLIGHTS -->
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px; color:rgba(9,43,46,0.45); margin-top:2px;">Rolling updates from the last 7 days</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates from the last 7 days</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Headless API &amp; GraphQL research starts today (Apr 6).</strong> Andrej &amp; Sammy kick off a week-long spike on two tracks: migrating iOS off Core Data without rewriting UIs (a "RemoteObject hijack" middleware approach) and exploring a KMP unified networking layer. Findings review Apr 13, proposal Apr 14. Feed refactor continues in parallel with remaining squad members.</div>
+      <div><strong>Design decision: Prompt cards are getting dropped.</strong> Kelsey's engagement data showed &lt;0.3% click rates across profile builder and suggested members cards (tracked since Mar 27). Tom reviewed and agreed today. Front end will not render prompt cards in the new feed; server-side ticket still needed to stop serving them.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>iOS router refactoring: Core Data removal in motion.</strong> Andrej merged PRs refactoring the factory method out of the router, removing its dependency on Core Data. End goal: the entire new UI stack becomes 100% unit testable and fully separated from Core Data.</div>
+      <div><strong>Online now indicator dropped from initial feed release.</strong> Team aligned that accurate presence on the avatar in the new component is too complex for this release. The existing row-icon approach is not being carried forward. A holistic online presence system will be scoped separately.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Android Phase 2 complete -- Phase 3 rolling.</strong> Sammy wrapped Post Detail, Member Feed, and Pinned Feed conversions to Compose. Phase 3 (special card types &amp; complex feeds) is now underway, targeting May 1 completion.</div>
+      <div><strong>PostCard is the confirmed universal component name.</strong> Location-based names like "discovery cards" are out. All components are PostCards that display in different contexts and sizes -- direction formalized in the Apr 7 Card Sizing sync with Tom, Bradley, and Giada.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Android test coverage dashboard live.</strong> Mate built an auto-updating test coverage dashboard that recalculates on every merge -- giving the team real-time visibility into testing health across the platform.</div>
+      <div><strong>Rodrigo shipped ThemedBridgeView (iOS).</strong> A new generic SwiftUI wrapper that injects the Theme environment into UIHostingController call sites. Standardizes the legacy UIKit bridge pattern app-wide -- components use @Environment(\.theme), bridge stays in the integration layer only.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Figma → Code pipeline is live.</strong> Android can now go from Figma designs straight to production Compose components. iOS deployed matching skills: ios-figma-mapper, ios-ui-component, ios-feed-content. Each new component accelerates faster than the last.</div>
+      <div><strong>EmbeddedLinkView complexity fully mapped.</strong> Rodrigo catalogued 24 variations (3 sizes x 8 content types) needed for the new component: Generic, Event, Space, Collection, Plan, Poll, Recognition, and Announcement -- each at large, small, and tiny sizes.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Claude skills compounding.</strong> iOS data layer skills one-shotted a full new repository plan (DTOs, enums, repository, factory, composition root, and tests) -- zero back-and-forth. Both platforms now generate ~85-90% of boilerplate automatically.</div>
+      <div><strong>Poll card architecture aligned (iOS).</strong> Henrique and team aligned on container/content architecture for poll cards. Bradley updating Figma to match. Pattern supports the "Share Your Answer" button and will inform other interactive card types.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Mammoth/Sequoia editorial feed coordination locked in.</strong> Editorial feed will be its own standalone system sharing components with the new feed. Discovery cards &amp; carousel prioritized. Downloading with Tom on Tuesday 4/7 for discovery cards. All relevant components targeted ready (with mock data) by end of April. Mammoth project start ~April 30.</div>
+      <div><strong>Sammy shipped 5 Compose UI test fixes (Android).</strong> PRs 12325-12330 address: Add Choice delay debounce, RecyclerView absence in Compose feeds, RSVP view focus transfer, Compose node wait in Profile, and DeadObjectException prevention.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Feed performance instrumentation merged (Android).</strong> Firebase Performance traces for load time, JankStats for scroll jank, Crashlytics screen tagging for crash isolation -- baseline production numbers expected after ~1-2 weeks of data collection.</div>
+      <div><strong>Android Space Feed migration (SEQ-13195) moved to In Review.</strong> Rafael's Contextual (Space) Feed conversion is code complete and under team review.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Event Content is merged and available for preview in our Feed View library.</strong></div>
+      <div><strong>Headless API &amp; Core Data research wrapping up.</strong> Andrej &amp; Sammy finalizing their research sprint (started Apr 6). Internal findings review Monday Apr 13, full architecture proposal to leadership Tuesday Apr 14. Feed refactor continued in parallel all week.</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════ iOS SECTION ═══════════ -->
+<!-- iOS SECTION -->
 <div class="platform-section ios-section">
   <div class="platform-header">
     <div class="platform-header-left">
@@ -877,179 +362,72 @@
     </div>
     <div class="platform-target">Deploy Train: June 15</div>
   </div>
-
-  <!-- Phase Timeline -->
   <div class="phase-timeline">
-    <div class="phase-item">
-      <div class="phase-dot completed">&#10003;</div>
-      <div class="phase-label">Discovery &amp; Architecture</div>
-      <div class="phase-dates">Mar 4 &ndash; 20</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot in-progress">2</div>
-      <div class="phase-label">Component Building</div>
-      <div class="phase-dates">Mar 23 &ndash; May 1</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot upcoming">3</div>
-      <div class="phase-label">Integration</div>
-      <div class="phase-dates">May 4 &ndash; 22</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot upcoming">4</div>
-      <div class="phase-label">Polish &amp; Analytics</div>
-      <div class="phase-dates">May 26 &ndash; Jun 1</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot upcoming">5</div>
-      <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">Jun 4 &ndash; 10</div>
-    </div>
+    <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Discovery &amp; Architecture</div><div class="phase-dates">Mar 4 - 20</div></div>
+    <div class="phase-item"><div class="phase-dot in-progress">2</div><div class="phase-label">Component Building</div><div class="phase-dates">Mar 23 - May 1</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">3</div><div class="phase-label">Integration</div><div class="phase-dates">May 4 - 22</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">Polish &amp; Analytics</div><div class="phase-dates">May 26 - Jun 1</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">5</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 4 - 10</div></div>
   </div>
-
-  <!-- Progress Bar -->
   <div class="progress-bar-section">
-    <div class="progress-track">
-      <div class="progress-fill phase-active" style="width: 32%;"></div>
-    </div>
-    <div class="progress-pct">~32%</div>
-    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro →</a>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:35%"></div></div>
+    <div class="progress-pct">~35%</div>
+    <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
-
-  <!-- Research Phase Injection -->
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> — Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6 – 14 · Findings review Apr 13 · Proposal Apr 14</span>
+      <strong>Research Phase Wrapping Up</strong> -- Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6-14 &middot; Findings review Apr 13 &middot; Leadership proposal Apr 14</span>
     </div>
   </div>
-
-  <!-- Status Columns -->
   <div class="status-columns">
     <div class="status-col">
-      <div class="status-col-header">
-        <span class="indicator indicator-progress"></span>
-        In Progress
-      </div>
-      <div class="status-item">
-        <strong>Router factory refactoring</strong>
-        <div class="detail">Andrej extracting factory method from router, removing Core Data dependency</div>
-      </div>
-      <div class="status-item">
-        <strong>Event Header extraction</strong>
-        <div class="detail">Henrique building event card content — PRs incoming for Post Card Event Content</div>
-      </div>
-      <div class="status-item">
-        <strong>FeedViewRouter dependency extraction</strong>
-        <div class="detail">Pushing CoreData dependencies out of composition layer</div>
-      </div>
-      <div class="status-item">
-        <strong>Feed Realtime Service</strong>
-        <div class="detail">Architecture visualized — integrating with data &amp; MVVM layers</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
+      <div class="status-item"><strong>Poll cards</strong><div class="detail">Henrique -- container/content architecture aligned; Bradley updating Figma to match</div></div>
+      <div class="status-item"><strong>EmbeddedLinkView (24 variations)</strong><div class="detail">Rodrigo building new component -- 3 sizes x 8 content types</div></div>
+      <div class="status-item"><strong>FeedViewRouter dependency extraction</strong><div class="detail">Pushing CoreData dependencies out of composition layer</div></div>
+      <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture visualized -- integrating with data &amp; MVVM layers</div></div>
     </div>
-
     <div class="status-col">
-      <div class="status-col-header">
-        <span class="indicator indicator-deck"></span>
-        On Deck
-      </div>
-      <div class="status-item">
-        <strong>Discovery cards</strong>
-        <div class="detail">Thursday standup review with Bradley — prioritized for Mammoth editorial</div>
-      </div>
-      <div class="status-item">
-        <strong>Carousel component</strong>
-        <div class="detail">Next priority after discovery cards — Bradley syncing on designs</div>
-      </div>
-      <div class="status-item">
-        <strong>Remaining ~30 card components</strong>
-        <div class="detail">Articles, events, polls, courses, quick posts, etc.</div>
-      </div>
-      <div class="status-item">
-        <strong>Comments system extraction</strong>
-        <div class="detail">Standalone component needed for Post Detail</div>
-      </div>
-      <div class="status-item">
-        <strong>Filter data wiring</strong>
-        <div class="detail">Connect filter UI to data layer logic</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
+      <div class="status-item"><strong>Discovery card design finalization</strong><div class="detail">Giada sharing embed unification ideas Monday; Bradley working remaining variants (background image, galleries, file-only, link embeds)</div></div>
+      <div class="status-item"><strong>Carousel component</strong><div class="detail">Next priority after discovery cards -- needed for Mammoth by end of April</div></div>
+      <div class="status-item"><strong>Remaining card components</strong><div class="detail">Articles, events, courses, quick posts, etc.</div></div>
+      <div class="status-item"><strong>Comments system extraction</strong><div class="detail">Standalone component needed for Post Detail</div></div>
+      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connect filter UI to data layer logic</div></div>
     </div>
-
     <div class="status-col status-col-completed">
-      <div class="status-col-header">
-        <span class="indicator indicator-done"></span>
-        Completed
-      </div>
-      <div class="status-item">
-        <strong>Post Event Card component</strong>
-        <div class="detail">Event description, livestream CTAs — merged</div>
-      </div>
-      <div class="status-item">
-        <strong>Global icon refactor</strong>
-        <div class="detail">Rodrigo migrated all legacy icons to updated Figma set — app-wide</div>
-      </div>
-      <div class="status-item">
-        <strong>UI Library feed preview</strong>
-        <div class="detail">New Feed option in UI Library with Quick Post &amp; Unsupported Content samples</div>
-      </div>
-      <div class="status-item">
-        <strong>Data layer docs updated</strong>
-        <div class="detail">Realtime Service, API Service &amp; FlexSpaceRepository patterns documented</div>
-      </div>
-      <div class="status-item">
-        <strong>Data layer architecture</strong>
-        <div class="detail">Repository, networking, DTOs — diagrammed &amp; merged</div>
-      </div>
-      <div class="status-item">
-        <strong>UI architecture merged</strong>
-        <div class="detail">Modular SwiftUI feed card system — validated by iOS team</div>
-      </div>
-      <div class="status-item">
-        <strong>Full component mapping in Miro</strong>
-        <div class="detail">~40 components identified across all card types</div>
-      </div>
-      <div class="status-item">
-        <strong>New feed live behind feature flag</strong>
-        <div class="detail">ios_feed_refactor — loading real data in internal app</div>
-      </div>
-      <div class="status-item">
-        <strong>Post Detail: full rewrite decision</strong>
-        <div class="detail">98% component reuse with feed cards — single codebase</div>
-      </div>
-      <div class="status-item">
-        <strong>Filter UI component added</strong>
-        <div class="detail">Ready to wire to data layer</div>
-      </div>
-      <div class="status-item">
-        <strong>Float Action Button interactions</strong>
-        <div class="detail">Flow-based actions working end-to-end</div>
-      </div>
-      <div class="status-item">
-        <strong>Unsupported card type fallback</strong>
-        <div class="detail">Graceful placeholders for unbuilt card types</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
+      <div class="status-item"><strong>ThemedBridgeView utility</strong><div class="detail">SwiftUI/UIKit theme bridge -- standardizes legacy integration pattern app-wide</div></div>
+      <div class="status-item"><strong>Post Event Card component</strong><div class="detail">Event description, livestream CTAs -- merged</div></div>
+      <div class="status-item"><strong>Router factory refactoring</strong><div class="detail">Andrej extracted factory method, removing Core Data dependency</div></div>
+      <div class="status-item"><strong>Global icon refactor</strong><div class="detail">All legacy icons migrated to updated Figma set -- app-wide</div></div>
+      <div class="status-item"><strong>UI Library feed preview</strong><div class="detail">New Feed option with Quick Post &amp; Unsupported Content samples</div></div>
+      <div class="status-item"><strong>Data layer architecture</strong><div class="detail">Repository, networking, DTOs -- diagrammed &amp; merged</div></div>
+      <div class="status-item"><strong>UI architecture merged</strong><div class="detail">Modular SwiftUI feed card system -- validated by iOS team</div></div>
+      <div class="status-item"><strong>Full component mapping in Miro</strong><div class="detail">~40 components identified across all card types</div></div>
+      <div class="status-item"><strong>New feed live behind feature flag</strong><div class="detail">ios_feed_refactor -- loading real data in internal app</div></div>
+      <div class="status-item"><strong>Filter UI component added</strong><div class="detail">Ready to wire to data layer</div></div>
+      <div class="status-item"><strong>Float Action Button interactions</strong><div class="detail">Flow-based actions working end-to-end</div></div>
+      <div class="status-item"><strong>Unsupported card type fallback</strong><div class="detail">Graceful placeholders for unbuilt card types</div></div>
     </div>
   </div>
-
-  <!-- Risks / Notes -->
   <div class="risks-section">
-    <div class="risks-header">
-      &#9888; Risks &amp; Notes
-    </div>
-    <div class="risk-item">Research phase starts Apr 6 — Andrej &amp; Sammy shift to GraphQL spike for one week. Remaining squad continues feed refactor.</div>
-    <div class="risk-item">Discovery card designs still in progress — will prioritize build to unblock Mammoth upcoming project.</div>
-    <div class="risk-item">Filter screen UI is functional but dated — decision pending on whether to recreate in new design.</div>
+    <div class="risks-header">&#9888; Risks &amp; Notes</div>
+    <div class="risk-item">Prompt cards officially dropped -- server-side ticket still needed to stop serving them (pagination risk if first page fills with prompt cards).</div>
+    <div class="risk-item">Online now indicator dropped from initial release -- scope holistic presence system as a separate project.</div>
+    <div class="risk-item">Architecture proposal (headless API / Core Data) needs leadership buy-in by Apr 14. Potential 2-3 week impact on data layer timeline.</div>
+    <div class="risk-item">Discovery card designs must be ready end of April to unblock Mammoth. Get firm timeline from Bradley/Giada Monday.</div>
+    <div class="risk-item">P2 chat bugs surfaced (long load, reply reading, image sending, crashes on likes) -- Rodrigo ticketing and will address after current task.</div>
   </div>
-
   <div class="platform-resources">
-    <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
-    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 →</a>
-    <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board →</a>
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 &rarr;</a>
+    <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board &rarr;</a>
   </div>
 </div>
 
-<!-- ═══════════ ANDROID SECTION ═══════════ -->
+<!-- ANDROID SECTION -->
 <div class="platform-section android-section">
   <div class="platform-header">
     <div class="platform-header-left">
@@ -1058,155 +436,67 @@
     </div>
     <div class="platform-target">Deploy Train: May 11</div>
   </div>
-
-  <!-- Phase Timeline -->
   <div class="phase-timeline">
-    <div class="phase-item">
-      <div class="phase-dot completed">&#10003;</div>
-      <div class="phase-label">Foundation &amp; Saved Posts</div>
-      <div class="phase-dates">Mar 3 &ndash; 14</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot completed">&#10003;</div>
-      <div class="phase-label">Simple Screens</div>
-      <div class="phase-dates">Mar 17 &ndash; 28</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot in-progress">3</div>
-      <div class="phase-label">Complex Cards &amp; Feeds</div>
-      <div class="phase-dates">Mar 31 &ndash; May 1</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot upcoming">4</div>
-      <div class="phase-label">Integration</div>
-      <div class="phase-dates">Apr 27 &ndash; May 1</div>
-    </div>
-    <div class="phase-item">
-      <div class="phase-dot upcoming">5</div>
-      <div class="phase-label">QA &amp; Rollout</div>
-      <div class="phase-dates">May 4 &ndash; 8</div>
-    </div>
+    <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Foundation &amp; Saved Posts</div><div class="phase-dates">Mar 3 - 14</div></div>
+    <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Simple Screens</div><div class="phase-dates">Mar 17 - 28</div></div>
+    <div class="phase-item"><div class="phase-dot in-progress">3</div><div class="phase-label">Complex Cards &amp; Feeds</div><div class="phase-dates">Mar 31 - May 1</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">Integration</div><div class="phase-dates">Apr 27 - May 1</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">5</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">May 4 - 8</div></div>
   </div>
-
-  <!-- Progress Bar -->
   <div class="progress-bar-section">
-    <div class="progress-track">
-      <div class="progress-fill phase-active" style="width: 55%;"></div>
-    </div>
-    <div class="progress-pct">~55%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:60%"></div></div>
+    <div class="progress-pct">~60%</div>
   </div>
-
-  <!-- Research Phase Injection -->
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Research Phase Injected</strong> — Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6 – 14</span>
+      <strong>Research Phase Wrapping Up</strong> -- Headless API &amp; Core Data (Andrej &amp; Sammy). <span class="research-dates">Apr 6-14 &middot; Leadership proposal Apr 14</span>
     </div>
   </div>
-
-  <!-- Status Columns -->
   <div class="status-columns">
     <div class="status-col">
-      <div class="status-col-header">
-        <span class="indicator indicator-progress"></span>
-        In Progress
-      </div>
-      <div class="status-item">
-        <strong>Phase 3A: Special Card Types</strong>
-        <div class="detail">Advertisement, Discovery, Face Explorer, Profile Prompt, Course Item cards</div>
-      </div>
-      <div class="status-item">
-        <strong>Contextual Feed conversion</strong>
-        <div class="detail">Filters, space headers, real-time activity badge</div>
-      </div>
-      <div class="status-item">
-        <strong>Filter Dropdown component</strong>
-        <div class="detail">New FilterDropdownComponent + FeedUiEvent extensions</div>
-      </div>
-      <div class="status-item">
-        <strong>Poll/Question card polish</strong>
-        <div class="detail">Design review feedback being applied</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
+      <div class="status-item"><strong>Space Feed migration (SEQ-13195)</strong><div class="detail">Rafael -- code complete, now In Review</div></div>
+      <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael comparing Compose poll card vs legacy view-based version</div></div>
+      <div class="status-item"><strong>Phase 3: Special Card Types</strong><div class="detail">Discovery cards, small post cards; base architecture in place from Rodrigo</div></div>
+      <div class="status-item"><strong>Compose feed UI test stabilization</strong><div class="detail">Sammy shipped 5 fixes this week (PRs 12325-12330)</div></div>
     </div>
-
     <div class="status-col">
-      <div class="status-col-header">
-        <span class="indicator indicator-deck"></span>
-        On Deck
-      </div>
-      <div class="status-item">
-        <strong>Global Feed conversion</strong>
-        <div class="detail">Main home feed — invite buttons, live events, coaching overlays</div>
-      </div>
-      <div class="status-item">
-        <strong>Analytics wiring</strong>
-        <div class="detail">Impression tracking, interaction events → ViewModels</div>
-      </div>
-      <div class="status-item">
-        <strong>More Menu system parity</strong>
-        <div class="detail">~20 actions including edit, delete, pin, mute, report, share</div>
-      </div>
-      <div class="status-item">
-        <strong>Accessibility pass</strong>
-        <div class="detail">TalkBack verification across all card types</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
+      <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays</div></div>
+      <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking, interaction events to ViewModels</div></div>
+      <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share</div></div>
+      <div class="status-item"><strong>Accessibility pass</strong><div class="detail">TalkBack verification across all card types</div></div>
     </div>
-
     <div class="status-col status-col-completed">
-      <div class="status-col-header">
-        <span class="indicator indicator-done"></span>
-        Completed
-      </div>
-      <div class="status-item">
-        <strong>Phase 2: Simple Screen Conversions</strong>
-        <div class="detail">Post Detail, Member Feed, Pinned Feed — all converted to Compose</div>
-      </div>
-      <div class="status-item">
-        <strong>Feed performance instrumentation</strong>
-        <div class="detail">Firebase Performance traces, JankStats scroll jank, Crashlytics screen tagging</div>
-      </div>
-      <div class="status-item">
-        <strong>Phase 1: Foundation</strong>
-        <div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div>
-      </div>
-      <div class="status-item">
-        <strong>Saved Posts screen — fully converted</strong>
-        <div class="detail">First screen live on new Compose pipeline</div>
-      </div>
-      <div class="status-item">
-        <strong>Poll cards in Compose</strong>
-        <div class="detail">Full unit test coverage — 1,700+ lines of dead code removed</div>
-      </div>
-      <div class="status-item">
-        <strong>Figma → Compose design system mapping</strong>
-        <div class="detail">40+ component mappings, all tokens documented</div>
-      </div>
+      <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
+      <div class="status-item"><strong>5 Compose UI test fixes</strong><div class="detail">PRs 12325-12330: debounce, RecyclerView/Compose handling, RSVP focus, scroll assertions, DeadObjectException</div></div>
+      <div class="status-item"><strong>Phase 2: Simple Screen Conversions</strong><div class="detail">Post Detail, Member Feed, Pinned Feed -- all converted to Compose</div></div>
+      <div class="status-item"><strong>Feed performance instrumentation</strong><div class="detail">Firebase Performance traces, JankStats scroll jank, Crashlytics screen tagging</div></div>
+      <div class="status-item"><strong>Phase 1: Foundation</strong><div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div></div>
+      <div class="status-item"><strong>Poll cards in Compose</strong><div class="detail">Full unit test coverage -- 1,700+ lines of dead code removed</div></div>
+      <div class="status-item"><strong>Figma to Compose design system mapping</strong><div class="detail">40+ component mappings, all tokens documented</div></div>
     </div>
   </div>
-
-  <!-- Risks / Notes -->
   <div class="risks-section">
-    <div class="risks-header">
-      &#9888; Risks &amp; Notes
-    </div>
-    <div class="risk-item">Research phase starts Apr 6 — Sammy shifts to GraphQL spike. Phase 3 continues with remaining squad capacity.</div>
-    <div class="risk-item">Discovery card designs still in progress — will prioritize build to unblock Mammoth upcoming project.</div>
-    <div class="risk-item">Nested scroll coordination — Global &amp; Contextual feeds sit inside tab pager. Custom touch interception needs careful Compose implementation.</div>
-    <div class="risk-item">Profile Prompt carousel is the highest-complexity special card — horizontal carousel with dynamic item sizing.</div>
-    <div class="risk-item">Android feed engagement tracking data looks off — Colleen + Kelsey investigating low impression counts relative to engagement events.</div>
+    <div class="risks-header">&#9888; Risks &amp; Notes</div>
+    <div class="risk-item">Prompt cards dropped from scope -- server-side ticket needed for safe removal (pagination risk if first page fills with prompt cards).</div>
+    <div class="risk-item">Android feed engagement/impressions data still off -- Kelsey believes server-side config change is needed, not just the client-side fix. Follow up with Mate Monday.</div>
+    <div class="risk-item">Sammy OOO Apr 14-17 -- plan coverage for unblocking and review during that window.</div>
+    <div class="risk-item">Nested scroll coordination -- Global &amp; Contextual feeds sit inside tab pager; custom touch interception needs careful Compose implementation.</div>
+    <div class="risk-item">Discovery card designs must be ready end of April for Mammoth. Get firm timeline from Bradley/Giada Monday.</div>
   </div>
-
   <div class="platform-resources">
-    <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc →</a>
-    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 →</a>
+    <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
+    <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 &rarr;</a>
   </div>
 </div>
 
-<!-- ═══════════ DEVX WINS ═══════════ -->
+<!-- DEVEX WINS -->
 <div class="scoreboard">
   <div class="scoreboard-header">
     <div class="scoreboard-title">DevEx Wins</div>
-    <a class="scoreboard-link" href="https://mightynetworks.slack.com/archives/C0A83MZSX1B" target="_blank">View #devex →</a>
+    <a class="scoreboard-link" href="https://mightynetworks.slack.com/archives/C0A83MZSX1B" target="_blank">View #devex &rarr;</a>
   </div>
   <div class="scoreboard-body">
     <div class="score-card">
@@ -1216,8 +506,8 @@
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Bug System: Fix &amp; Maintenance automated workflows</li>
-        <li>ios-create-dto &amp; ios-create-data-layer — one-shot repo scaffolding</li>
+        <li>ThemedBridgeView -- SwiftUI/UIKit theme bridge pattern standardized</li>
+        <li>ios-create-dto &amp; ios-create-data-layer -- one-shot repo scaffolding</li>
         <li>Pre-commit hook fix: staged-files-only scanning</li>
       </ul>
     </div>
@@ -1228,44 +518,38 @@
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Bug System Fix &amp; Maintenance automated workflows</li>
-        <li>Test coverage dashboard — auto-updates on every merge</li>
-        <li>Worktree setup fix for Claude Code remote sessions</li>
+        <li>5 Compose UI test stability fixes (PRs 12325-12330)</li>
+        <li>android-figma-to-component skill -- Figma to Compose in one shot</li>
+        <li>Test coverage dashboard -- auto-updates on every merge</li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- ═══════════ RESOURCES ═══════════ -->
+<!-- RESOURCES -->
 <div class="resources">
-  <div class="resources-header">
-    <div class="resources-title">&#128206; Resources</div>
-  </div>
+  <div class="resources-header"><div class="resources-title">&#128206; Resources</div></div>
   <div class="resources-grid">
     <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0AGMPYAGCE" target="_blank">
       <div class="resource-label">Slack Project Channel</div>
-      <div class="resource-name">#mobile_feed_refactor →</div>
+      <div class="resource-name">#mobile_feed_refactor &rarr;</div>
     </a>
     <a class="resource-item" href="https://www.figma.com/design/orchjRMhCEZNehSpGipZht/Components?node-id=3634-31084&m=dev" target="_blank">
       <div class="resource-label">Designs</div>
-      <div class="resource-name">Figma Components →</div>
+      <div class="resource-name">Figma Components &rarr;</div>
     </a>
     <a class="resource-item" href="https://mn.productboard.com/timeline/MTpUaW1lbGluZVJvYWRtYXBCb2FyZDozMmMwNmUyNC02NjRiLTRlZTktODlhNi04NDZkMmVlNDZkZTA=" target="_blank">
       <div class="resource-label">Roadmap</div>
-      <div class="resource-name">ProductBoard Timeline →</div>
+      <div class="resource-name">ProductBoard Timeline &rarr;</div>
     </a>
     <a class="resource-item" href="https://turbo-adventure-l4m3rk7.pages.github.io/" target="_blank">
       <div class="resource-label">Android Test Coverage</div>
-      <div class="resource-name">Coverage Dashboard →</div>
+      <div class="resource-name">Coverage Dashboard &rarr;</div>
     </a>
   </div>
 </div>
 
 </div>
-
-<div class="footer">
-  Sequoia Mobile Squad · Mighty Networks
-</div>
-
+<div class="footer">Sequoia Mobile Squad &middot; Mighty Networks</div>
 </body>
 </html>
