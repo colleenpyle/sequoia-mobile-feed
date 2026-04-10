@@ -215,8 +215,8 @@
   .milestone-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
   .milestone-platform { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 15px; color: var(--white); }
   .milestone-status {
-    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 12px; border-radius: 20px;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 4px 12px; border-radius: 20px;
   }
   .milestone-status.date-moved { background: rgba(250,77,80,0.2); color: var(--red); }
   .milestone-status.date-moved .milestone-status-dot { background: var(--red); }
@@ -275,14 +275,14 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved This Week</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 2</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 10</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Poll cards and EmbeddedLinkView (24 variations) in progress. Prompt cards dropped from scope. Headless API research wrapping up Apr 14.<br>*Target moved back one week due to Headless API research sprint.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Poll cards and EmbeddedLinkView (24 variations to account for) being cataloged. Prompt cards dropping from feed given low engagement. Headless API research wrapping up Apr 14.<br>*Target moved back one week due to Headless API research sprint.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:35%"></div></div>
         <div class="milestone-progress-pct">~35%</div>
@@ -291,14 +291,14 @@
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved This Week</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 4</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">May 8</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">May 11</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed in Review. Poll parity gaps next, then small cards. Prompt cards dropped from scope.<br>*Target moved back one week due to Headless API research sprint.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed in Review. Poll parity gaps next, then small cards to support editorial feed. Prompt cards dropping from feed.<br>*Target moved back one week due to Headless API research sprint.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:60%"></div></div>
         <div class="milestone-progress-pct">~60%</div>
@@ -316,11 +316,11 @@
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Design decision: Prompt cards are getting dropped.</strong> Kelsey's engagement data showed &lt;0.3% click rates across profile builder and suggested members cards (tracked since Mar 27). Tom reviewed and agreed today. Front end will not render prompt cards in the new feed; server-side ticket still needed to stop serving them.</div>
+      <div><strong>Design decision: Prompt cards are getting dropped from feed.</strong> Kelsey's engagement data showed &lt;0.3% click rates across profile builder and suggested members cards. Tom reviewed and agreed today. Server-side ticket still needed to stop serving them; needs coordination.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Online now indicator dropped from initial feed release.</strong> Team aligned that accurate presence on the avatar in the new component is too complex for this release. The existing row-icon approach is not being carried forward. A holistic online presence system will be scoped separately.</div>
+      <div><strong>Online now indicator is under evaluation.</strong> The current row-icon approach won't carry forward. Given the accuracy issues reviewed today and inconsistencies within and across platforms, Sequoia is best positioned to solve online now as a mobile system -- Squad will develop a project proposal to address all connected views holistically.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -328,7 +328,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Rodrigo shipped ThemedBridgeView (iOS).</strong> A new generic SwiftUI wrapper that injects the Theme environment into UIHostingController call sites. Standardizes the legacy UIKit bridge pattern app-wide -- components use @Environment(\.theme), bridge stays in the integration layer only.</div>
+      <div><strong>Rodrigo shipped ThemedBridgeView (iOS).</strong> A new generic SwiftUI wrapper that injects the Theme environment into UIHostingController call sites. Standardizes the legacy UIKit bridge pattern app-wide.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -348,7 +348,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Headless API &amp; Core Data research wrapping up.</strong> Andrej &amp; Sammy finalizing their research sprint (started Apr 6). Internal findings review Monday Apr 13, full architecture proposal to leadership Tuesday Apr 14. Feed refactor continued in parallel all week.</div>
+      <div><strong>Headless API &amp; Core Data research wrapping up.</strong> Andrej &amp; Sammy finalizing their research sprint (started Apr 6). Internal findings review Monday Apr 13, full architecture proposal to leadership Tuesday Apr 14. Feed refactor continued in parallel all week. Squad tackling bug backlog under new agreements.</div>
     </div>
   </div>
 </div>
@@ -414,8 +414,8 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item">Prompt cards officially dropped -- server-side ticket still needed to stop serving them (pagination risk if first page fills with prompt cards).</div>
-    <div class="risk-item">Online now indicator dropped from initial release -- scope holistic presence system as a separate project.</div>
+    <div class="risk-item">Prompt cards dropping from feed -- server-side ticket still needed to stop serving them (pagination risk if first page fills with prompt cards).</div>
+    <div class="risk-item">Online now indicator under evaluation -- Squad developing a project proposal for holistic treatment across all connected views.</div>
     <div class="risk-item">Architecture proposal (headless API / Core Data) needs leadership buy-in by Apr 14. Potential 2-3 week impact on data layer timeline.</div>
     <div class="risk-item">Discovery card designs must be ready end of April to unblock Mammoth. Get firm timeline from Bradley/Giada Monday.</div>
     <div class="risk-item">P2 chat bugs surfaced (long load, reply reading, image sending, crashes on likes) -- Rodrigo ticketing and will address after current task.</div>
@@ -480,7 +480,7 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item">Prompt cards dropped from scope -- server-side ticket needed for safe removal (pagination risk if first page fills with prompt cards).</div>
+    <div class="risk-item">Prompt cards dropping from feed -- server-side ticket needed for safe removal (pagination risk if first page fills with prompt cards).</div>
     <div class="risk-item">Android feed engagement/impressions data still off -- Kelsey believes server-side config change is needed, not just the client-side fix. Follow up with Mate Monday.</div>
     <div class="risk-item">Sammy OOO Apr 14-17 -- plan coverage for unblocking and review during that window.</div>
     <div class="risk-item">Nested scroll coordination -- Global &amp; Contextual feeds sit inside tab pager; custom touch interception needs careful Compose implementation.</div>
