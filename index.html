@@ -220,6 +220,10 @@
   }
   .milestone-status.date-moved { background: rgba(250,77,80,0.2); color: var(--red); }
   .milestone-status.date-moved .milestone-status-dot { background: var(--red); }
+  .milestone-status.timeline-risk { background: rgba(255,156,50,0.2); color: var(--yellow); }
+  .milestone-status.timeline-risk .milestone-status-dot { background: var(--yellow); }
+  .milestone-status.on-pace { background: rgba(200,240,105,0.2); color: var(--green); }
+  .milestone-status.on-pace .milestone-status-dot { background: var(--green); }
   .milestone-status-dot { width: 6px; height: 6px; border-radius: 50%; }
   .milestone-dates { display: flex; flex-direction: column; margin-bottom: 14px; }
   .milestone-date-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -291,14 +295,14 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Watch: GraphQL outcome</div>
+        <div class="milestone-status timeline-risk"><div class="milestone-status-dot"></div> Timeline risks, but no date changes</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 2</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 10</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Q/Poll cards in progress (Henrique -- slowed by livestream DRI). EmbeddedLinkView (24 variations) with Rodrigo. FeedViewRouter Core Data extraction ongoing. Mate presents GraphQL/Headless API proposal to leadership today.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Post cards for editorial feeds and question/poll cards in progress (Henrique -- slowed by livestream DRI).</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:38%"></div></div>
         <div class="milestone-progress-pct">~38%</div>
@@ -307,14 +311,14 @@
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Sammy OOO Apr 14-17</div>
+        <div class="milestone-status on-pace"><div class="milestone-status-dot"></div> On pace</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 4</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">May 8</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">May 11</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed (SEQ-13195) in Ready for QA. Course navigation deployed. Rafael on poll parity gaps + discovery cards. Sammy OOO Apr 14-17 -- plan review coverage.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5): post cards for editorial feed. Sammy OOO Apr 14-17.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:65%"></div></div>
         <div class="milestone-progress-pct">~65%</div>
