@@ -336,15 +336,15 @@
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#128308;</div>
-      <div><strong>#mobile-livestream-issues channel launched today.</strong> Sequoia inherited DRI for mobile livestream bugs after Galapagos lost mobile devs. Henrique is leading a Chime SDK update investigation across all platforms. Rafael and Esteban are looped in. Team is also exploring a long-term Chime replacement (RTMPS or alternate vendor).</div>
+      <div><strong>#mobile-livestream-issues channel launched today.</strong> Sequoia now DRI for mobile livestream bugs after mobile devs migrated from Galapagos. Henrique is leading a Chime SDK update investigation across all platforms and logging/reproducibility improvements.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Mate presents GraphQL/Headless API architecture proposal to leadership today.</strong> After a week-long spike and two days of review meetings (Apr 13-14), the team is weighing Approach A (GraphQL shim over Core Data -- simpler, throwaway code) vs Approach H (strangler fig, repo-by-repo Core Data removal -- more work, better long-term architecture). Outcome will affect data layer timeline and scope.</div>
+      <div><strong>Mate presented GraphQL/Headless API architecture proposals to leadership today.</strong> The team will POC the recommended approach to validate the mobile strategy -- but with several paths forward identified, platform is unblocked and feed refactor work resumes.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Design card review (Apr 10) locked in major decisions.</strong> Tom aligned on dropping prompt cards (profile builder + suggested member) -- data showed &lt;0.3% click rates. Online-now row-icon approach dropped from feed release. Bradley finalizing remaining card variants: background image, image galleries, file-only posts, and link embeds.</div>
+      <div><strong>Design card review (Apr 10) locked in major decisions.</strong> Tom aligned on dropping prompt cards (profile builder + suggested member) -- data showed &lt;0.3% click rates. Online-now row-icon approach dropped in favor of a consistent, on-avatar approach. Bradley finalizing remaining card variants: background image, image galleries, file-only posts, and link embeds.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -361,14 +361,6 @@
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
       <div><strong>EmbeddedLinkView complexity fully mapped.</strong> Rodrigo catalogued all 24 variations needed (3 sizes x 8 content types): Generic, Event, Space, Collection, Plan, Poll, Recognition, and Announcement. Component build is underway.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9670;</div>
-      <div><strong>Online now indicator scoped out of feed release.</strong> Squad aligning on a project proposal to treat online-now as a holistic mobile system, covering all connected views. Will not block the feed release.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9670;</div>
-      <div><strong>Server-side ticket still needed to safely drop prompt cards.</strong> Frontend is ready to stop rendering them, but dropping them on the server carries a pagination risk if the first feed page fills with prompt cards. Ticket needed before launch.</div>
     </div>
   </div>
 </div>
