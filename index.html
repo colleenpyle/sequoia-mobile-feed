@@ -243,6 +243,14 @@
   .highlight-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 1px; }
   .highlight-item:nth-child(odd) .highlight-icon { background: rgba(200,240,105,0.25); }
   .highlight-item:nth-child(even) .highlight-icon { background: rgba(200,240,105,0.15); }
+  .alert-banner {
+    background: rgba(250,77,80,0.07); border: 1.5px solid rgba(250,77,80,0.25);
+    border-radius: 12px; padding: 16px 22px; margin-bottom: 24px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .alert-banner-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .alert-banner-text { font-size: 14px; line-height: 1.6; }
+  .alert-banner-text strong { color: var(--red); font-weight: 700; }
   .resources { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); margin-bottom: 32px; }
   .resources-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); }
   .resources-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
@@ -261,12 +269,20 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 13, 2026</div>
+      <div class="updated-token">Updated April 14, 2026</div>
     </div>
   </div>
 </div>
 
 <div class="container">
+
+<!-- ALERT BANNER: LIVESTREAM -->
+<div class="alert-banner">
+  <div class="alert-banner-icon">&#128308;</div>
+  <div class="alert-banner-text">
+    <strong>Livestream escalation pulling squad focus.</strong> #mobile-livestream-issues channel launched today (Apr 14). Henrique is DRI for a Chime SDK update across iOS, Android, and web. Rafael is also looped in. This is active non-project work competing with feed component building -- monitor impact on Q/Poll card progress and Android Phase 3 pacing.
+  </div>
+</div>
 
 <!-- KEY MILESTONES -->
 <div class="milestones">
@@ -275,14 +291,14 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved Last Week</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Watch: GraphQL outcome</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 2</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 10</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Article Content deploying, Question/Poll cards in progress. EmbeddedLinkView (24 variations) underway. Headless API/GraphQL research -- internal review Apr 13, leadership proposal Apr 14.<br>*Target moved back one week due to Headless API research sprint.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Q/Poll cards in progress (Henrique -- slowed by livestream DRI). EmbeddedLinkView (24 variations) with Rodrigo. FeedViewRouter Core Data extraction ongoing. Mate presents GraphQL/Headless API proposal to leadership today.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:38%"></div></div>
         <div class="milestone-progress-pct">~38%</div>
@@ -291,14 +307,14 @@
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Target Date Moved Last Week</div>
+        <div class="milestone-status date-moved"><div class="milestone-status-dot"></div> Sammy OOO Apr 14-17</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 4</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">May 8</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">May 11</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed (SEQ-13195) hit Ready for QA -- major Phase 3 milestone. Course navigation deployed. Poll parity gaps + discovery cards next for editorial feed.<br>*Target moved back one week due to Headless API research sprint.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed (SEQ-13195) in Ready for QA. Course navigation deployed. Rafael on poll parity gaps + discovery cards. Sammy OOO Apr 14-17 -- plan review coverage.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:65%"></div></div>
         <div class="milestone-progress-pct">~65%</div>
@@ -311,20 +327,24 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates -- week of Apr 13</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates -- week of Apr 14</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
-      <div class="highlight-icon">&#9670;</div>
-      <div><strong>Android Space Feed (SEQ-13195) hits Ready for QA.</strong> Rafael's Contextual Feed migration moved to Ready for QA on Apr 13 -- the first complex feed through code review and into QA. Major Phase 3 milestone.</div>
+      <div class="highlight-icon">&#128308;</div>
+      <div><strong>#mobile-livestream-issues channel launched today.</strong> Sequoia inherited DRI for mobile livestream bugs after Galapagos lost mobile devs. Henrique is leading a Chime SDK update investigation across all platforms. Rafael and Esteban are looped in. Team is also exploring a long-term Chime replacement (RTMPS or alternate vendor).</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Headless API / GraphQL research presentations this week.</strong> Andrej &amp; Sammy wrapped their spike. Andrej's visualization shows GraphQL migration + Core Data drop is doable in 3-4 months. Internal review Apr 13; Mate presents architecture proposal to leadership Apr 14.</div>
+      <div><strong>Mate presents GraphQL/Headless API architecture proposal to leadership today.</strong> After a week-long spike and two days of review meetings (Apr 13-14), the team is weighing Approach A (GraphQL shim over Core Data -- simpler, throwaway code) vs Approach H (strangler fig, repo-by-repo Core Data removal -- more work, better long-term architecture). Outcome will affect data layer timeline and scope.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>iOS Space Feed temp connection (SEQ-13198) deployed.</strong> Andrej deployed Apr 13 -- temporary wiring to connect the new SwiftUI feed to space context data, unblocking downstream component work.</div>
+      <div><strong>Design card review (Apr 10) locked in major decisions.</strong> Tom aligned on dropping prompt cards (profile builder + suggested member) -- data showed &lt;0.3% click rates. Online-now row-icon approach dropped from feed release. Bradley finalizing remaining card variants: background image, image galleries, file-only posts, and link embeds.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9670;</div>
+      <div><strong>Android Space Feed (SEQ-13195) hits Ready for QA.</strong> Rafael's Contextual Feed migration moved to Ready for QA on Apr 13 -- first complex feed through code review and into QA. Major Phase 3 milestone.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
@@ -332,23 +352,19 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>iOS Article Content (SEQ-13131) is deploying.</strong> Henrique's Article Content component is in the Deploying stage as of Apr 9 -- HTML rendering via WebView, integrated with the new feed card shell.</div>
+      <div><strong>iOS Article Content (SEQ-13131) deployed.</strong> Henrique's Article Content component -- HTML rendering via WebView -- is through the deploy pipeline and integrated with the new feed card shell.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>iOS Question/Poll Content (SEQ-13129) in progress.</strong> Henrique is building the poll card component using the container/content architecture aligned last week. Bradley updating the color token in Figma (SEQ-13332) to unblock final implementation.</div>
+      <div><strong>EmbeddedLinkView complexity fully mapped.</strong> Rodrigo catalogued all 24 variations needed (3 sizes x 8 content types): Generic, Event, Space, Collection, Plan, Poll, Recognition, and Announcement. Component build is underway.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Design decision: Prompt cards are getting dropped from feed.</strong> Kelsey's data showed &lt;0.3% click rates across profile builder and suggested member cards. Tom reviewed and agreed Apr 10. Server-side ticket still needed to safely stop serving them (pagination risk).</div>
+      <div><strong>Online now indicator scoped out of feed release.</strong> Squad aligning on a project proposal to treat online-now as a holistic mobile system, covering all connected views. Will not block the feed release.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9670;</div>
-      <div><strong>Online now indicator under evaluation.</strong> The current row-icon approach won't carry forward. Sequoia is developing a project proposal to address online now as a mobile system, covering all connected views holistically.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9670;</div>
-      <div><strong>EmbeddedLinkView complexity fully mapped.</strong> Rodrigo catalogued all 24 variations needed (3 sizes x 8 content types): Generic, Event, Space, Collection, Plan, Poll, Recognition, and Announcement. Giada syncing on embed unification this week.</div>
+      <div><strong>Server-side ticket still needed to safely drop prompt cards.</strong> Frontend is ready to stop rendering them, but dropping them on the server carries a pagination risk if the first feed page fills with prompt cards. Ticket needed before launch.</div>
     </div>
   </div>
 </div>
@@ -377,50 +393,47 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Architecture Research Week</strong> -- Headless API &amp; GraphQL (Andrej &amp; Sammy). <span class="research-dates">Apr 6-14 &middot; Internal review Apr 13 &middot; Leadership proposal Apr 14</span>
+      <strong>GraphQL / Headless API Architecture Decision TODAY</strong> -- Mate presents to leadership Apr 14. <span class="research-dates">Research spike Apr 6-14 &middot; Internal review Apr 13 &middot; Leadership proposal Apr 14</span>
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Question/Poll Content (SEQ-13129)</strong><div class="detail">Henrique -- container/content architecture aligned; Bradley updating color token in Figma (SEQ-13332)</div></div>
-      <div class="status-item"><strong>Article Content (SEQ-13131) -- Deploying</strong><div class="detail">Henrique -- HTML rendering via WebView; moving through deploy pipeline</div></div>
-      <div class="status-item"><strong>EmbeddedLinkView (24 variations)</strong><div class="detail">Rodrigo building new component -- 3 sizes x 8 content types; Giada syncing on embed unification</div></div>
-      <div class="status-item"><strong>FeedViewRouter dependency extraction</strong><div class="detail">Pushing CoreData dependencies out of composition layer</div></div>
-      <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture visualized -- integrating with data &amp; MVVM layers</div></div>
+      <div class="status-item"><strong>Question/Poll Content (SEQ-13129)</strong><div class="detail">Henrique -- container/content architecture aligned; slowed by livestream DRI duties this week. Bradley updating color token (SEQ-13332) to unblock.</div></div>
+      <div class="status-item"><strong>EmbeddedLinkView (24 variations)</strong><div class="detail">Rodrigo -- 3 sizes x 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement</div></div>
+      <div class="status-item"><strong>FeedViewRouter Core Data extraction</strong><div class="detail">Andrej -- follow-up tickets SEQ-13293 (theme from FlexSpaceDTO) and SEQ-13205 (encapsulate Core Data)</div></div>
+      <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture documented in Miro -- integrating with data &amp; MVVM layers</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
-      <div class="status-item"><strong>Discovery card design finalization</strong><div class="detail">Giada sharing embed unification ideas this week; Bradley working remaining variants (background image, galleries, file-only, link embeds)</div></div>
-      <div class="status-item"><strong>Carousel component</strong><div class="detail">Next priority after discovery cards -- needed for Mammoth by end of April</div></div>
-      <div class="status-item"><strong>Remaining card components</strong><div class="detail">Courses, quick posts, background image cards, etc.</div></div>
-      <div class="status-item"><strong>Comments system extraction</strong><div class="detail">Standalone component needed for Post Detail</div></div>
-      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connect filter UI to data layer logic</div></div>
+      <div class="status-item"><strong>Discovery card design finalization</strong><div class="detail">Bradley working remaining variants: background image, image galleries, file-only, link embeds. End of April deadline for Mammoth</div></div>
+      <div class="status-item"><strong>Carousel component</strong><div class="detail">Next after discovery cards -- needed for Mammoth editorial by end of April</div></div>
+      <div class="status-item"><strong>Card naming poll</strong><div class="detail">What to call the featured/discovery cards -- poll going out in #mobile_feed_refactor</div></div>
+      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connect filter UI (built) to data layer logic</div></div>
+      <div class="status-item"><strong>Online now -- system proposal</strong><div class="detail">Squad to develop holistic treatment across all connected views. Will not block feed release.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>iOS Space Feed temp connection (SEQ-13198)</strong><div class="detail">Andrej -- deployed Apr 13. Temporary wiring to connect new feed to space context data</div></div>
-      <div class="status-item"><strong>ThemedBridgeView utility</strong><div class="detail">SwiftUI/UIKit theme bridge -- standardizes legacy integration pattern app-wide</div></div>
-      <div class="status-item"><strong>Post Event Card component</strong><div class="detail">Event description, livestream CTAs -- merged</div></div>
-      <div class="status-item"><strong>Router factory refactoring</strong><div class="detail">Andrej extracted factory method, removing Core Data dependency</div></div>
-      <div class="status-item"><strong>Global icon refactor</strong><div class="detail">All legacy icons migrated to updated Figma set -- app-wide</div></div>
-      <div class="status-item"><strong>UI Library feed preview</strong><div class="detail">New Feed option with Quick Post &amp; Unsupported Content samples</div></div>
-      <div class="status-item"><strong>Data layer architecture</strong><div class="detail">Repository, networking, DTOs -- diagrammed &amp; merged</div></div>
-      <div class="status-item"><strong>UI architecture merged</strong><div class="detail">Modular SwiftUI feed card system -- validated by iOS team</div></div>
-      <div class="status-item"><strong>Full component mapping in Miro</strong><div class="detail">~40 components identified across all card types</div></div>
+      <div class="status-item"><strong>Article Content (SEQ-13131) -- Deployed</strong><div class="detail">Henrique -- HTML rendering via WebView, integrated with feed card shell</div></div>
+      <div class="status-item"><strong>iOS Space Feed temp connection (SEQ-13198)</strong><div class="detail">Andrej -- deployed Apr 13. Connects new SwiftUI feed to space context data</div></div>
+      <div class="status-item"><strong>Event Content component -- Merged</strong><div class="detail">Henrique -- event description, livestream CTAs; merged Apr 7</div></div>
+      <div class="status-item"><strong>Router factory refactoring</strong><div class="detail">Andrej -- extracted factory method, removing Core Data dependency from router</div></div>
+      <div class="status-item"><strong>Global icon refactor</strong><div class="detail">Rodrigo -- all legacy icons migrated to updated Figma set app-wide</div></div>
+      <div class="status-item"><strong>Discovery card base architecture</strong><div class="detail">Rodrigo -- reusable across new Feed and Discovery screen; Quick Post type wired up</div></div>
+      <div class="status-item"><strong>UI Library feed preview</strong><div class="detail">New Feed option with Quick Post &amp; Unsupported Content samples in the app</div></div>
+      <div class="status-item"><strong>Data layer architecture</strong><div class="detail">Repository, networking, DTOs -- diagrammed, merged, and Miro updated</div></div>
       <div class="status-item"><strong>New feed live behind feature flag</strong><div class="detail">ios_feed_refactor -- loading real data in internal app</div></div>
-      <div class="status-item"><strong>Filter UI component added</strong><div class="detail">Ready to wire to data layer</div></div>
-      <div class="status-item"><strong>Float Action Button interactions</strong><div class="detail">Flow-based actions working end-to-end</div></div>
-      <div class="status-item"><strong>Unsupported card type fallback</strong><div class="detail">Graceful placeholders for unbuilt card types</div></div>
+      <div class="status-item"><strong>Filter UI + Float Action Button</strong><div class="detail">Filter UI ready to wire; FAB interactions working end-to-end</div></div>
     </div>
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item">Prompt cards dropping from feed -- server-side ticket still needed to stop serving them (pagination risk if first page fills with prompt cards).</div>
-    <div class="risk-item">Online now indicator under evaluation -- Squad developing a project proposal for holistic treatment across all connected views.</div>
-    <div class="risk-item">Architecture proposal (headless API / Core Data) leadership review Apr 14. Potential 2-3 week impact on data layer timeline depending on outcome.</div>
-    <div class="risk-item">Discovery card designs must be ready end of April to unblock Mammoth. Get firm timeline from Bradley/Giada this week.</div>
-    <div class="risk-item">Tap propagation bug -- tapping reactions causes post card to blink (Henrique, Apr 8). Needs hit test fix before polish phase.</div>
+    <div class="risk-item"><strong>Livestream DRI (new today).</strong> Henrique leading Chime SDK update investigation across platforms -- expect some slowdown on Q/Poll cards this week.</div>
+    <div class="risk-item">GraphQL/Headless API architecture outcome (leadership review today) -- could affect data layer scope and timeline. Watch for follow-up from Mate.</div>
+    <div class="risk-item">Prompt cards -- server-side ticket still needed to safely stop serving them (pagination risk if first page fills with prompt cards).</div>
+    <div class="risk-item">Discovery card designs must be firm by end of April to unblock Mammoth editorial. Get confirmation from Bradley/Giada this week.</div>
+    <div class="risk-item">P1 bug SEQ-13333 (comments not showing on mobile/iPad) approaching SLA -- Rodrigo, In Review.</div>
+    <div class="risk-item">Andrej carrying 31 open bugs -- heaviest bug load on the team. Monitor for bandwidth pressure.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
@@ -450,30 +463,29 @@
     <div class="progress-pct">~65%</div>
   </div>
   <div class="research-injection">
-    <div class="research-injection-icon">&#128308;</div>
+    <div class="research-injection-icon">&#9888;</div>
     <div class="research-injection-text">
-      <strong>Architecture Research Week</strong> -- Headless API &amp; GraphQL (Andrej &amp; Sammy). <span class="research-dates">Apr 6-14 &middot; Leadership proposal Apr 14</span>
+      <strong>Sammy OOO April 14-17</strong> -- Rafael carrying Android forward solo this week. Plan coverage for unblocking and PR review. <span class="research-dates">Rafael also looped in on the livestream SDK investigation.</span>
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Space Feed migration (SEQ-13195) -- Ready for QA</strong><div class="detail">Rafael -- moved to Ready for QA Apr 13. Major Phase 3 milestone.</div></div>
-      <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael -- next up after Space Feed QA completes</div></div>
-      <div class="status-item"><strong>Phase 3: Discovery cards + small post cards</strong><div class="detail">Base architecture in place; design finalization in progress</div></div>
+      <div class="status-item"><strong>Space Feed migration (SEQ-13195) -- Ready for QA</strong><div class="detail">Rafael -- moved to Ready for QA Apr 13. Awaiting QA sign-off. Major Phase 3 milestone.</div></div>
+      <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael -- investigating gaps in poll component vs. view version; next up after QA</div></div>
+      <div class="status-item"><strong>Livestream SDK update investigation</strong><div class="detail">Rafael looped in -- assessing Android lift for Chime SDK update; adding logs in parallel with Henrique</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
+      <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; awaiting final designs from Bradley. End of April Mammoth deadline</div></div>
       <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays</div></div>
-      <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking, interaction events to ViewModels</div></div>
+      <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events to ViewModels</div></div>
       <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share</div></div>
-      <div class="status-item"><strong>Accessibility pass</strong><div class="detail">TalkBack verification across all card types</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>Compose course navigation (SEQ-13299)</strong><div class="detail">Sammy -- deployed Apr 13. Replaced legacy CourseworkComposite (7 stacked PRs)</div></div>
+      <div class="status-item"><strong>Compose course navigation (SEQ-13299) -- Deployed</strong><div class="detail">Sammy -- deployed Apr 13. Replaced legacy CourseworkComposite (7 stacked PRs)</div></div>
       <div class="status-item"><strong>FeedCardItem composable + UI tests (SEQ-13014/13016)</strong><div class="detail">Sammy -- resolved Apr 10. Content dispatch composable with full test coverage</div></div>
-      <div class="status-item"><strong>5 Compose UI test fixes (PRs 12325-12330)</strong><div class="detail">Debounce, RecyclerView/Compose handling, RSVP focus, scroll assertions, DeadObjectException</div></div>
       <div class="status-item"><strong>Phase 2: Simple Screen Conversions</strong><div class="detail">Post Detail, Member Feed, Pinned Feed -- all converted to Compose</div></div>
       <div class="status-item"><strong>Feed performance instrumentation</strong><div class="detail">Firebase Performance traces, JankStats scroll jank, Crashlytics screen tagging</div></div>
       <div class="status-item"><strong>Phase 1: Foundation</strong><div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions</div></div>
@@ -483,10 +495,10 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item">Prompt cards dropping from feed -- server-side ticket needed for safe removal (pagination risk if first page fills with prompt cards).</div>
-    <div class="risk-item">Android feed engagement/impressions data still off -- Kelsey believes server-side config change is needed, not just the client-side fix. Follow up with Mate (back today).</div>
-    <div class="risk-item">Sammy OOO Apr 14-17 -- plan coverage for unblocking and review during that window.</div>
-    <div class="risk-item">Nested scroll coordination -- Global &amp; Contextual feeds sit inside tab pager; custom touch interception needs careful Compose implementation.</div>
+    <div class="risk-item"><strong>Sammy OOO Apr 14-17</strong> -- Rafael is carrying Android solo. Plan for unblocking and review coverage this week.</div>
+    <div class="risk-item"><strong>Livestream pulling Rafael.</strong> Looped in on Chime SDK investigation. Monitor time impact on poll work and Phase 3 pacing.</div>
+    <div class="risk-item">Prompt cards -- server-side ticket needed for safe removal (pagination risk). Needed before feed launch.</div>
+    <div class="risk-item">Android feed engagement/impressions data still off -- believed to be a server-side config issue. Follow up with Mate.</div>
     <div class="risk-item">Discovery card designs must be ready end of April for Mammoth. Get firm timeline from Bradley/Giada this week.</div>
   </div>
   <div class="platform-resources">
@@ -537,17 +549,25 @@
       <div class="resource-label">Slack Project Channel</div>
       <div class="resource-name">#mobile_feed_refactor &rarr;</div>
     </a>
+    <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0ASEVBQSUX" target="_blank">
+      <div class="resource-label">Slack -- New</div>
+      <div class="resource-name">#mobile-livestream-issues &rarr;</div>
+    </a>
     <a class="resource-item" href="https://www.figma.com/design/orchjRMhCEZNehSpGipZht/Components?node-id=3634-31084&m=dev" target="_blank">
       <div class="resource-label">Designs</div>
       <div class="resource-name">Figma Components &rarr;</div>
     </a>
-    <a class="resource-item" href="https://mn.productboard.com/timeline/MTpUaW1lbGluZVJvYWRtYXBCb2FyZDozMmMwNmUyNC02NjRiLTRlZTktODlhNi04NDZkMmVlNDZkZTA=" target="_blank">
+    <a class="resource-item" href="https://mn.productboard.com/timeline/MTpUaWl1bGluZVJvYWRtYXBCb2FyZDozMmMwNmUyNC02NjRiLTRlZTktODlhNi04NDZkMmVlNDZkZTA=" target="_blank">
       <div class="resource-label">Roadmap</div>
       <div class="resource-name">ProductBoard Timeline &rarr;</div>
     </a>
     <a class="resource-item" href="https://turbo-adventure-l4m3rk7.pages.github.io/" target="_blank">
       <div class="resource-label">Android Test Coverage</div>
       <div class="resource-name">Coverage Dashboard &rarr;</div>
+    </a>
+    <a class="resource-item" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">
+      <div class="resource-label">Architecture</div>
+      <div class="resource-name">Miro Board &rarr;</div>
     </a>
   </div>
 </div>
