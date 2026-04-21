@@ -273,7 +273,7 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 20, 2026</div>
+      <div class="updated-token">Updated April 21, 2026</div>
     </div>
   </div>
 </div>
@@ -294,7 +294,7 @@
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 10</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 5). Question Content Card merged today; Small Post Card variants landing; EmbeddedLinkView build underway.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 3 of 5). Question Content Card merged today; Small Post Card variants landing today; remaining poll types and member attribution underway. Data Layer wrapping end of week!</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:45%"></div></div>
         <div class="milestone-progress-pct">~45%</div>
@@ -348,11 +348,11 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android Space Feed (SEQ-13195) -- Verified.</strong> Rafael's Contextual Feed migration cleared QA on Apr 15. First complex feed fully through the pipeline. Phase 3 milestone done.</div>
+      <div><strong>Android Space Feed (SEQ-13195) -- Verified.</strong> Rafael's Contextual Feed migration cleared QA on Apr 15. First complex feed fully through the pipeline.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
-      <div><strong>GraphQL architecture direction -- Option H (Strangler Fig) preferred.</strong> Andrej presented the plan Apr 14: full Core Data removal, repository pattern, screen-by-screen replacement. 3-6 months, 3 engineers, feature-flaggable rollback. Core Data is now banned from all new work. Awaiting formal sign-off from Grady.</div>
+      <div><strong>GraphQL architecture direction -- Option H (Strangler Fig) preferred.</strong> Full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data is now banned from all new work. Next step: awaiting roadmap prioritization, but Platform is now unblocked.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
@@ -360,7 +360,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9888;</div>
-      <div><strong>P1 bug watchlist (as of Fri Apr 17).</strong> SEQ-13371 (invites-by-email skipping landing page on iOS) approaching SLA -- Rodrigo, in progress. SEQ-13370 (We Gotta Thing crashes + long load times on iOS, Core Data suspected) also approaching SLA and unassigned. Needs triage Monday.</div>
+      <div><strong>P1 bugs in last week (as of 4/21) = 4.</strong></div>
     </div>
   </div>
 </div>
@@ -389,7 +389,7 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>GraphQL / Headless API -- Option H (Strangler Fig) preferred.</strong> Andrej presented Apr 14. Full Core Data removal, repository pattern, 3-6 months w/ 3 engineers. <span class="research-dates">Core Data now banned from all new work &middot; Awaiting sign-off from Grady</span>
+      <strong>One week injection of GraphQL / Headless API research.</strong> Bug improvement project and Invites + Plan Sharing project will also impact timeline.
     </div>
   </div>
   <div class="status-columns">
@@ -426,13 +426,9 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Bug fixer system ineffective for mobile.</strong> Per Granola notes, only ~1 mobile bug/week is being fixed by the auto-fixer; Core Data-related chat bugs marked "too complex for autofix". "Zero bugs by end of April is not tenable" -- needs leadership conversation.</div>
-    <div class="risk-item"><strong>5 competing priorities with no clear sequencing.</strong> GraphQL rewrite, chat refactor, bug-fixer mandate, invite links, livestream recovery.</div>
-    <div class="risk-item">P1 SEQ-13371 (invites-by-email skipping landing page) -- Rodrigo, in progress, approaching SLA.</div>
-    <div class="risk-item">P1 SEQ-13370 (We Gotta Thing crashes, Core Data suspected) -- unassigned, needs manual repro, approaching SLA.</div>
-    <div class="risk-item">Andrej carrying 31 open bugs -- heaviest bug load on the team. Monitor for bandwidth pressure.</div>
-    <div class="risk-item">Prompt cards -- server-side ticket still needed to safely stop serving them (pagination risk if first page fills with prompt cards).</div>
-    <div class="risk-item">Discovery card designs must be firm by end of April to unblock Mammoth editorial. Get confirmation from Bradley/Giada this week.</div>
+    <div class="risk-item"><strong>Bug fixer system needs improvement for mobile.</strong> Only ~1 mobile bug has been fixed by the auto-fixer in one shot.</div>
+    <div class="risk-item">One week injection of GraphQL / Headless API research.</div>
+    <div class="risk-item">Bug improvement project and Invites + Plan Sharing project will also impact timeline.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
@@ -462,9 +458,9 @@
     <div class="progress-pct">~72%</div>
   </div>
   <div class="research-injection">
-    <div class="research-injection-icon">&#9989;</div>
+    <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Sammy back from OOO.</strong> Android Compose feed work resumes at full pace. Rafael also shipped the waiting room polling code this week. <span class="research-dates">No timeline changes to Phase 3.</span>
+      <strong>One week injection of GraphQL / Headless API research.</strong> Bug improvement project and Invites + Plan Sharing project will also impact timeline.
     </div>
   </div>
   <div class="status-columns">
@@ -495,10 +491,9 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Livestream work pulling Rafael.</strong> Polling code is merged, but logging + SDK upgrade parallel workstream continues. Monitor time impact on poll parity and Phase 4 pacing.</div>
-    <div class="risk-item">Prompt cards -- server-side ticket still needed for safe removal (pagination risk). Needed before feed launch.</div>
-    <div class="risk-item">Android feed engagement/impressions data still off -- believed to be a server-side config issue. Follow up with Mate.</div>
-    <div class="risk-item">Discovery card designs must be ready end of April for Mammoth. Get firm timeline from Bradley/Giada this week.</div>
+    <div class="risk-item"><strong>Bug fixer system needs improvement for mobile.</strong> Only ~1 mobile bug has been fixed by the auto-fixer in one shot.</div>
+    <div class="risk-item">One week injection of GraphQL / Headless API research.</div>
+    <div class="risk-item">Bug improvement project and Invites + Plan Sharing project will also impact timeline.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
