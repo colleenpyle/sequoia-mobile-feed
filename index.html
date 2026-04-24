@@ -247,6 +247,7 @@
   .highlight-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 1px; }
   .highlight-item:nth-child(odd) .highlight-icon { background: rgba(200,240,105,0.25); }
   .highlight-item:nth-child(even) .highlight-icon { background: rgba(200,240,105,0.15); }
+  .highlight-subheading { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--dark-teal); padding: 18px 0 6px; margin-top: 8px; border-top: 1px solid rgba(9,43,46,0.08); }
   .alert-banner {
     background: rgba(250,77,80,0.07); border: 1.5px solid rgba(250,77,80,0.25);
     border-radius: 12px; padding: 16px 22px; margin-bottom: 24px;
@@ -328,39 +329,52 @@
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#128308;</div>
-      <div><strong>Deploy train ETAs slipping ~1 week.</strong> Livestream recovery work and the P1 influx from the past 4 days (SEQ-13333, SEQ-13347, SEQ-13370, SEQ-13371) have pulled meaningful capacity away from feed refactor. Both platforms' deploy trains are pushing out to the following week. Refreshed targets being finalized 4/21.</div>
+      <div><strong>Deploy train dates updated per livestreaming, bug burn, and bug system improvement projects.</strong></div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Waiting room polling system -- go.</strong> Android code merged; iOS PR in review. Confirmed at today's standup. Fixes the class of livestream bug where users stay stuck in the waiting room when they miss the live-started event (Pusher reconnection + post-countdown polling + foreground refresh). Tickets: SEQ-13368, SEQ-13369.</div>
+      <div><strong>Mobile Bug System Improvements project -- definition approved.</strong> 2-week project starting Monday with 1 DRI per platform. Adds a test-and-verify loop so the mobile auto-fixer can validate fixes against a simulated app -- today it operates on bug descriptions alone, which is why mobile has lagged.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Question Content Card merged (SEQ-13129).</strong> Henrique -- available in the Feed Library today. Shipped alongside the shared Polls container pattern.</div>
+      <div><strong>Android Space Feed (Phase 3A) -- Verified.</strong> Rafael's Contextual Feed migration cleared QA Apr 15. First complex feed fully through the pipeline.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Small Post Card UI shipped for three content types.</strong> Rodrigo -- Quick Post, Article, and Question &amp; Poll now previewable in the UI Library. Event and Member Attribution variants still in progress.</div>
+      <div><strong>iOS Question Content Card merged (SEQ-13129).</strong> Henrique -- available in the Feed Library. Shipped alongside the shared Polls container pattern.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Chime SDK upgraded on iOS (v0.25.0 &rarr; v0.27.2).</strong> Henrique also added a new EventAnalyticsObserver for better livestream diagnostics -- remote logs for speakers, local logs for viewers. Boards next release train.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android Space Feed (SEQ-13195) -- Verified.</strong> Rafael's Contextual Feed migration cleared QA on Apr 15. First complex feed fully through the pipeline.</div>
+      <div><strong>Small Post Card UI wrapping up on both platforms to unblock Mammoth's editorial project!</strong></div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
-      <div><strong>GraphQL architecture direction -- Option H (Strangler Fig) preferred.</strong> Full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data is now banned from all new work. Next step: awaiting roadmap prioritization, but Platform is now unblocked.</div>
+      <div><strong>GraphQL architecture proposals shared -- Option H (Strangler Fig) preferred.</strong> Full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data now banned from all new work. Platform unblocked; awaiting roadmap prioritization.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
-      <div><strong>EmbeddedLinkView complexity fully mapped.</strong> Rodrigo catalogued all 24 variations (3 sizes x 8 content types): Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement. Component build is underway.</div>
+      <div><strong>EmbeddedLinkView complexity mapped (24 variants).</strong> Rodrigo catalogued 3 sizes &times; 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement. Component build underway.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9679;</div>
+      <div><strong>32 tickets re-routed into Sequoia triage 4/20.</strong> Moved from MN project into our pipeline; we're using them as candidates for Bug System Improvements starting Monday.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9888;</div>
       <div><strong>P1 bugs in last week (as of 4/21) = 4.</strong></div>
+    </div>
+    <div class="highlight-subheading">Livestreaming</div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9679;</div>
+      <div><strong>Validating the speaker promotion flow / fixes 4/28 (Murphy).</strong></div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Waiting room polling system -- boarded 4/19.</strong> Fixes the class of livestream bug where members get stuck in waiting room after missing the "live started" Pusher event.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Chime SDK upgraded on iOS (v0.25.0 &rarr; v0.27.2).</strong> Henrique also added a new EventAnalyticsObserver for better livestream diagnostics -- remote logs for speakers, local logs for viewers.</div>
     </div>
   </div>
 </div>
