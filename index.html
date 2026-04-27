@@ -288,7 +288,7 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>On Pace</div>
+        <div class="milestone-status date-moved"><span class="milestone-status-dot"></span>Target changed last week</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 15</div></div>
@@ -304,7 +304,7 @@
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>On Pace</div>
+        <div class="milestone-status date-moved"><span class="milestone-status-dot"></span>Target changed last week</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 27</div></div>
@@ -359,19 +359,6 @@
       <div class="highlight-icon">&#9679;</div>
       <div><strong>GraphQL architecture proposals shared -- Option H (Strangler Fig) preferred.</strong> Full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data now banned from all new work. Platform unblocked; awaiting roadmap prioritization.</div>
     </div>
-    <div class="highlight-subheading">DevEx Wins (cross-team)</div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>GHA pull_request workflow fix shipped across 9 repos.</strong> Tim Herby caught a long-standing CI gotcha where workflows were validating a synthetic merge preview rather than the actual branch -- 54 checkouts patched to use the immutable head SHA. Eliminates a class of phantom CI failures.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>mighty-mailgun skill shipped (Roque Santos).</strong> Bug bots can now query Mailgun directly for delivery, bounce, and suppression evidence -- closes the gap where Claude couldn't actually verify email-delivery hypotheses. Already ruled out Mailgun on BAN-12002 in minutes.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android test coverage dashboard live.</strong> Mate's new coverage dashboard auto-recalculates on every merge. Coverage has climbed steadily since launch via the test-coverage campaigns tool.</div>
-    </div>
     <div class="highlight-subheading">Livestreaming</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
@@ -412,6 +399,12 @@
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
       <strong>Mobile Bug System Improvements project.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Project definition approved.</span>
+    </div>
+  </div>
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128308;</div>
+    <div class="research-injection-text">
+      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Invites + Plan Sharing project will also impact downstream cycles.
     </div>
   </div>
   <div class="status-columns">
@@ -485,6 +478,12 @@
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
       <strong>Mobile Bug System Improvements project.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Project definition approved.</span>
+    </div>
+  </div>
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128308;</div>
+    <div class="research-injection-text">
+      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Invites + Plan Sharing project will also impact downstream cycles.
     </div>
   </div>
   <div class="status-columns">
