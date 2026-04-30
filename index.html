@@ -274,7 +274,7 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated April 24, 2026</div>
+      <div class="updated-token">Updated April 30, 2026</div>
     </div>
   </div>
 </div>
@@ -288,30 +288,30 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status date-moved"><span class="milestone-status-dot"></span>Target changed last week</div>
+        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>On pace</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 15</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 22</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 29</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 4). Small Post Card UI fully shipped this week -- Quick Post, Article, Question, Poll, and Event variants plus the new carousel component. Poll Card landed with three states (open / closed / private) wired into the Feed routing. Up next: poll content types and 24-variant link embeds.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Component Building (Phase 2 of 4). First Embedded Link variant up for UI review this week (24-variant build underway). Small Post Card UI &amp; carousel shipped last week. Poll Card three-state implementation routing into Feed. Up next: poll content types and remaining link embed variants.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:55%"></div></div>
-        <div class="milestone-progress-pct">~55%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:60%"></div></div>
+        <div class="milestone-progress-pct">~60%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status date-moved"><span class="milestone-status-dot"></span>Target changed last week</div>
+        <div class="milestone-status timeline-risk"><span class="milestone-status-dot"></span>Bug system spike active</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 27</div></div>
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 1</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 8</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Space Feed Verified. SmallPostCards documentation pipeline shipped this week -- 10 docs PRs catalog tile variants, geometry, theming, and the legacy &harr; Compose parity matrix. Poll parity investigation continuing.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5). Sammy &amp; Mate are leading the 2-week Mobile Bug System Improvements spike (Apr 27 &ndash; May 8) -- their feed bandwidth is reduced through May 8. Rafael is continuing the poll parity investigation in parallel. Phase 4 prep deferred until spike wraps.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:78%"></div></div>
         <div class="milestone-progress-pct">~78%</div>
@@ -324,12 +324,28 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates -- week of Apr 20</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates -- week of Apr 27</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Small Post Card UI complete.</strong> Rodrigo wrapped Quick Post, Article, Question, Poll, and Event variants this week, plus a brand-new carousel component that powers the new Feed. All merged to develop and previewable in the UI Library.</div>
+      <div><strong>iOS first Embedded Link variant up for UI review.</strong> Rodrigo posted the first of 24 link embed variants in the UI Library on Apr 28. Sets the template for the remaining 3 sizes &times; 8 content types build.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Mobile Bug System Improvements spike kicked off.</strong> 2-week project running Apr 27 -- May 8. Sammy &amp; Mate leading: AI generates an integration test &rarr; CI repros &rarr; auto-fixer attempts up to 3x &rarr; escalates to human. Tests stay as permanent integration coverage.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#128308;</div>
+      <div><strong>Sequoia daily bug report -- 3 P1s breached SLA.</strong> Laura's Apr 27 report flagged all 3 P1s past 24h since filing, plus SEQ-13374 stuck in Needs Manual Repro. Daily visibility is helping us see slip in real time.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#128308;</div>
+      <div><strong>Auto-fixer architecture decision still open.</strong> Tim prefers a single-worker monolith; current proposal is async multi-worker draft PRs. Cost &amp; platform isolation unresolved -- Mate has a 1-on-1 with Tim to align before scaling.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>iOS Small Post Card UI complete.</strong> Rodrigo shipped Quick Post, Article, Question, Poll, and Event variants last week, plus a brand-new carousel component that powers the new Feed. All merged to develop and previewable in the UI Library.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
@@ -337,23 +353,15 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android SmallPostCards documentation suite shipped.</strong> 10 docs PRs from Sammy this week catalog all 9 tile variants, the mapper pipeline, geometry vs. legacy XML, theming, and the legacy &harr; Compose parity matrix -- surfaced from CLAUDE.md so engineers (and Claude) can pick up the system fast.</div>
+      <div><strong>Android SmallPostCards documentation suite shipped.</strong> 10 docs PRs from Sammy catalog all 9 tile variants, the mapper pipeline, geometry vs. legacy XML, theming, and the legacy &harr; Compose parity matrix -- surfaced from CLAUDE.md so engineers (and Claude) can pick up the system fast.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
       <div><strong>iOS Question Content Card merged (SEQ-13129).</strong> Henrique -- shipped Apr 20, available in the Feed Library. Container/content pattern shared with Polls.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS realtime debug tool (Pusher event suppression) merged.</strong> Henrique shipped a debug toggle that lets internal testers suppress specific realtime events to debug "missed event" bugs -- particularly useful for livestream investigations.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Mobile Bug System Improvements project -- definition approved.</strong> 2-week project starting Monday with 1 DRI per platform. Adds a test-and-verify loop so the mobile auto-fixer can validate fixes against a simulated app -- today it operates on bug descriptions alone, which is why mobile has lagged.</div>
-    </div>
-    <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
-      <div><strong>EmbeddedLinkView complexity mapped (24 variants).</strong> Rodrigo catalogued 3 sizes &times; 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement. Component build underway.</div>
+      <div><strong>EmbeddedLinkView complexity mapped (24 variants).</strong> Rodrigo catalogued 3 sizes &times; 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement. First variant now up for review; remaining variants underway.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
@@ -362,7 +370,11 @@
     <div class="highlight-subheading">Livestreaming</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9679;</div>
-      <div><strong>Validating speaker promotion flow / fixes 4/28 (Murphy).</strong></div>
+      <div><strong>Speaker promotion retest scheduled with Host -- Tuesday 4/28 (Murphy).</strong> Validating the speaker promotion flow + recent fixes with the live host.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9679;</div>
+      <div><strong>Web declined Chime SDK update.</strong> Esteban: no benefit, high risk, confirmed Safari screen-share regression. Mobile work is unaffected.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
@@ -391,14 +403,14 @@
     <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 1 - 12</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:55%"></div></div>
-    <div class="progress-pct">~55%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:60%"></div></div>
+    <div class="progress-pct">~60%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Mobile Bug System Improvements project.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Project definition approved.</span>
+      <strong>Mobile Bug System Improvements project -- now active.</strong> 2-week spike Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Sammy &amp; Mate leading; iOS DRI in motion.</span>
     </div>
   </div>
   <div class="research-injection">
@@ -410,8 +422,8 @@
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
+      <div class="status-item"><strong>EmbeddedLinkView (24 variations)</strong><div class="detail">Rodrigo -- first variant up for UI review (Apr 28). 3 sizes x 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement.</div></div>
       <div class="status-item"><strong>Poll content types</strong><div class="detail">Henrique -- multiple choice, percentage, hot and cold. Shared container/internal-content pattern (matches Posts).</div></div>
-      <div class="status-item"><strong>EmbeddedLinkView (24 variations)</strong><div class="detail">Rodrigo -- 3 sizes x 8 content types: Generic, Event, Space, Collection, Plan, Poll, Recognition, Announcement</div></div>
       <div class="status-item"><strong>Filter screen recreation</strong><div class="detail">Rodrigo -- proposing a fresh build to match the new Feed UI rather than retrofitting the legacy filter screen.</div></div>
       <div class="status-item"><strong>FeedViewRouter Core Data extraction</strong><div class="detail">Andrej -- follow-up tickets SEQ-13293 (theme from FlexSpaceDTO) and SEQ-13205 (encapsulate Core Data)</div></div>
       <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture documented in Miro -- integrating with data &amp; MVVM layers</div></div>
@@ -426,6 +438,7 @@
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
+      <div class="status-item"><strong>First Embedded Link variant -- UI review ready</strong><div class="detail">Rodrigo -- first of 24 variants posted in UI Library Apr 28. Sets template for the remaining build.</div></div>
       <div class="status-item"><strong>Small Post Card UI -- shipped</strong><div class="detail">Rodrigo -- Quick Post, Article, Question, Poll, and Event variants plus the new small member attribution. Merged Apr 23.</div></div>
       <div class="status-item"><strong>Carousel UI component -- shipped</strong><div class="detail">Rodrigo -- new SwiftUI carousel powering the new Feed. Merged Apr 23.</div></div>
       <div class="status-item"><strong>Poll Card -- three states wired</strong><div class="detail">Henrique -- open (vote), closed (results), private (hidden). Routed into Feed; previewable in UI Library. Apr 24.</div></div>
@@ -444,6 +457,7 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
+    <div class="risk-item"><strong>P1 SLA breach visibility.</strong> Apr 27 daily bug report flagged 3 P1s past 24h SLA + SEQ-13374 stuck in Needs Manual Repro. Daily report cadence catching slip in real time.</div>
     <div class="risk-item"><strong>Bug fixer system needs improvement for mobile.</strong> Bug System Improvements project (Apr 27 &ndash; May 8) directly addresses this -- the auto-fixer has only fixed ~1 mobile bug in one shot to date.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
@@ -477,7 +491,7 @@
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Mobile Bug System Improvements project.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Project definition approved.</span>
+      <strong>Mobile Bug System Improvements project -- now active.</strong> 2-week spike Apr 27 &ndash; May 8. Sammy &amp; Mate leading; their feed bandwidth is reduced through May 8. <span class="research-dates">Auto-fixer architecture (single-worker vs. multi-worker async) still under debate.</span>
     </div>
   </div>
   <div class="research-injection">
@@ -491,14 +505,14 @@
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
       <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael -- investigating gaps in poll component vs. view version; underway now that Space Feed is Verified</div></div>
       <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; awaiting final designs from Bradley. End-of-April Mammoth deadline.</div></div>
-      <div class="status-item"><strong>Integration phase prep</strong><div class="detail">Sammy / Rafael -- staging Phase 4 work as Complex Cards wraps in mid-May.</div></div>
+      <div class="status-item"><strong>Bug system spike</strong><div class="detail">Sammy &amp; Mate -- 2-week project Apr 27 &ndash; May 8. Reduces feed bandwidth through May 8.</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
       <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays</div></div>
       <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events to ViewModels</div></div>
       <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share</div></div>
-      <div class="status-item"><strong>Integration phase kickoff</strong><div class="detail">Phase 4 starts May 18 -- stitch complex feeds into app navigation</div></div>
+      <div class="status-item"><strong>Integration phase kickoff</strong><div class="detail">Phase 4 starts May 18 -- stitch complex feeds into app navigation. Deferred until bug spike wraps.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
@@ -515,6 +529,7 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
+    <div class="risk-item"><strong>Phase 4 prep deferred until bug spike wraps May 8.</strong> Sammy &amp; Mate co-leading the bug system spike reduces parallel feed capacity for the next 2 weeks.</div>
     <div class="risk-item"><strong>Bug fixer system needs improvement for mobile.</strong> Bug System Improvements project (Apr 27 &ndash; May 8) directly addresses this.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
@@ -550,9 +565,9 @@
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>android-pr-upload skill -- now auto-detects reliably</li>
+        <li>Continue button modernized on event delete popup (#12731)</li>
+        <li>Deprecated Html.fromHtml dropped from members list title (#12732)</li>
         <li>SmallPostCards docs -- 10-PR documentation suite (variants, mapper, theming, parity matrix)</li>
-        <li>Test coverage dashboard live and updating on every merge</li>
       </ul>
     </div>
   </div>
