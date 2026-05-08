@@ -28,37 +28,114 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body { font-family: 'Inter', sans-serif; background: var(--warm-grey); color: var(--dark-teal); line-height: 1.6; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-grey);
+    color: var(--dark-teal);
+    line-height: 1.6;
+    padding: 0;
+  }
 
-  .header { background: var(--dark-teal); color: var(--white); padding: 36px 48px 32px; position: relative; }
-  .header-top { display: flex; justify-content: space-between; align-items: flex-start; }
-  .header h1 { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.5px; margin-bottom: 6px; }
+  .header {
+    background: var(--dark-teal);
+    color: var(--white);
+    padding: 36px 48px 32px;
+    position: relative;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header h1 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
   .header h1 span { color: var(--teal); }
-  .header-meta { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-  .updated-token { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 48px; }
-  .platform-section { background: var(--white); border-radius: 16px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); border-top: 4px solid transparent; }
+  .header-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .updated-token {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+  }
+  .platform-section {
+    background: var(--white);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(9,43,46,0.06);
+    border-top: 4px solid transparent;
+  }
   .platform-section.ios-section { border-top-color: var(--blue); }
   .platform-section.android-section { border-top-color: var(--accessible-teal); }
-  .platform-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); }
+  .platform-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba(9,43,46,0.06);
+  }
   .platform-header-left { display: flex; align-items: center; gap: 12px; }
-  .platform-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; }
+  .platform-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700;
+  }
   .ios-icon { background: var(--blue); color: var(--white); }
   .android-icon { background: var(--accessible-teal); color: var(--white); }
   .platform-name { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
-  .platform-target { font-size: 13px; font-weight: 600; color: var(--accessible-teal); background: rgba(0,167,139,0.08); padding: 4px 12px; border-radius: 12px; }
-  .phase-timeline { display: flex; gap: 0; padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); overflow-x: auto; }
-  .phase-item { flex: 1; min-width: 0; position: relative; text-align: center; padding: 0 8px; }
-  .phase-item:not(:last-child)::after { content: ''; position: absolute; top: 14px; right: -4px; width: 8px; height: 2px; background: rgba(9,43,46,0.15); }
-  .phase-dot { width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--white); }
+  .platform-target {
+    font-size: 13px; font-weight: 600; color: var(--accessible-teal);
+    background: rgba(0,167,139,0.08); padding: 4px 12px; border-radius: 12px;
+  }
+  .phase-timeline {
+    display: flex; gap: 0; padding: 20px 28px;
+    border-bottom: 1px solid rgba(9,43,46,0.06); overflow-x: auto;
+  }
+  .phase-item {
+    flex: 1; min-width: 0; position: relative; text-align: center; padding: 0 8px;
+  }
+  .phase-item:not(:last-child)::after {
+    content: ''; position: absolute; top: 14px; right: -4px;
+    width: 8px; height: 2px; background: rgba(9,43,46,0.15);
+  }
+  .phase-dot {
+    width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--white);
+  }
   .phase-dot.completed { background: var(--accessible-teal); }
   .phase-dot.in-progress { background: var(--blue); animation: pulse 2s ease-in-out infinite; }
   .phase-dot.upcoming { background: rgba(9,43,46,0.15); color: rgba(9,43,46,0.4); }
-  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(73,93,235,0.3); } 50% { box-shadow: 0 0 0 6px rgba(73,93,235,0); } }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(73,93,235,0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(73,93,235,0); }
+  }
   .phase-label { font-size: 11px; font-weight: 600; color: var(--dark-teal); line-height: 1.3; }
   .phase-dates { font-size: 10px; color: rgba(9,43,46,0.45); margin-top: 2px; }
-  .progress-bar-section { padding: 16px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); display: flex; align-items: center; gap: 16px; }
-  .progress-track { flex: 1; height: 10px; background: rgba(9,43,46,0.06); border-radius: 6px; overflow: hidden; }
+  .progress-bar-section {
+    padding: 16px 28px; border-bottom: 1px solid rgba(9,43,46,0.06);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .progress-track {
+    flex: 1; height: 10px; background: rgba(9,43,46,0.06); border-radius: 6px; overflow: hidden;
+  }
   .progress-fill { height: 100%; border-radius: 6px; }
   .progress-fill.phase-active { background: var(--blue); }
   .progress-pct { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap; }
@@ -67,7 +144,11 @@
   .status-columns { display: grid; grid-template-columns: 1fr 1fr 1fr; }
   .status-col { padding: 20px 24px; border-right: 1px solid rgba(9,43,46,0.06); }
   .status-col:last-child { border-right: none; }
-  .status-col-header { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .status-col-header {
+    font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
   .status-col-header .indicator { width: 8px; height: 8px; border-radius: 50%; }
   .status-col-completed { background: rgba(9,43,46,0.025); }
   .indicator-done { background: var(--accessible-teal); }
@@ -78,18 +159,32 @@
   .status-item strong { font-weight: 600; }
   .status-item .detail { color: rgba(9,43,46,0.55); font-size: 12px; }
   .risks-section { padding: 16px 28px 20px; background: rgba(9,43,46,0.02); border-top: 1px solid rgba(9,43,46,0.06); }
-  .risks-header { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; color: var(--red); display: flex; align-items: center; gap: 6px; }
+  .risks-header {
+    font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; color: var(--red);
+    display: flex; align-items: center; gap: 6px;
+  }
   .risk-item { font-size: 13px; line-height: 1.5; padding: 4px 0 4px 16px; position: relative; }
   .risk-item::before { content: '\2014'; position: absolute; left: 0; color: rgba(9,43,46,0.3); }
-  .research-injection { padding: 14px 28px; background: rgba(250,77,80,0.06); border-top: 3px solid var(--red); border-bottom: 1px solid rgba(250,77,80,0.15); display: flex; align-items: flex-start; gap: 10px; }
+  .research-injection {
+    padding: 14px 28px; background: rgba(250,77,80,0.06);
+    border-top: 3px solid var(--red); border-bottom: 1px solid rgba(250,77,80,0.15);
+    display: flex; align-items: flex-start; gap: 10px;
+  }
   .research-injection-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
   .research-injection-text { font-size: 13px; line-height: 1.5; }
   .research-injection-text strong { color: var(--red); font-weight: 700; }
   .research-injection-text .research-dates { color: rgba(9,43,46,0.55); font-size: 12px; }
-  .platform-resources { padding: 14px 28px 18px; background: rgba(0,167,139,0.03); border-top: 1px solid rgba(9,43,46,0.06); display: flex; flex-wrap: wrap; gap: 16px; }
+  .platform-resources {
+    padding: 14px 28px 18px; background: rgba(0,167,139,0.03);
+    border-top: 1px solid rgba(9,43,46,0.06); display: flex; flex-wrap: wrap; gap: 16px;
+  }
   .platform-resource-link { font-size: 12px; font-weight: 500; color: var(--accessible-teal); text-decoration: none; }
   .platform-resource-link:hover { text-decoration: underline; }
-  .scoreboard { background: var(--white); border-radius: 16px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); }
+  .scoreboard {
+    background: var(--white); border-radius: 16px; margin-bottom: 24px;
+    overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06);
+  }
   .scoreboard-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); display: flex; align-items: center; justify-content: space-between; }
   .scoreboard-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
   .scoreboard-link { font-size: 13px; color: var(--accessible-teal); text-decoration: none; font-weight: 500; }
@@ -107,7 +202,10 @@
   .score-pr-list { list-style: none; padding: 0; margin: 0; }
   .score-pr-list li { font-size: 13px; line-height: 1.5; padding: 4px 0 4px 14px; position: relative; color: rgba(9,43,46,0.7); }
   .score-pr-list li::before { content: '\2022'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
-  .milestones { background: var(--dark-teal); border-radius: 16px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 2px 8px rgba(9,43,46,0.12); }
+  .milestones {
+    background: var(--dark-teal); border-radius: 16px; margin-bottom: 24px;
+    overflow: hidden; box-shadow: 0 2px 8px rgba(9,43,46,0.12);
+  }
   .milestones-header { padding: 20px 28px 0; }
   .milestones-title { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: var(--white); }
   .milestones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px 28px 24px; }
@@ -116,7 +214,10 @@
   .milestone-card.android-milestone { border-top: 3px solid var(--accessible-teal); }
   .milestone-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
   .milestone-platform { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 15px; color: var(--white); }
-  .milestone-status { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; padding: 4px 12px; border-radius: 20px; }
+  .milestone-status {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 4px 12px; border-radius: 20px;
+  }
   .milestone-status.date-moved { background: rgba(250,77,80,0.2); color: var(--red); }
   .milestone-status.date-moved .milestone-status-dot { background: var(--red); }
   .milestone-status.timeline-risk { background: rgba(255,156,50,0.2); color: var(--yellow); }
@@ -147,10 +248,14 @@
   .highlight-item:nth-child(odd) .highlight-icon { background: rgba(200,240,105,0.25); }
   .highlight-item:nth-child(even) .highlight-icon { background: rgba(200,240,105,0.15); }
   .highlight-subheading { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--dark-teal); padding: 18px 0 6px; margin-top: 8px; border-top: 1px solid rgba(9,43,46,0.08); }
-  .alert-banner { background: rgba(200,240,105,0.12); border: 1.5px solid rgba(200,240,105,0.55); border-radius: 12px; padding: 16px 22px; margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px; }
+  .alert-banner {
+    background: rgba(250,77,80,0.07); border: 1.5px solid rgba(250,77,80,0.25);
+    border-radius: 12px; padding: 16px 22px; margin-bottom: 24px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
   .alert-banner-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
   .alert-banner-text { font-size: 14px; line-height: 1.6; }
-  .alert-banner-text strong { color: var(--accessible-teal); font-weight: 700; }
+  .alert-banner-text strong { color: var(--red); font-weight: 700; }
   .resources { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); margin-bottom: 32px; }
   .resources-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); }
   .resources-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
@@ -169,20 +274,12 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated May 8, 2026 (PM refresh)</div>
+      <div class="updated-token">Updated May 8, 2026</div>
     </div>
   </div>
 </div>
 
 <div class="container">
-
-<!-- ALERT BANNER -->
-<div class="alert-banner">
-  <div class="alert-banner-icon">&#127881;</div>
-  <div class="alert-banner-text">
-    <strong>iOS Bug System TDD shipped end-to-end (May 8, 12:58 PM, Andrej).</strong> Full green run plus a ticket auto-fixed via the iOS TDD bug system. All PRs merged. Every CI run on iOS now builds the app and goes through the full flow -- iOS reaches parity with Sammy's Android pipeline, and Sammy is now triaging the full Android bug queue. <strong>Feed UI also has a finish line</strong> -- Rodrigo confirmed the pending list (Embedded Link variants, Post Attachments, Quick Post + background variant, Post Detail screen pieces) is the LAST set of UI components needed for the Feed. Next two weeks pivot to bug burndown (~100 tickets) while integration testing runs in parallel. Chromecasting is positioned to move to general on Monday after one more round of NVM testing -- only outstanding issue is a light-mode icon visibility fix.
-  </div>
-</div>
 
 <!-- KEY MILESTONES -->
 <div class="milestones">
@@ -191,33 +288,33 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status on-pace">Last UI components mapped; bug burndown next</div>
+        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>On pace</div>
       </div>
       <div class="milestone-dates">
-        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 29</div></div>
-        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">July 6</div></div>
-        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">July 13</div></div>
+        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 15</div></div>
+        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 22</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 29</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Component build wrapping -- Rodrigo confirmed the pending list is the LAST UI work needed. Integration ticket planning open under SEQ-13039. <strong>Next two weeks:</strong> bug burndown (~100 open tickets, achievable in 2 weeks) with integration tests running in parallel.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 2 (Component Building) wrapping up. This week: native iOS slider for polls landed, MightyFileView component delivered file UI singularity across Feed/Comments/Compose, Polls live in UILibrary 8.266.43 (simple + animated variants, multichoice, percentage, hot &amp; cold), Feed Filter UI rebuilt on iOS, and the first Embedded Link variant is in UI review. Phase 3 (Integration) kicks off May 11.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:75%"></div></div>
-        <div class="milestone-progress-pct">~75%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:72%"></div></div>
+        <div class="milestone-progress-pct">~72%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status on-pace">Bug System loop live; Sammy triaging full Android queue</div>
+        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>On pace</div>
       </div>
       <div class="milestone-dates">
-        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">June 3</div></div>
-        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 8</div></div>
-        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 15</div></div>
+        <div class="milestone-date-row"><div class="ms-label">Full Platform Internal Testing</div><div class="ms-date">May 27</div></div>
+        <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 1</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 8</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Complex Cards &amp; Feeds (Phase 3 of 5) wrapping. Sammy now triaging the full Android bug queue alongside QA polish. Bug System Android pipeline running end-to-end.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Complex Cards &amp; Feeds) closing out. Space Feed Verified, SmallPostCards documentation suite shipped, FeedCardItem composable + UI tests resolved, Compose course navigation deployed. Integration phase (Phase 4) prep underway -- staging starts May 18.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:90%"></div></div>
-        <div class="milestone-progress-pct">~90%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:85%"></div></div>
+        <div class="milestone-progress-pct">~85%</div>
       </div>
     </div>
   </div>
@@ -227,83 +324,62 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Rolling updates -- week of May 4 - May 8</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Week of May 4</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
-      <div class="highlight-icon">&#128640;</div>
-      <div><strong>iOS Bug System TDD shipped end-to-end (May 8, 12:58 PM PDT, Andrej).</strong> Full green run on iOS plus a ticket successfully auto-fixed with the iOS TDD bug system. All PRs merged. Every CI run on iOS now builds the app and goes through the full flow. iOS reached parity with Android's pipeline. Squad to monitor closely as it bakes in.</div>
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>iOS native slider for polls landed.</strong> Henrique replaced the custom percentage slider with the native iOS slider (PR #13176) -- snappier feel, snapshots and videos in the PR. Final piece of the percentage poll UX.</div>
     </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#127937;</div>
-      <div><strong>Feed UI has a finish line (May 8, Rodrigo).</strong> The pending list IS the last set of UI components needed for the Feed: <em>Waiting on Design</em> -- Small Post Card carousel "see more" button, Embedded Link View remaining 7 variants. <em>Ready to Dev</em> -- Post Attachments component, Quick Post, Quick Post background image variant. <em>Post Detail</em> -- Web Content Render, Comments Component, Post Detail screen architecture. Squad will run integration tests on completed pieces while these wrap.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128737;</div>
-      <div><strong>Next 2 weeks pivot to bug burndown.</strong> ~100 open tickets in the queue -- achievable inside the 2-week window. Sammy is already actively triaging the full Android bug list; Andrej shipping the iOS pipeline accelerates the iOS side. Integration testing on completed feed pieces continues in parallel.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128250;</div>
-      <div><strong>Chromecasting on track for general on Monday.</strong> Only outstanding issue is a light-mode icon visibility fix (quick to land). One more round of NVM-led alpha testing this weekend, then move to general. Once Chromecasting is GA, focus extends to livestream casting.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#127881;</div>
-      <div><strong>iOS feed integration ticket planning kicked off (May 8).</strong> Henrique started carving out integration tickets under SEQ-13039 for every post card already built. In flight: identified gaps in interactors and DTO field types (e.g. PostDTO.myRSVP is String? not Int) and is cleaning up TODOs that pointed to deleted tickets (SEQ-13103, SEQ-13104) plus tickets that landed in Deploying by accident (SEQ-13102, SEQ-13105).</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128230;</div>
-      <div><strong>New MightyFileView component shipped (May 8, Rodrigo).</strong> File attachments now render through one shared component across feed cells, comment cells, and the compose flow (new file picker preview). Behind the Feed Refactor feature flag. Available in the UI Library under feature components for previewing.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#127922;</div>
-      <div><strong>Native iOS slider PR landed (May 8, Henrique).</strong> <a href="https://github.com/untitledstartup/ios-app/pull/13176" target="_blank">PR #13176</a> with snapshots and videos -- awaiting Bradley review. Replaces the custom slider in the percentage poll.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128172;</div>
-      <div><strong>Polls live in UILibrary in 8.266.43+ for design feedback (May 7, Henrique).</strong> Two hot/cold poll variants ready to compare (simple crossfade vs animated wave morph). Asking for feedback on transition feel, haptics, and whether we want sound feedback. Slider migration (SEQ-13489) still open. <a href="https://mightynetworks.atlassian.net/browse/SEQ-13526" target="_blank">SEQ-13526</a>.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#129302;</div>
-      <div><strong>Android shipped-plan cleanup (May 7-8, Sammy).</strong> Posted PRs to remove shipped Compose course navigation plans, Global Feed migration phase plans, FlexSpace feed filter dropdown plan (SEQ-12749), and feed refactor measurement baseline plan. Ongoing housekeeping as feeds stabilize.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128268;</div>
-      <div><strong>Bug System project: Sammy + Andrej + Thiago presented at Bug Guild (May 8).</strong> Andrej rewrote the iOS plan to follow the mighty-common approach (<a href="https://github.com/untitledstartup/ios-app/pull/13157" target="_blank">PR #13157</a>) and shipped iOS TDD end-to-end the same day. Thiago is rolling out a TDD approach for bug fixes (<a href="https://github.com/untitledstartup/mighty-common/pull/681" target="_blank">mighty-common #681</a>, <a href="https://github.com/untitledstartup/speckel/pull/40999" target="_blank">speckel #40999</a>). Sammy proposed loop_mode: tdd_external_red so the loop's Phase 2 doesn't conflict with Android's already-generated test.</div>
-    </div>
-    <div class="highlight-subheading">Risks &amp; Watch Items</div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9888;</div>
-      <div><strong>P1 SLA breached: SEQ-13575 (May 8 daily report).</strong> Design request to add email verification prompt to branded apps (SSO removed; members only see password prompts). Assigned to Colleen, in Design Needed for ~1.9 days.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128680;</div>
-      <div><strong>Livestream crash bug filed May 7 -- SEQ-13587.</strong> Pro Complete report: members report livestream crashes that scale with attendance and on comment. In Needs Manual Repro (Laura Laws, platform pending). Worth watching since livestream reliability has been a recurring drag on the squad.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128241;</div>
-      <div><strong>SEQ-13588 (May 7) -- Android live event push notifications missing.</strong> P1, ~16h old, Needs Manual Repro, Sammy assigned. Joins the broader notifications cluster.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128737;</div>
-      <div><strong>iOS notification cluster still active.</strong> SEQ-13544 (badge persists after reading comment notification), SEQ-13550 (tab bar badge missing), SEQ-13551 (profile picture save fails) all on Rodrigo and in Deploying. Henrique flagged SEQ-13560 came in tagged P1 but reads more like P2 -- triage call needed.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128276;</div>
-      <div><strong>Android push-notification P1 SEQ-13553 still SLA breached.</strong> Onboarding-prompt push reliability on Inner Matrix Network branded app. Ready for Work, Rafael assigned.</div>
-    </div>
-    <div class="highlight-subheading">Livestreaming (focus risk)</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>No new active livestream firefighting since last Thursday.</strong> Web declined the Chime SDK update (no benefits, high risk) -- mobile unaffected. Waiting room polling remains stable. Henrique still DRI for native livestream issues; SEQ-13587 above is the new incoming we're watching. Once Chromecasting goes GA, livestream casting is next on the focus list.</div>
-    </div>
-    <div class="highlight-subheading">Squad notes</div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128197;</div>
-      <div><strong>Rodrigo out of Thu/Fri standups</strong> (May 7-8) in favor of Share Link meetings.</div>
+      <div><strong>iOS MightyFileView component shipped -- file UI singularity.</strong> Rodrigo built a single component for file attachments and rolled it into Feed cells, Comment cells, and the Compose flow's new file picker preview. Replaces N different file view styles with one. Behind the Feed Refactor flag.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#128161;</div>
-      <div><strong>Rafael focus.</strong> Has all PRs ready for the redesign work he's on; refining and testing. Also focusing on invites work in parallel.</div>
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>iOS Polls live in UILibrary 8.266.43+.</strong> Hot &amp; cold polls (simple + animated variants), multichoice, and percentage are all interactive in the UI Library now -- including haptics on physical devices. Design feedback loop open in <a href="https://mightynetworks.atlassian.net/browse/SEQ-13526">SEQ-13526</a>.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>iOS Feed Filter UI rebuilt.</strong> Rodrigo recreated the Feed Filter screen on iOS to match the new Feed UI rather than retrofit the legacy screen. In design review now.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>iOS first Embedded Link variant ready for UI review.</strong> Rodrigo -- the first of 24 variants is live in UILibrary's embedded link section, pacing the rest of the build.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9679;</div>
+      <div><strong>Android Phase 4 (Integration) prep underway.</strong> Sammy &amp; Rafael staging integration work as Complex Cards wraps mid-May. Global Feed conversion, analytics wiring, and More Menu parity all queued.</div>
+    </div>
+    <div class="highlight-subheading">DevEx Platform Wins</div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Per-test failure bundles now universal across web/speckel CI.</strong> Every failing spec gets its own pre-signed S3 tarball linked from the Datadog test span -- one click to logs, screenshots, console output. Flake-friendly, lands on the actual failure span.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Claude Code Skill Usage dashboard live in Datadog.</strong> Per-skill invocations across local Claude sessions and GHA workflows -- top skills, dead-weight skills, failure rate, activity over time. Privacy-safe: only skill names and success bits emitted.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Knapsack Pro retry-only-failures shipped.</strong> Re-run failed jobs now executes only the failures from the previous attempt -- substantially faster reruns when failures concentrate on a few specs.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Web tests up 18% to 47K in 2 months.</strong> Tim &amp; team shrinking costs in parallel -- including a WIP Graviton migration from Ahmed (just joined this week).</div>
+    </div>
+    <div class="highlight-subheading">Livestreaming</div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9679;</div>
+      <div><strong>Realtime event suppression debug tool active for livestream investigations.</strong> Henrique's Pusher event filter is helping testers reproduce missed-event bugs in livestreams.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Waiting room polling system shipped.</strong> Fixes the class of bug where members get stuck in waiting room after missing the "live started" Pusher event.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Chime SDK upgraded on iOS (v0.25.0 &rarr; v0.27.2)</strong> with a new EventAnalyticsObserver for sharper livestream diagnostics -- remote logs for speakers, local logs for viewers.</div>
     </div>
   </div>
 </div>
@@ -315,86 +391,79 @@
       <div class="platform-icon ios-icon">&#128241;</div>
       <span class="platform-name">iOS Feed Refactor</span>
     </div>
-    <div class="platform-target">Deploy Train: July 13</div>
+    <div class="platform-target">Deploy Train: June 29</div>
   </div>
   <div class="phase-timeline">
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Discovery &amp; Architecture</div><div class="phase-dates">Mar 4 - 20</div></div>
-    <div class="phase-item"><div class="phase-dot in-progress">2</div><div class="phase-label">Component Building</div><div class="phase-dates">Mar 23 - May 22</div></div>
-    <div class="phase-item"><div class="phase-dot in-progress">3</div><div class="phase-label">Integration</div><div class="phase-dates">May 25 - Jun 12</div></div>
-    <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 15 - Jul 6</div></div>
+    <div class="phase-item"><div class="phase-dot in-progress">2</div><div class="phase-label">Component Building</div><div class="phase-dates">Mar 23 - May 8</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">3</div><div class="phase-label">Integration</div><div class="phase-dates">May 11 - 29</div></div>
+    <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 1 - 12</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:75%"></div></div>
-    <div class="progress-pct">~75%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:72%"></div></div>
+    <div class="progress-pct">~72%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
   <div class="research-injection">
-    <div class="research-injection-icon">&#127881;</div>
+    <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Mobile Bug System Improvements -- iOS shipped end-to-end (May 8, 12:58 PM PDT).</strong> Andrej got a full green run on iOS plus a ticket successfully auto-fixed with the iOS TDD bug system. All PRs merged. Every CI run now builds the app and goes through the full flow. iOS at parity with Android pipeline. Bug Guild presented progress today.
+      <strong>Mobile Bug System Improvements project wrapping up.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer so it can validate fixes against a simulated app. <span class="research-dates">Wraps today.</span>
     </div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Option H (Strangler Fig) preferred -- full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data now banned from all new work. Invites + Plan Sharing project will also impact downstream cycles. <span class="research-dates">Spike complete; awaiting roadmap prioritization.</span>
+      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Invites + Plan Sharing project will also impact downstream cycles.
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Bug burndown -- 2-week target</strong><div class="detail">~100 open tickets across iOS + Android. Squad's main focus over the next two weeks while integration tests run in parallel.</div></div>
-      <div class="status-item"><strong>Integration ticket planning -- SEQ-13039</strong><div class="detail">Henrique (May 8) -- carving out integration tickets for all built post cards. Identifying interactor/DTO gaps and cleaning Jira hygiene.</div></div>
-      <div class="status-item"><strong>Native slider PR review</strong><div class="detail">Henrique -- <a href="https://github.com/untitledstartup/ios-app/pull/13176">PR #13176</a> awaiting Bradley. Snapshots + videos in PR.</div></div>
-      <div class="status-item"><strong>Polls -- design feedback in flight</strong><div class="detail">Henrique -- hot/cold simple vs animated, multi-choice avatar size discussion with Tom and Bradley.</div></div>
-      <div class="status-item"><strong>Feed Filter UI -- design review</strong><div class="detail">Rodrigo -- PRs out (SEQ-13504 series) for FeedFilterContext decoupling and option name normalization. Tom flagged tap-ability.</div></div>
-      <div class="status-item"><strong>Event status color standardization</strong><div class="detail">Henrique -- SEQ-13516. EventStatusView logic spread across app; standardizing bg/text colors. Bradley aligned on state mapping.</div></div>
-      <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- architecture + first variant in UILibrary. 7 to go (3 sizes x 8 content types). Awaiting Figma specs.</div></div>
-      <div class="status-item"><strong>3 P1 notification bugs</strong><div class="detail">Rodrigo -- SEQ-13544 (Deploying), SEQ-13550 (Deploying), SEQ-13551 (Deploying).</div></div>
-      <div class="status-item"><strong>Bug System project -- iOS pipeline shipped (May 8)</strong><div class="detail">Andrej DRI. Full green run + auto-fixed ticket end-to-end. All PRs merged. Monitoring how it works in CI.</div></div>
+      <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- first variant in UI review. Building out the remaining 23 across 3 sizes &times; 8 content types.</div></div>
+      <div class="status-item"><strong>Poll polish -- haptics &amp; sound</strong><div class="detail">Henrique -- gathering feedback on simple vs. animated variants, haptic feedback on percentage and multichoice transitions.</div></div>
+      <div class="status-item"><strong>Feed Filter design review</strong><div class="detail">Rodrigo -- iOS-built Feed Filter UI in design review with Bradley.</div></div>
+      <div class="status-item"><strong>FeedViewRouter Core Data extraction</strong><div class="detail">Andrej -- SEQ-13293 (theme from FlexSpaceDTO) and SEQ-13205 (encapsulate Core Data).</div></div>
+      <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture documented in Miro -- integrating with data &amp; MVVM layers.</div></div>
     </div>
     <div class="status-col">
-      <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck (LAST UI Components)</div>
-      <div class="status-item"><strong>Post Attachments shareable component</strong><div class="detail">Handles Image, Multi-Images, File, Embedded Link, Video for posts. Ready to dev.</div></div>
-      <div class="status-item"><strong>Quick Post + Background Image variants</strong><div class="detail">Reuses Post Attachments. Quick Post needs "See More". Background image variant has totally different layout.</div></div>
-      <div class="status-item"><strong>Web Content Render</strong><div class="detail">SwiftUI component for Article/Event/Lessons content. Required for Post Detail. Tricky.</div></div>
-      <div class="status-item"><strong>Comments Component</strong><div class="detail">Compose Bar, pagination, scroll behaviors. Comment view itself in SwiftUI; needs refactor of usage.</div></div>
-      <div class="status-item"><strong>Post Detail screen architecture</strong><div class="detail">Screen shell tying base components together, mirroring Feed and PostCard architecture.</div></div>
-      <div class="status-item"><strong>Small Post Card carousel "see more"</strong><div class="detail">Quick to implement once Figma specs land.</div></div>
-      <div class="status-item"><strong>Discovery card design finalization</strong><div class="detail">Bradley working remaining variants: background image, image galleries, file-only, link embeds.</div></div>
-      <div class="status-item"><strong>Card naming poll</strong><div class="detail">What to call the featured/discovery cards -- poll going out in #mobile_feed_refactor.</div></div>
+      <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
+      <div class="status-item"><strong>Phase 3 Integration kickoff</strong><div class="detail">Starts May 11 -- stitching components into the live Feed and editorial flows.</div></div>
+      <div class="status-item"><strong>Carousel integration</strong><div class="detail">Carousel UI built; next is wiring it through editorial flows for Mammoth.</div></div>
+      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connect rebuilt filter UI to data layer logic.</div></div>
+      <div class="status-item"><strong>Card naming finalization</strong><div class="detail">Resolving naming for featured/discovery cards.</div></div>
       <div class="status-item"><strong>Online now -- system proposal</strong><div class="detail">Squad to develop holistic treatment across all connected views. Will not block feed release.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>iOS Bug System TDD shipped (May 8)</strong><div class="detail">Andrej -- full green run + auto-fixed ticket end-to-end. All PRs merged.</div></div>
-      <div class="status-item"><strong>MightyFileView component (May 8)</strong><div class="detail">Rodrigo -- file attachments unified across feed cells, comment cells, compose flow. Behind feed flag.</div></div>
-      <div class="status-item"><strong>Native iOS slider PR landed (May 8)</strong><div class="detail">Henrique -- PR #13176 ready for review.</div></div>
-      <div class="status-item"><strong>Polls in UILibrary 8.266.43+ (May 7)</strong><div class="detail">Henrique -- two hot/cold variants in app for design feedback.</div></div>
-      <div class="status-item"><strong>Feed Filter UI rebuild (May 1)</strong><div class="detail">Rodrigo -- ready for design review. Built without Figma reference.</div></div>
-      <div class="status-item"><strong>MightyRadioButton + MightyCheckbox (Apr 30)</strong><div class="detail">Rodrigo -- new components, both handle taps on text.</div></div>
-      <div class="status-item"><strong>First EmbeddedLinkView variant (Apr 30)</strong><div class="detail">Rodrigo -- ready for UI review in UILibrary.</div></div>
-      <div class="status-item"><strong>Small Post Cards UI complete</strong><div class="detail">Rodrigo -- Quick Post, Article, Question, Poll, Event + small member attribution + new SwiftUI carousel. Merged Apr 23.</div></div>
-      <div class="status-item"><strong>Poll Card -- three states wired</strong><div class="detail">Henrique -- open (vote), closed (results), private (hidden). Apr 24.</div></div>
-      <div class="status-item"><strong>Question + Article + Event content cards</strong><div class="detail">Henrique -- merged + previewable in Feed library.</div></div>
-      <div class="status-item"><strong>Chime SDK v0.25 &rarr; v0.27.2 + EventAnalyticsObserver</strong><div class="detail">Henrique -- merged Apr 15.</div></div>
+      <div class="status-item"><strong>Native iOS slider for polls -- shipped</strong><div class="detail">Henrique -- replaces custom slider with native iOS slider. PR #13176 landed May 8.</div></div>
+      <div class="status-item"><strong>MightyFileView component -- shipped</strong><div class="detail">Rodrigo -- file UI singularity across Feed, Comments, and Compose flow's new file picker preview. May 8.</div></div>
+      <div class="status-item"><strong>Polls live in UILibrary 8.266.43+</strong><div class="detail">Henrique -- hot &amp; cold (simple + animated), multichoice, percentage all interactive. May 7.</div></div>
+      <div class="status-item"><strong>Feed Filter UI rebuild</strong><div class="detail">Rodrigo -- iOS-native rebuild matching new Feed system. Ready for design review. May 1.</div></div>
+      <div class="status-item"><strong>First Embedded Link variant in UI review</strong><div class="detail">Rodrigo -- live in UILibrary's embedded link section, pacing the rest of the build. Apr 30.</div></div>
+      <div class="status-item"><strong>Small Post Card UI -- shipped</strong><div class="detail">Rodrigo -- Quick Post, Article, Question, Poll, and Event variants plus small member attribution. Apr 23.</div></div>
+      <div class="status-item"><strong>Carousel UI component -- shipped</strong><div class="detail">Rodrigo -- new SwiftUI carousel powering the new Feed. Apr 23.</div></div>
+      <div class="status-item"><strong>Poll Card -- three states wired</strong><div class="detail">Henrique -- open (vote), closed (results), private (hidden). Routed into Feed. Apr 24.</div></div>
+      <div class="status-item"><strong>SmallPostCard context menu + Hide From Activity Feed</strong><div class="detail">Rodrigo -- reuses the regular PostCard menu. Apr 23.</div></div>
+      <div class="status-item"><strong>Realtime event suppression debug tool</strong><div class="detail">Henrique -- internal Pusher event filter for debugging missed-event bugs.</div></div>
+      <div class="status-item"><strong>Question Content Card (SEQ-13129)</strong><div class="detail">Henrique -- shipped Apr 20. Container/content pattern shared with Polls.</div></div>
+      <div class="status-item"><strong>Chime SDK v0.25 &rarr; v0.27.2 + EventAnalyticsObserver</strong><div class="detail">Henrique -- merged Apr 15. Better livestream diagnostics.</div></div>
+      <div class="status-item"><strong>Article Content (SEQ-13131) -- Deployed</strong><div class="detail">Henrique -- HTML rendering via WebView, integrated with feed card shell.</div></div>
+      <div class="status-item"><strong>Event Content component</strong><div class="detail">Henrique -- event description, livestream CTAs; merged Apr 7.</div></div>
       <div class="status-item"><strong>Router factory refactoring</strong><div class="detail">Andrej -- extracted factory method, removing Core Data dependency from router.</div></div>
+      <div class="status-item"><strong>Global icon refactor</strong><div class="detail">Rodrigo -- all legacy icons migrated to updated Figma set app-wide.</div></div>
+      <div class="status-item"><strong>Data layer architecture</strong><div class="detail">Repository, networking, DTOs -- diagrammed, merged, and Miro updated.</div></div>
       <div class="status-item"><strong>New feed live behind feature flag</strong><div class="detail">ios_feed_refactor -- loading real data in internal app.</div></div>
     </div>
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>3 P1 notification bugs on Rodrigo</strong> all in Deploying -- watch for component-work impact during the next train.</div>
-    <div class="risk-item"><strong>iOS notification cluster.</strong> 6+ tickets in the family; root cause TBD across Andrej / Henrique / Rodrigo.</div>
-    <div class="risk-item"><strong>SEQ-13587 livestream crash.</strong> New Pro Complete report (May 7) -- crashes scale with attendance. Needs Manual Repro.</div>
-    <div class="risk-item"><strong>SEQ-13575 P1 SLA breached.</strong> Email verification prompt design (Colleen).</div>
+    <div class="risk-item"><strong>Mobile Bug System Improvements wraps today.</strong> Test-and-verify loop now in place; expecting auto-fixer mobile fix rate to climb from the prior ~1 fix baseline.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
     <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12940" target="_blank">Jira Epic: SEQ-12940 &rarr;</a>
     <a class="platform-resource-link" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">Miro Board &rarr;</a>
-    <a class="platform-resource-link" href="https://docs.google.com/document/d/1r3RZU1JSiaCFaKAsoQOfTqEtlGYQMHMthNAgJmkIl9Y/edit?tab=t.soekqcehk96s" target="_blank">Bug System Project Doc &rarr;</a>
   </div>
 </div>
 
@@ -405,7 +474,7 @@
       <div class="platform-icon android-icon">&#129302;</div>
       <span class="platform-name">Android Compose Feed</span>
     </div>
-    <div class="platform-target">Deploy Train: June 15</div>
+    <div class="platform-target">Deploy Train: June 8</div>
   </div>
   <div class="phase-timeline">
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Foundation &amp; Saved Posts</div><div class="phase-dates">Mar 3 - 14</div></div>
@@ -415,92 +484,57 @@
     <div class="phase-item"><div class="phase-dot upcoming">5</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">May 26 - Jun 1</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:90%"></div></div>
-    <div class="progress-pct">~90%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:85%"></div></div>
+    <div class="progress-pct">~85%</div>
   </div>
   <div class="research-injection">
-    <div class="research-injection-icon">&#127881;</div>
+    <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>Bug-repro test loop running end-to-end (May 4) + Sammy now triaging full Android queue.</strong> Sammy validated the full chain on a real recently-resolved bug: AI skill writes a Kotlin test from a triaged ticket, CI runs it on a real emulator, results + logcat + video come back as artifacts. Demo PR #12906. Sammy is now batch-triaging the full Android bug list on top. <span class="research-dates">Bug Guild presentation today (May 8).</span>
+      <strong>Mobile Bug System Improvements project wrapping up.</strong> 2-week project Apr 27 &ndash; May 8 with 1 DRI per platform. Adds test-and-verify loop for the mobile auto-fixer. <span class="research-dates">Wraps today.</span>
     </div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#128308;</div>
     <div class="research-injection-text">
-      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Option H (Strangler Fig) preferred -- full Core Data removal, repository pattern, screen-by-screen replacement, feature-flaggable rollback. Core Data now banned from all new work. <span class="research-dates">Spike complete; awaiting roadmap prioritization.</span>
+      <strong>One-week GraphQL / Headless API research injection (complete).</strong> Andrej + Sammy ran the spike Apr 7 &ndash; Apr 14; one-week pause baked into the timeline. Invites + Plan Sharing project will also impact downstream cycles.
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Bug burndown -- 2-week target</strong><div class="detail">Sammy now triaging the full Android bug queue. Squad-wide push to clear ~100 open tickets in the next two weeks.</div></div>
-      <div class="status-item"><strong>Global Feed UI -- final QA polish</strong><div class="detail">Sammy -- design polish from QA wrapping up alongside Bug System project.</div></div>
-      <div class="status-item"><strong>Bug System project -- Android pipeline</strong><div class="detail">Sammy DRI. End-to-end test-generation loop validated May 4. Bug Guild walkthrough today (May 8).</div></div>
-      <div class="status-item"><strong>TDD loop alignment with mighty-common</strong><div class="detail">Sammy proposing loop_mode: tdd_external_red so the loop's Phase 2 doesn't conflict with Android's existing test generation flow.</div></div>
-      <div class="status-item"><strong>Shipped-plan cleanup</strong><div class="detail">Sammy (May 7-8) -- removing Compose course nav, Global Feed migration, FlexSpace filter dropdown, feed refactor measurement plans.</div></div>
-      <div class="status-item"><strong>P1 SEQ-13553 (push notifications inconsistent)</strong><div class="detail">Rafael -- SLA breached. Inner Matrix Network branded app. Ready for Work.</div></div>
-      <div class="status-item"><strong>P1 SEQ-13588 (Live event push notifications)</strong><div class="detail">Sammy -- filed May 7. Needs Manual Repro.</div></div>
-      <div class="status-item"><strong>Invites work + bug fixes</strong><div class="detail">Rafael -- has redesign PRs ready; testing/refining and parallel invites work.</div></div>
+      <div class="status-item"><strong>Phase 3 closeout</strong><div class="detail">Rafael / Sammy -- final complex card types and feed surfaces wrapping toward May 15.</div></div>
+      <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael -- investigating gaps in poll component vs. view version, underway now that Space Feed is Verified.</div></div>
+      <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; aligned with iOS card system as designs continue.</div></div>
+      <div class="status-item"><strong>Integration phase prep</strong><div class="detail">Sammy / Rafael -- staging Phase 4 work for May 18 kickoff.</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
-      <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; awaiting final designs from Bradley.</div></div>
+      <div class="status-item"><strong>Phase 4 Integration kickoff</strong><div class="detail">Starts May 18 -- stitch complex feeds into app navigation.</div></div>
+      <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays.</div></div>
       <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events to ViewModels.</div></div>
       <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share.</div></div>
-      <div class="status-item"><strong>Integration phase kickoff</strong><div class="detail">Phase 4 starts May 18 -- stitch complex feeds into app navigation.</div></div>
-      <div class="status-item"><strong>Remove ANDROID_COMPOSE_FEED flag (SEQ-13027)</strong><div class="detail">Sammy -- Ready for Work, removes transitional flag once feeds stabilize.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>Bug-repro loop end-to-end (May 4)</strong><div class="detail">Sammy -- AI skill + CI workflow + real emulator runs validated on a real bug.</div></div>
-      <div class="status-item"><strong>Global Feed UI complete</strong><div class="detail">Sammy -- main home feed UI built and merged. Final QA polish underway.</div></div>
-      <div class="status-item"><strong>SmallPostCards documentation suite</strong><div class="detail">Sammy -- 10 docs PRs catalog 9 tile variants, mapper pipeline, geometry vs. legacy XML, theming, parity matrix.</div></div>
+      <div class="status-item"><strong>SmallPostCards documentation suite -- shipped</strong><div class="detail">Sammy -- 10 docs PRs catalog 9 tile variants, mapper pipeline, geometry vs. legacy XML, theming, parity matrix, surfaced from CLAUDE.md. Apr 24.</div></div>
       <div class="status-item"><strong>Space Feed migration (SEQ-13195) -- Verified</strong><div class="detail">Rafael -- cleared QA Apr 15. First complex feed fully through pipeline.</div></div>
       <div class="status-item"><strong>Compose course navigation (SEQ-13299) -- Deployed</strong><div class="detail">Sammy -- deployed Apr 13. Replaced legacy CourseworkComposite (7 stacked PRs).</div></div>
-      <div class="status-item"><strong>Compose Feed: Post Detail (SEQ-13182)</strong><div class="detail">Sammy -- Deployed. Post Detail rendering through Compose PostCardItem.</div></div>
+      <div class="status-item"><strong>FeedCardItem composable + UI tests (SEQ-13014/13016)</strong><div class="detail">Sammy -- resolved Apr 10. Content dispatch composable with full test coverage.</div></div>
       <div class="status-item"><strong>Phase 2: Simple Screen Conversions</strong><div class="detail">Post Detail, Member Feed, Pinned Feed -- all converted to Compose.</div></div>
       <div class="status-item"><strong>Feed performance instrumentation</strong><div class="detail">Firebase Performance traces, JankStats scroll jank, Crashlytics screen tagging.</div></div>
       <div class="status-item"><strong>Phase 1: Foundation</strong><div class="detail">Shared feed data models, Compose card rendering, mapping layer, core interactions.</div></div>
       <div class="status-item"><strong>Poll cards in Compose</strong><div class="detail">Full unit test coverage -- 1,700+ lines of dead code removed.</div></div>
+      <div class="status-item"><strong>Figma to Compose design system mapping</strong><div class="detail">40+ component mappings, all tokens documented.</div></div>
     </div>
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>P1 SEQ-13553 SLA still breached.</strong> Push notifications inconsistent (Inner Matrix Network branded app). Rafael assigned.</div>
-    <div class="risk-item"><strong>P1 SEQ-13588 (May 7).</strong> Android push notifications missing for Live events.</div>
-    <div class="risk-item"><strong>Bug System project running in parallel.</strong> Sammy splitting attention with final QA polish + Android bug triage.</div>
+    <div class="risk-item"><strong>Mobile Bug System Improvements wraps today.</strong> Test-and-verify loop now in place for the mobile auto-fixer.</div>
+    <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1ncwrsO5mg_ie1zpTaBY0od_mM02yHMP_n6X4qRC61CQ/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
     <a class="platform-resource-link" href="https://mightynetworks.atlassian.net/browse/SEQ-12995" target="_blank">Jira Epic: SEQ-12995 &rarr;</a>
-  </div>
-</div>
-
-<!-- CHROMECAST SECTION -->
-<div class="platform-section android-section">
-  <div class="platform-header">
-    <div class="platform-header-left">
-      <div class="platform-icon android-icon">&#128250;</div>
-      <span class="platform-name">Chromecasting (Android)</span>
-    </div>
-    <div class="platform-target">Targeting GA: Monday May 11</div>
-  </div>
-  <div class="status-columns">
-    <div class="status-col">
-      <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Light-mode icon visibility fix</strong><div class="detail">Cast icon hard to see in light mode -- quick styling fix queued before GA.</div></div>
-      <div class="status-item"><strong>NVM-led alpha testing -- final round</strong><div class="detail">More tester confirmations rolling in. Continuing this weekend ahead of Monday GA decision.</div></div>
-    </div>
-    <div class="status-col">
-      <div class="status-col-header"><span class="indicator indicator-deck"></span>Up Next</div>
-      <div class="status-item"><strong>Move Chromecast to General -- Monday</strong><div class="detail">Pending GTM tester sign-off + light-mode icon fix.</div></div>
-      <div class="status-item"><strong>Livestream casting</strong><div class="detail">Members in Pro networks asking for cast support inside livestream (workout content). Moves up the focus list once Chromecast is GA.</div></div>
-    </div>
-    <div class="status-col status-col-completed">
-      <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>Alpha test rolled out via #mighty-alpha-testers</strong><div class="detail">Test ask: cast natively uploaded video to a Chromecast device. Reactions/replies tracked in #sequoia thread.</div></div>
-      <div class="status-item"><strong>Help center / member doc drafted</strong><div class="detail">Step-by-step covers Android-only support, native video player, fullscreen entry, cast icon location, troubleshooting (network, version, network compatibility).</div></div>
-    </div>
   </div>
 </div>
 
@@ -514,25 +548,25 @@
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">iOS</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">198</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">247</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>iOS Bug System TDD shipped end-to-end (Andrej, May 8 12:58pm)</li>
-        <li>MightyFileView component shipped (Rodrigo, May 8)</li>
-        <li>Native iOS slider PR (Henrique, May 8) -- #13176</li>
+        <li>PLA build error detection wired into Admino notifications (#13147)</li>
+        <li>Phase 1 cleanup -- 2,337 lines of stale planning docs removed (#13071)</li>
+        <li>Phase 2 dispatcher activator: BUG_SYSTEM_PLATFORM=ios for Datadog tagging (#13161)</li>
       </ul>
     </div>
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">Android</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">295</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">365</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Sammy triaging the full Android bug queue (May 7-8)</li>
-        <li>Shipped-plan cleanup (Sammy, May 7-8)</li>
-        <li>Bug-repro AI skill + CI emulator workflow (Sammy, May 4) -- PR #12906</li>
+        <li>Flake correlator perf -- 13min runs cut to 30sec via first-parent git walk (#13011)</li>
+        <li>New pr-chain-author skill -- automates stacked PR conventions (#13020)</li>
+        <li>New compose-conventions-audit skill -- enforces Figma/preview/modifier rules (#13019)</li>
       </ul>
     </div>
   </div>
@@ -546,12 +580,8 @@
       <div class="resource-label">Slack Project Channel</div>
       <div class="resource-name">#mobile_feed_refactor &rarr;</div>
     </a>
-    <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0B1106R9EC" target="_blank">
-      <div class="resource-label">Slack -- New</div>
-      <div class="resource-name">#mobile-bug-system &rarr;</div>
-    </a>
     <a class="resource-item" href="https://mightynetworks.slack.com/archives/C0ASEVBQSUX" target="_blank">
-      <div class="resource-label">Slack</div>
+      <div class="resource-label">Slack -- New</div>
       <div class="resource-name">#mobile-livestream-issues &rarr;</div>
     </a>
     <a class="resource-item" href="https://www.figma.com/design/orchjRMhCEZNehSpGipZht/Components?node-id=3634-31084&m=dev" target="_blank">
