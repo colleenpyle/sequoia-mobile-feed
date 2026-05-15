@@ -249,13 +249,13 @@
   .highlight-item:nth-child(even) .highlight-icon { background: rgba(200,240,105,0.15); }
   .highlight-subheading { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--dark-teal); padding: 18px 0 6px; margin-top: 8px; border-top: 1px solid rgba(9,43,46,0.08); }
   .alert-banner {
-    background: rgba(250,77,80,0.07); border: 1.5px solid rgba(250,77,80,0.25);
+    background: rgba(200,240,105,0.15); border: 1.5px solid rgba(0,167,139,0.35);
     border-radius: 12px; padding: 16px 22px; margin-bottom: 24px;
     display: flex; align-items: flex-start; gap: 12px;
   }
   .alert-banner-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
   .alert-banner-text { font-size: 14px; line-height: 1.6; }
-  .alert-banner-text strong { color: var(--red); font-weight: 700; }
+  .alert-banner-text strong { color: var(--accessible-teal); font-weight: 700; }
   .resources { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(9,43,46,0.06); margin-bottom: 32px; }
   .resources-header { padding: 20px 28px; border-bottom: 1px solid rgba(9,43,46,0.06); }
   .resources-title { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 20px; }
@@ -274,18 +274,18 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated May 11, 2026</div>
+      <div class="updated-token">Updated May 15, 2026</div>
     </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- LIVESTREAM ALERT BANNER -->
+<!-- LIVESTREAM SUCCESS BANNER -->
 <div class="alert-banner">
-  <div class="alert-banner-icon">&#128680;</div>
+  <div class="alert-banner-icon">&#127881;</div>
   <div class="alert-banner-text">
-    <strong>Active livestream reliability incident pulling iOS focus.</strong> Esteban flagged a missed-promotion-to-speaker incident on May 11 -- success rate sitting at 87% (iOS) / 75% (Android). Henrique shipped <a href="https://mightynetworks.atlassian.net/browse/SEQ-13608">SEQ-13608</a> (PUT-based rejection on iOS, PR #13203) and it boards today's train. Android was already on PUT. Speaker invite/promote WebSocket investigation continues -- this is the kind of non-project work that puts pressure on the feed timeline if it stretches.
+    <strong>Tyler Henry livestream went off cleanly with new logging in place.</strong> Both iOS and Android shipped to the app store with the log-tracing feature flag ahead of the 5pm PT event -- 5 folks successfully promoted to speaker during the livestream. Diagnostic data now ready for analysis to chase the remaining WebSocket promotion misses. Henrique's PUT-based rejection fix (SEQ-13608, PR #13203) is in the iOS train and Android was already on PUT.
   </div>
 </div>
 
@@ -303,10 +303,10 @@
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 22</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 29</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Integration) kicks off today, May 11. Phase 2 closed with native iOS slider, MightyFileView, and full poll suite (simple + animated, multichoice, percentage, hot &amp; cold) all in UILibrary. First Embedded Link variant in UI review. Feed Filter UI rebuilt iOS-side, in design review with Bradley.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Integration) -- end of week 1. Components stitching into the live Feed and editorial flows on schedule. Phase 2 closed clean May 8 with native iOS slider, MightyFileView, Polls in UILibrary, Feed Filter rebuild, and the first Embedded Link variant all landed. Remaining 23 Embedded Link variants pacing alongside integration work.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:75%"></div></div>
-        <div class="milestone-progress-pct">~75%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:80%"></div></div>
+        <div class="milestone-progress-pct">~80%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
@@ -319,10 +319,10 @@
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 1</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 8</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Complex Cards &amp; Feeds) closing out -- targeting May 15 wrap. Phase 4 (Integration) prep underway, kicks off May 18. Chromecast (SEQ-13464) moves to general on today's Android train.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Complex Cards &amp; Feeds) wraps today on schedule -- Space Feed Verified, SmallPostCards documentation suite shipped, FeedCardItem composable + UI tests resolved, Compose course navigation deployed, poll parity gaps closed. Phase 4 (Integration) kicks off Monday May 18 with Global Feed conversion, analytics wiring, and More Menu parity all queued.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:87%"></div></div>
-        <div class="milestone-progress-pct">~87%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:92%"></div></div>
+        <div class="milestone-progress-pct">~92%</div>
       </div>
     </div>
   </div>
@@ -336,59 +336,54 @@
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
-      <div class="highlight-icon">&#128293;</div>
-      <div><strong>Livestream speaker-invite reject fix shipped on iOS.</strong> Henrique routed rejection through PUT /attendees/:id (SEQ-13608, PR #13203) -- merged and boarding today's train. Esteban led the investigation; web fix (GAL-13275) and Android (already on PUT since 2023) are both clean.</div>
+      <div class="highlight-icon">&#127881;</div>
+      <div><strong>Tyler Henry livestream succeeded with new mobile logging in place.</strong> iOS and Android both shipped to the app store with the log-tracing flag ahead of the 5pm PT event. 5 folks promoted to speaker during the livestream -- diagnostic data captured and ready for analysis mode.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Mobile Bug System -- full green run + first auto-fix landed.</strong> Andrej merged all the iOS TDD bug-system PRs (May 8). Full pipeline now builds the app and runs the verify loop on every triaged ticket. Successfully auto-fixed a real ticket (SEQ-13350). The 2-week mobile bug system project officially wrapped.</div>
+      <div><strong>iOS Phase 3 (Integration) kicked off on schedule.</strong> Phase 2 closed clean on May 8 with the full component suite landed -- native iOS slider, MightyFileView, Polls in UILibrary, Feed Filter rebuild, and the first Embedded Link variant. Squad now stitching components into the live Feed and editorial flows.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS native slider for polls landed.</strong> Henrique replaced the custom percentage slider with the native iOS slider (PR #13176) -- snappier feel, snapshots and videos in the PR. Final piece of the percentage poll UX.</div>
+      <div><strong>Android Phase 3 (Complex Cards &amp; Feeds) wraps today on schedule.</strong> Space Feed Verified, SmallPostCards docs suite shipped, FeedCardItem composable + UI tests resolved, Compose course navigation deployed, poll parity gaps closed. Phase 4 (Integration) kicks off Monday May 18 -- tracking on pace for May 27 internal testing.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS MightyFileView component shipped -- file UI singularity.</strong> Rodrigo built a single component for file attachments and rolled it into Feed cells, Comment cells, and the Compose flow's new file picker preview. Replaces N different file view styles with one. Behind the Feed Refactor flag.</div>
+      <div><strong>Sequoia bug burndown: 116 &rarr; 83 Ready for Work this week.</strong> 7 bugs in Deploying for next week's train, 10 new bugs added to the inbox. Net ~26 cleared even with two devs pulled to livestreaming logging work. Tracked in the <a href="https://mightynetworks.atlassian.net/jira/dashboards/10918">Jira dashboard</a>.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Polls live in UILibrary 8.266.43+.</strong> Hot &amp; cold polls (simple + animated variants), multichoice, and percentage are all interactive in the UI Library now -- including haptics on physical devices. Design feedback loop open in <a href="https://mightynetworks.atlassian.net/browse/SEQ-13526">SEQ-13526</a>.</div>
+      <div><strong>Livestream speaker-invite reject fix shipped on iOS.</strong> Henrique routed rejection through PUT /attendees/:id (SEQ-13608, PR #13203) -- merged and on this week's iOS train. Esteban led the investigation; web fix (GAL-13275) and Android (already on PUT) are both clean.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android Chromecast moves to general.</strong> Mate is bumping ANDROID_CAST_PLAYER from alpha to general on today's Android train (SEQ-13464). Cast button visibility and icon tinting both shipped recently.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9679;</div>
-      <div><strong>Android Phase 4 (Integration) prep underway.</strong> Sammy &amp; Rafael staging integration work as Complex Cards wraps mid-May. Global Feed conversion, analytics wiring, and More Menu parity all queued.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9679;</div>
-      <div><strong>Android bug-repro test loop coming alive.</strong> Sammy got an end-to-end run reproducing a real recently-resolved bug -- triage, Kotlin instrumented test, emulator run, structured results + video. First workflow run with before/after screenshots also worked. Two manual steps left to automate.</div>
-    </div>
-    <div class="highlight-subheading">Open Squad Conversations</div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9888;</div>
-      <div><strong>Dynamic Text Size on iOS -- proposal to temporarily disable.</strong> Rodrigo flagged in #sequoia_squad that the app doesn't generally follow Text Size config, and where it does, the layouts break. Grady noted we knew this would be inconsistent. Rodrigo is now proposing his global font changes ride the next train rather than today's, to give him more testing room. Needs a call from Bradley.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9888;</div>
-      <div><strong>Anthropic API credits ran out late last week.</strong> Sammy flagged it on May 7 -- Claude-powered systems (bug-system fix in all three spokes, bug-system triage in speckel, Claude Review on PRs) were crashing. Worth confirming this is resolved going into the week.</div>
+      <div><strong>iOS Mobile Bug System -- full green pipeline + first auto-fix landed.</strong> Andrej merged all the iOS TDD bug-system PRs (May 8). The 2-week mobile bug system project officially wrapped with a real auto-fixed ticket (SEQ-13350). Expecting mobile fix rate to climb from the prior baseline.</div>
     </div>
     <div class="highlight-subheading">DevEx Platform Wins</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Per-test failure bundles now universal across web/speckel CI.</strong> Every failing spec gets its own pre-signed S3 tarball linked from the Datadog test span -- one click to logs, screenshots, console output.</div>
+      <div><strong>Bot PR dual-approval workflow centralized in mighty-common.</strong> Addison shipped the shared hub workflow with follow-ups landing across speckel, android-app, and ios-app -- one source of truth for bot-authored PR review gates instead of repo-by-repo drift.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Claude Code Skill Usage dashboard live in Datadog.</strong> Per-skill invocations across local Claude sessions and GHA workflows.</div>
+      <div><strong>Bug System and CI Investigator quality jumped after enabling tests in GHA.</strong> Tim flagged dramatically better fix quality on both post-deploy CI Investigator runs and TDD-based Bug System fixes since Rodrigo Bahiense wired up test execution in the Actions environment.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Per-test failure bundles universal across web/speckel CI.</strong> Every failing spec gets its own pre-signed S3 tarball linked from the Datadog test span -- one click to logs, screenshots, console output. Flake-friendly, lands on the actual failure span.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Claude Code Skill Usage dashboard live in Datadog.</strong> Per-skill invocations across local Claude sessions and GHA workflows -- top skills, dead-weight skills, failure rate, activity over time. Privacy-safe: only skill names and success bits emitted.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Web CI scaled to 500 nodes; tests up 18% to 47K in 2 months.</strong> Dane bumped runner count for faster splits, Tim &amp; team shrinking costs in parallel -- including a WIP Graviton migration from Ahmed (just joined the team).</div>
     </div>
     <div class="highlight-subheading">Livestreaming</div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#128308;</div>
-      <div><strong>Mobile log-tracing project underway for livestream WebSocket attendees.</strong> Esteban's plan for this week: mobile generates logs tracing the entire attendee activity in a livestream, sent asynchronously to server for analysis. Goal is to understand WHY iOS/Android attendees miss promotion messages.</div>
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Realtime event suppression debug tool actively used during Tyler Henry livestream.</strong> Henrique's Pusher event filter helped testers reproduce missed-event bugs in livestreams ahead of the event.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
@@ -396,7 +391,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Chime SDK upgraded on iOS (v0.25.0 &rarr; v0.27.2)</strong> with a new EventAnalyticsObserver for sharper livestream diagnostics.</div>
+      <div><strong>Chime SDK upgraded on iOS (v0.25.0 &rarr; v0.27.2)</strong> with a new EventAnalyticsObserver for sharper livestream diagnostics -- remote logs for speakers, local logs for viewers.</div>
     </div>
   </div>
 </div>
@@ -417,43 +412,45 @@
     <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 1 - 12</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:75%"></div></div>
-    <div class="progress-pct">~75%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:80%"></div></div>
+    <div class="progress-pct">~80%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
-  </div>
-  <div class="research-injection">
-    <div class="research-injection-icon">&#128293;</div>
-    <div class="research-injection-text">
-      <strong>Active livestream incident pulling iOS engineering focus.</strong> Speaker-invite WebSocket reliability work in flight; iOS PUT fix shipped today (SEQ-13608). Watching for spillover into Phase 3 capacity.
-    </div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#9989;</div>
     <div class="research-injection-text">
-      <strong>Mobile Bug System Improvements project -- wrapped May 8.</strong> Andrej shipped the iOS TDD pipeline with a full green run and first successful auto-fix. <span class="research-dates">Apr 27 -- May 8.</span>
+      <strong>Mobile Bug System Improvements project -- wrapped May 8.</strong> Andrej shipped the iOS TDD pipeline with a full green run and first successful auto-fix on SEQ-13350. <span class="research-dates">Apr 27 -- May 8.</span>
+    </div>
+  </div>
+  <div class="research-injection">
+    <div class="research-injection-icon">&#127881;</div>
+    <div class="research-injection-text">
+      <strong>Livestream logging shipped for Tyler Henry event.</strong> Mobile log-tracing flag landed on iOS train, 5 folks promoted to speaker during the livestream. Diagnostic data ready for analysis on the remaining WebSocket promotion misses.
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Phase 3 Integration -- kicked off May 11</strong><div class="detail">Stitching components into the live Feed and editorial flows.</div></div>
+      <div class="status-item"><strong>Phase 3 Integration -- week 1 wrapping</strong><div class="detail">Squad -- stitching new components into the live Feed and editorial flows. Kicked off May 11 on schedule.</div></div>
       <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- first variant in UI review. Building out the remaining 23 across 3 sizes &times; 8 content types.</div></div>
-      <div class="status-item"><strong>Poll polish -- haptics &amp; sound feedback</strong><div class="detail">Henrique -- gathering feedback on simple vs. animated variants, haptic feedback on percentage and multichoice transitions.</div></div>
-      <div class="status-item"><strong>Feed Filter design review</strong><div class="detail">Rodrigo -- iOS-built Feed Filter UI in design review with Bradley.</div></div>
+      <div class="status-item"><strong>Carousel integration</strong><div class="detail">Carousel UI built; wiring it through editorial flows for Mammoth.</div></div>
+      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connecting rebuilt filter UI to data layer logic.</div></div>
       <div class="status-item"><strong>FeedViewRouter Core Data extraction</strong><div class="detail">Andrej -- SEQ-13293 (theme from FlexSpaceDTO) and SEQ-13205 (encapsulate Core Data).</div></div>
       <div class="status-item"><strong>Feed Realtime Service</strong><div class="detail">Architecture documented in Miro -- integrating with data &amp; MVVM layers.</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
-      <div class="status-item"><strong>Carousel integration</strong><div class="detail">Carousel UI built; next is wiring it through editorial flows for Mammoth.</div></div>
-      <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connect rebuilt filter UI to data layer logic.</div></div>
-      <div class="status-item"><strong>Dynamic Text Size decision</strong><div class="detail">Rodrigo proposing to temporarily disable. Needs design call from Bradley.</div></div>
+      <div class="status-item"><strong>Phase 4 QA &amp; Rollout</strong><div class="detail">Starts Jun 1 -- internal testing target Jun 15, general release-ready Jun 22, Deploy Train Jun 29.</div></div>
+      <div class="status-item"><strong>Poll polish -- haptics &amp; sound</strong><div class="detail">Henrique -- finalizing feedback model on simple vs. animated variants and percentage/multichoice transitions.</div></div>
+      <div class="status-item"><strong>Dynamic Text Size decision</strong><div class="detail">Rodrigo proposed to temporarily disable -- pending design call from Bradley.</div></div>
       <div class="status-item"><strong>Card naming finalization</strong><div class="detail">Resolving naming for featured/discovery cards.</div></div>
       <div class="status-item"><strong>Online now -- system proposal</strong><div class="detail">Squad to develop holistic treatment across all connected views. Will not block feed release.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>Livestream speaker reject -- PUT routing (SEQ-13608)</strong><div class="detail">Henrique -- PR #13203 merged and on today's train. May 11.</div></div>
+      <div class="status-item"><strong>Tyler Henry livestream logging shipped</strong><div class="detail">Mobile log-tracing flag landed on iOS train. May 13.</div></div>
+      <div class="status-item"><strong>Livestream speaker reject -- PUT routing (SEQ-13608)</strong><div class="detail">Henrique -- PR #13203 merged and on this week's train. May 11.</div></div>
+      <div class="status-item"><strong>Phase 2 Component Building -- closed clean</strong><div class="detail">Squad -- all major components landed by May 8 deadline. Phase 3 started May 11.</div></div>
       <div class="status-item"><strong>iOS Mobile Bug System -- full green pipeline</strong><div class="detail">Andrej -- TDD build + verify loop, first auto-fix on SEQ-13350. May 8.</div></div>
       <div class="status-item"><strong>Native iOS slider for polls -- shipped</strong><div class="detail">Henrique -- replaces custom slider with native iOS slider. PR #13176 landed May 8.</div></div>
       <div class="status-item"><strong>MightyFileView component -- shipped</strong><div class="detail">Rodrigo -- file UI singularity across Feed, Comments, and Compose flow's new file picker preview. May 8.</div></div>
@@ -470,8 +467,8 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Livestream incident is active -- watch for capacity drag on Phase 3.</strong> iOS speaker-invite fix shipped; mobile log-tracing project starts this week with Esteban leading.</div>
-    <div class="risk-item"><strong>Dynamic Text Size proposal pending.</strong> Rodrigo wants to ride next train -- needs Bradley's input on disabling vs. fixing.</div>
+    <div class="risk-item"><strong>Phase 3 (Integration) is the densest stretch of the project.</strong> Stitching the full component set into the live Feed across 3 weeks. Tracking on schedule for the May 29 wrap.</div>
+    <div class="risk-item"><strong>Dynamic Text Size proposal pending.</strong> Rodrigo proposed to temporarily disable -- needs Bradley's input on disabling vs. fixing.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
   <div class="platform-resources">
@@ -498,8 +495,8 @@
     <div class="phase-item"><div class="phase-dot upcoming">5</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">May 26 - Jun 1</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:87%"></div></div>
-    <div class="progress-pct">~87%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:92%"></div></div>
+    <div class="progress-pct">~92%</div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#9989;</div>
@@ -508,18 +505,17 @@
     </div>
   </div>
   <div class="research-injection">
-    <div class="research-injection-icon">&#128241;</div>
+    <div class="research-injection-icon">&#127881;</div>
     <div class="research-injection-text">
-      <strong>Chromecast (SEQ-13464) bumps to general today.</strong> Cast Player promoted from alpha to general on Android train. Cast button now visible on dark player.
+      <strong>Tyler Henry livestream logging shipped on Android.</strong> Mobile log-tracing flag landed on Android train ahead of the 5pm PT event. 5 folks promoted to speaker -- diagnostic data captured for analysis on remaining WebSocket misses.
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Phase 3 closeout</strong><div class="detail">Rafael / Sammy -- final complex card types and feed surfaces wrapping toward May 15.</div></div>
-      <div class="status-item"><strong>Poll parity gaps investigation</strong><div class="detail">Rafael -- investigating gaps in poll component vs. view version.</div></div>
+      <div class="status-item"><strong>Phase 3 closeout -- final day</strong><div class="detail">Rafael / Sammy -- last complex card types and feed surfaces wrapping today.</div></div>
+      <div class="status-item"><strong>Phase 4 Integration prep</strong><div class="detail">Sammy / Rafael -- staging Phase 4 work for Monday May 18 kickoff. Global Feed, analytics, More Menu queued.</div></div>
       <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; aligned with iOS card system as designs continue.</div></div>
-      <div class="status-item"><strong>Integration phase prep</strong><div class="detail">Sammy / Rafael -- staging Phase 4 work for May 18 kickoff.</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
@@ -527,12 +523,15 @@
       <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays.</div></div>
       <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events to ViewModels.</div></div>
       <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share.</div></div>
+      <div class="status-item"><strong>Phase 5 QA &amp; Rollout</strong><div class="detail">Starts May 26 -- internal testing May 27, release-ready Jun 1, Deploy Train Jun 8.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
-      <div class="status-item"><strong>Chromecast bumped to general (SEQ-13464)</strong><div class="detail">Mate -- on today's Android train. May 11.</div></div>
+      <div class="status-item"><strong>Tyler Henry livestream logging shipped</strong><div class="detail">Mobile log-tracing flag landed on Android train. May 13.</div></div>
+      <div class="status-item"><strong>Poll parity gaps investigation -- wrapped</strong><div class="detail">Rafael -- gaps in poll component vs. view version closed out. May 14.</div></div>
+      <div class="status-item"><strong>Chromecast bumped to general (SEQ-13464)</strong><div class="detail">Mate -- Cast Player promoted from alpha to general on Android train. May 11.</div></div>
       <div class="status-item"><strong>Android bug-repro test loop -- end-to-end on real bug</strong><div class="detail">Sammy -- triage to instrumented test to emulator run, structured results + video. First workflow run with before/after screenshots also working.</div></div>
-      <div class="status-item"><strong>SmallPostCards documentation suite -- shipped</strong><div class="detail">Sammy -- 10 docs PRs catalog 9 tile variants, mapper pipeline, geometry vs. legacy XML, theming, parity matrix. Apr 24.</div></div>
+      <div class="status-item"><strong>SmallPostCards documentation suite -- shipped</strong><div class="detail">Sammy -- 10 docs PRs catalog 9 tile variants, mapper pipeline, geometry vs. legacy XML, theming, parity matrix, surfaced from CLAUDE.md. Apr 24.</div></div>
       <div class="status-item"><strong>Space Feed migration (SEQ-13195) -- Verified</strong><div class="detail">Rafael -- cleared QA Apr 15. First complex feed fully through pipeline.</div></div>
       <div class="status-item"><strong>Compose course navigation (SEQ-13299) -- Deployed</strong><div class="detail">Sammy -- deployed Apr 13.</div></div>
       <div class="status-item"><strong>FeedCardItem composable + UI tests (SEQ-13014/13016)</strong><div class="detail">Sammy -- resolved Apr 10.</div></div>
@@ -543,7 +542,7 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Anthropic API credits ran out May 7.</strong> Sammy flagged bug-system fix + triage + Claude Review on PRs all crashing. Confirm resolution.</div>
+    <div class="risk-item"><strong>Phase 4 Integration is a tight 1-week sprint (May 18 - 22).</strong> Global Feed, analytics, and More Menu parity all land here before QA opens. Tracking on pace.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
   <div class="platform-resources">
@@ -562,25 +561,25 @@
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">iOS</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">249</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">259</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>iOS TDD bug-system pipeline + first auto-fix landed (Andrej)</li>
-        <li>PLA build error detection wired into Admino notifications (#13147)</li>
-        <li>Phase 2 dispatcher activator: BUG_SYSTEM_PLATFORM=ios for Datadog tagging (#13161)</li>
+        <li>Adopt shared bot-pr-dual-approval workflow from mighty-common (#13265)</li>
+        <li>SEQ-12593: Document unscaled font opt-out in SemanticFonts (#13269)</li>
+        <li>Bring Show Muted Conversations setting back under Chat Settings (#13260)</li>
       </ul>
     </div>
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">Android</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">368</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">396</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Android bug-repro CI workflow + Kotlin instrumented test skill (#12906)</li>
-        <li>Flake correlator perf -- 13min runs cut to 30sec via first-parent git walk (#13011)</li>
-        <li>New pr-chain-author skill -- automates stacked PR conventions (#13020)</li>
+        <li>Adopt shared bot-pr-dual-approval workflow from mighty-common (#13081)</li>
+        <li>CI: allow speckel-triage-bot to dispatch Android bug-system-fix (#13089)</li>
+        <li>Triage fix: don't display bot login as culprit on bot-authored PRs (#13079)</li>
       </ul>
     </div>
   </div>
