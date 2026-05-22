@@ -274,18 +274,18 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated May 15, 2026</div>
+      <div class="updated-token">Updated May 22, 2026</div>
     </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- LIVESTREAM SUCCESS BANNER -->
+<!-- LIVESTREAM ANALYSIS BANNER -->
 <div class="alert-banner">
-  <div class="alert-banner-icon">&#127881;</div>
+  <div class="alert-banner-icon">&#128270;</div>
   <div class="alert-banner-text">
-    <strong>Tyler Henry livestream went off cleanly with new logging in place.</strong> Both iOS and Android shipped to the app store with the log-tracing feature flag ahead of the 5pm PT event -- 5 folks successfully promoted to speaker during the livestream. Diagnostic data now ready for analysis to chase the remaining WebSocket promotion misses. Henrique's PUT-based rejection fix (SEQ-13608, PR #13203) is in the iOS train and Android was already on PUT.
+    <strong>Livestream logging is paying off -- moving from data capture to fixes on the train.</strong> Tyler Henry diagnostic data surfaced client-side error handling improvements that are riding this week's trains on both platforms. Platform team has improved monitoring and capacity in parallel. Logging flips back on <strong>Tuesday May 26</strong> for the next scheduled livestream to validate the fixes.
   </div>
 </div>
 
@@ -303,10 +303,10 @@
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 22</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 29</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Integration) -- end of week 1. Components stitching into the live Feed and editorial flows on schedule. Phase 2 closed clean May 8 with native iOS slider, MightyFileView, Polls in UILibrary, Feed Filter rebuild, and the first Embedded Link variant all landed. Remaining 23 Embedded Link variants pacing alongside integration work.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Integration) -- end of week 2 of 3. Components are landing in the live Feed and editorial flows on schedule. Phase 2 closed clean May 8 with native iOS slider, MightyFileView, Polls in UILibrary, Feed Filter rebuild, and the first Embedded Link variant. Embedded Link variants and Realtime Service wiring continue alongside integration.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:80%"></div></div>
-        <div class="milestone-progress-pct">~80%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:85%"></div></div>
+        <div class="milestone-progress-pct">~85%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
@@ -319,10 +319,10 @@
         <div class="milestone-date-row"><div class="ms-label">General Release-Ready</div><div class="ms-date">June 1</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Deploy Train</div><div class="ms-date">June 8</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Phase 3 (Complex Cards &amp; Feeds) wraps today on schedule -- Space Feed Verified, SmallPostCards documentation suite shipped, FeedCardItem composable + UI tests resolved, Compose course navigation deployed, poll parity gaps closed. Phase 4 (Integration) kicks off Monday May 18 with Global Feed conversion, analytics wiring, and More Menu parity all queued.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Phase 4 (Integration) wraps today on schedule -- Global Feed conversion, analytics wiring, and More Menu parity all in. Phase 5 (QA &amp; Rollout) kicks off Tuesday May 26 with internal testing landing May 27, release-ready Jun 1, Deploy Train Jun 8. Discovery / featured card alignment with iOS continues in parallel.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:92%"></div></div>
-        <div class="milestone-progress-pct">~92%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:96%"></div></div>
+        <div class="milestone-progress-pct">~96%</div>
       </div>
     </div>
   </div>
@@ -332,62 +332,70 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Week of May 11</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Week of May 18</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
-      <div class="highlight-icon">&#127881;</div>
-      <div><strong>Tyler Henry livestream succeeded with new mobile logging in place.</strong> iOS and Android both shipped to the app store with the log-tracing flag ahead of the 5pm PT event. 5 folks promoted to speaker during the livestream -- diagnostic data captured and ready for analysis mode.</div>
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Android Phase 4 (Integration) wraps today on schedule.</strong> Global Feed conversion, analytics wiring, and More Menu parity all landed. Phase 5 (QA &amp; Rollout) kicks off Tuesday May 26 with internal testing targeting May 27 and Deploy Train holding for June 8.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Phase 3 (Integration) kicked off on schedule.</strong> Phase 2 closed clean on May 8 with the full component suite landed -- native iOS slider, MightyFileView, Polls in UILibrary, Feed Filter rebuild, and the first Embedded Link variant. Squad now stitching components into the live Feed and editorial flows.</div>
+      <div><strong>iOS Phase 3 (Integration) hits week 2 of 3 on pace.</strong> Components are landing in the live Feed and editorial flows, Embedded Link variants pacing alongside, Realtime Service wiring in flight. Phase 4 QA &amp; Rollout still on for June 1, Deploy Train holding June 29.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#128270;</div>
+      <div><strong>Livestream reliability work moves into "fixes on the train" mode.</strong> Tyler Henry diagnostic data surfaced client-side error handling improvements riding this week's trains on both platforms. Logging flips back on Tuesday May 26 for the next scheduled livestream to validate the fixes -- Platform also improved monitoring and capacity in parallel.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#128202;</div>
+      <div><strong>Hot/Cold poll renaming direction locked in.</strong> Kelsey's data pull (7,296 polls across 778 networks, 71% IQE-authored) and CSM voting fed the decision: customizable axes per poll is the long-term play; near-term fix is just aligning member-facing labels to "Hot/Cold" on all 3 platforms when the new iOS Feed is ready (mid-July target). No churn for Hosts in the meantime.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Android Phase 3 (Complex Cards &amp; Feeds) wraps today on schedule.</strong> Space Feed Verified, SmallPostCards docs suite shipped, FeedCardItem composable + UI tests resolved, Compose course navigation deployed, poll parity gaps closed. Phase 4 (Integration) kicks off Monday May 18 -- tracking on pace for May 27 internal testing.</div>
+      <div><strong>Sequoia bug burndown holding strong.</strong> Continuing the 116 &rarr; 83 trajectory from last week with 7 in Deploying for the train and a steady inbox -- all while two devs stayed pulled into livestream logging work. <a href="https://mightynetworks.atlassian.net/jira/dashboards/10918">Jira dashboard</a>.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Sequoia bug burndown: 116 &rarr; 83 Ready for Work this week.</strong> 7 bugs in Deploying for next week's train, 10 new bugs added to the inbox. Net ~26 cleared even with two devs pulled to livestreaming logging work. Tracked in the <a href="https://mightynetworks.atlassian.net/jira/dashboards/10918">Jira dashboard</a>.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Livestream speaker-invite reject fix shipped on iOS.</strong> Henrique routed rejection through PUT /attendees/:id (SEQ-13608, PR #13203) -- merged and on this week's iOS train. Esteban led the investigation; web fix (GAL-13275) and Android (already on PUT) are both clean.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Mobile Bug System -- full green pipeline + first auto-fix landed.</strong> Andrej merged all the iOS TDD bug-system PRs (May 8). The 2-week mobile bug system project officially wrapped with a real auto-fixed ticket (SEQ-13350). Expecting mobile fix rate to climb from the prior baseline.</div>
+      <div class="highlight-icon">&#128218;</div>
+      <div><strong>Android analytics gap acknowledged; iOS data is the source of truth pre-launch.</strong> Legacy Android analytics is showing impossible engagement rates and a server-side fix isn't a near-term priority for Data squad. Decision: lean on iOS data for feed engagement benchmarking through release; no pre-launch decisions blocked.</div>
     </div>
     <div class="highlight-subheading">DevEx Platform Wins</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Bot PR dual-approval workflow centralized in mighty-common.</strong> Addison shipped the shared hub workflow with follow-ups landing across speckel, android-app, and ios-app -- one source of truth for bot-authored PR review gates instead of repo-by-repo drift.</div>
+      <div><strong>Skill ecosystem maturing fast.</strong> mighty-slack-research (self-serve "what's been said in Slack about X"), mighty-upload-pr-image (Claude now attaches real screenshots to PRs, no more placeholders), and mighty-resolve-bug-assignee (single source of truth for bug ownership) all landed or in review this week.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Bug System and CI Investigator quality jumped after enabling tests in GHA.</strong> Tim flagged dramatically better fix quality on both post-deploy CI Investigator runs and TDD-based Bug System fixes since Rodrigo Bahiense wired up test execution in the Actions environment.</div>
+      <div><strong>Feature flag cleanup is now automatic.</strong> Vishnu shipped auto-creation of FF cleanup tickets the moment a flag flips from disabled to enabled -- a systems fix on top of the Banff squad's manual burndown (14 in March &rarr; 0 in April &rarr; 10 in May).</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Per-test failure bundles universal across web/speckel CI.</strong> Every failing spec gets its own pre-signed S3 tarball linked from the Datadog test span -- one click to logs, screenshots, console output. Flake-friendly, lands on the actual failure span.</div>
+      <div><strong>Bot PR dual-approval workflow centralized in mighty-common.</strong> Addison's shared hub workflow plus follow-ups across speckel, android-app, and ios-app -- one source of truth for bot-authored PR review gates instead of repo-by-repo drift.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Claude Code Skill Usage dashboard live in Datadog.</strong> Per-skill invocations across local Claude sessions and GHA workflows -- top skills, dead-weight skills, failure rate, activity over time. Privacy-safe: only skill names and success bits emitted.</div>
+      <div><strong>Skill context budget cut ~49%.</strong> Grady's tiered frontmatter approach + Tim's auto-activation opt-in cut the per-session skill registry from ~25k to ~6.8k chars in mighty-common -- avoiding Claude's "drop random skills when over budget" behavior and freeing context for the actual work.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Web CI scaled to 500 nodes; tests up 18% to 47K in 2 months.</strong> Dane bumped runner count for faster splits, Tim &amp; team shrinking costs in parallel -- including a WIP Graviton migration from Ahmed (just joined the team).</div>
+      <div><strong>Per-test failure bundles universal across web/speckel CI.</strong> Every failing spec gets its own pre-signed S3 tarball linked from the Datadog test span -- logs, screenshots, console output, one click. Flake-friendly, lands on the actual failure span.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Bug System and CI Investigator quality jumped after enabling tests in GHA.</strong> Tim flagged dramatically better fix quality on both post-deploy CI Investigator runs and TDD-based Bug System fixes since test execution was wired into the Actions environment.</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>Web CI scaled to 500 nodes; tests up 18% to 47K in 2 months.</strong> Faster splits, costs shrinking in parallel including a WIP Graviton migration from Ahmed (just joined the team).</div>
     </div>
     <div class="highlight-subheading">Livestreaming</div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>Realtime event suppression debug tool actively used during Tyler Henry livestream.</strong> Henrique's Pusher event filter helped testers reproduce missed-event bugs in livestreams ahead of the event.</div>
+      <div class="highlight-icon">&#127881;</div>
+      <div><strong>Tyler Henry livestream succeeded with mobile logging in place.</strong> 5 folks promoted to speaker during the event. Diagnostic data drove the client-side error handling fixes riding this week's trains -- proof point on the logging investment.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Waiting room polling system shipped.</strong> Fixes the class of bug where members get stuck in waiting room after missing the "live started" Pusher event.</div>
+      <div><strong>Speaker-invite reject fix shipped on iOS.</strong> Henrique routed rejection through PUT /attendees/:id (SEQ-13608, PR #13203) -- merged and on the iOS train. Web fix (GAL-13275) clean; Android already on PUT.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
@@ -412,9 +420,15 @@
     <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun 1 - 12</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:80%"></div></div>
-    <div class="progress-pct">~80%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:85%"></div></div>
+    <div class="progress-pct">~85%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
+  </div>
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128270;</div>
+    <div class="research-injection-text">
+      <strong>Livestream reliability fixes on this week's iOS train.</strong> Tyler Henry diagnostic data drove client-side error handling improvements; logging flips back on Tuesday May 26 for the next livestream to validate.
+    </div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#9989;</div>
@@ -422,17 +436,12 @@
       <strong>Mobile Bug System Improvements project -- wrapped May 8.</strong> Andrej shipped the iOS TDD pipeline with a full green run and first successful auto-fix on SEQ-13350. <span class="research-dates">Apr 27 -- May 8.</span>
     </div>
   </div>
-  <div class="research-injection">
-    <div class="research-injection-icon">&#127881;</div>
-    <div class="research-injection-text">
-      <strong>Livestream logging shipped for Tyler Henry event.</strong> Mobile log-tracing flag landed on iOS train, 5 folks promoted to speaker during the livestream. Diagnostic data ready for analysis on the remaining WebSocket promotion misses.
-    </div>
-  </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Phase 3 Integration -- week 1 wrapping</strong><div class="detail">Squad -- stitching new components into the live Feed and editorial flows. Kicked off May 11 on schedule.</div></div>
-      <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- first variant in UI review. Building out the remaining 23 across 3 sizes &times; 8 content types.</div></div>
+      <div class="status-item"><strong>Phase 3 Integration -- week 2 of 3</strong><div class="detail">Squad -- components landing in the live Feed and editorial flows. Phase wraps May 29.</div></div>
+      <div class="status-item"><strong>Livestream client-side error handling</strong><div class="detail">On this week's iOS train; diagnostic data from Tyler Henry shaped the fixes.</div></div>
+      <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- first variant shipped to UI review; building out remaining across 3 sizes &times; 8 content types.</div></div>
       <div class="status-item"><strong>Carousel integration</strong><div class="detail">Carousel UI built; wiring it through editorial flows for Mammoth.</div></div>
       <div class="status-item"><strong>Filter data wiring</strong><div class="detail">Connecting rebuilt filter UI to data layer logic.</div></div>
       <div class="status-item"><strong>FeedViewRouter Core Data extraction</strong><div class="detail">Andrej -- SEQ-13293 (theme from FlexSpaceDTO) and SEQ-13205 (encapsulate Core Data).</div></div>
@@ -441,6 +450,7 @@
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
       <div class="status-item"><strong>Phase 4 QA &amp; Rollout</strong><div class="detail">Starts Jun 1 -- internal testing target Jun 15, general release-ready Jun 22, Deploy Train Jun 29.</div></div>
+      <div class="status-item"><strong>Hot/Cold poll member-facing labels</strong><div class="detail">Align iOS axis labels to Hot/Cold to match poll title -- ships with the new iOS Feed (mid-July).</div></div>
       <div class="status-item"><strong>Poll polish -- haptics &amp; sound</strong><div class="detail">Henrique -- finalizing feedback model on simple vs. animated variants and percentage/multichoice transitions.</div></div>
       <div class="status-item"><strong>Dynamic Text Size decision</strong><div class="detail">Rodrigo proposed to temporarily disable -- pending design call from Bradley.</div></div>
       <div class="status-item"><strong>Card naming finalization</strong><div class="detail">Resolving naming for featured/discovery cards.</div></div>
@@ -448,8 +458,9 @@
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
+      <div class="status-item"><strong>Hot/Cold poll direction locked in</strong><div class="detail">Customizable axes is the long-term play; near-term member-facing label alignment ships with the new iOS Feed (mid-July). No churn for Hosts. May 21.</div></div>
       <div class="status-item"><strong>Tyler Henry livestream logging shipped</strong><div class="detail">Mobile log-tracing flag landed on iOS train. May 13.</div></div>
-      <div class="status-item"><strong>Livestream speaker reject -- PUT routing (SEQ-13608)</strong><div class="detail">Henrique -- PR #13203 merged and on this week's train. May 11.</div></div>
+      <div class="status-item"><strong>Livestream speaker reject -- PUT routing (SEQ-13608)</strong><div class="detail">Henrique -- PR #13203 merged and on the train. May 11.</div></div>
       <div class="status-item"><strong>Phase 2 Component Building -- closed clean</strong><div class="detail">Squad -- all major components landed by May 8 deadline. Phase 3 started May 11.</div></div>
       <div class="status-item"><strong>iOS Mobile Bug System -- full green pipeline</strong><div class="detail">Andrej -- TDD build + verify loop, first auto-fix on SEQ-13350. May 8.</div></div>
       <div class="status-item"><strong>Native iOS slider for polls -- shipped</strong><div class="detail">Henrique -- replaces custom slider with native iOS slider. PR #13176 landed May 8.</div></div>
@@ -467,7 +478,7 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Phase 3 (Integration) is the densest stretch of the project.</strong> Stitching the full component set into the live Feed across 3 weeks. Tracking on schedule for the May 29 wrap.</div>
+    <div class="risk-item"><strong>Phase 3 (Integration) in week 2 of 3 -- densest stretch of the project.</strong> Stitching the full component set into the live Feed. Tracking on schedule for the May 29 wrap.</div>
     <div class="risk-item"><strong>Dynamic Text Size proposal pending.</strong> Rodrigo proposed to temporarily disable -- needs Bradley's input on disabling vs. fixing.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
@@ -490,13 +501,19 @@
   <div class="phase-timeline">
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Foundation &amp; Saved Posts</div><div class="phase-dates">Mar 3 - 14</div></div>
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Simple Screens</div><div class="phase-dates">Mar 17 - 28</div></div>
-    <div class="phase-item"><div class="phase-dot in-progress">3</div><div class="phase-label">Complex Cards &amp; Feeds</div><div class="phase-dates">Mar 31 - May 15</div></div>
-    <div class="phase-item"><div class="phase-dot upcoming">4</div><div class="phase-label">Integration</div><div class="phase-dates">May 18 - 22</div></div>
+    <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Complex Cards &amp; Feeds</div><div class="phase-dates">Mar 31 - May 15</div></div>
+    <div class="phase-item"><div class="phase-dot in-progress">4</div><div class="phase-label">Integration</div><div class="phase-dates">May 18 - 22</div></div>
     <div class="phase-item"><div class="phase-dot upcoming">5</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">May 26 - Jun 1</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:92%"></div></div>
-    <div class="progress-pct">~92%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:96%"></div></div>
+    <div class="progress-pct">~96%</div>
+  </div>
+  <div class="research-injection">
+    <div class="research-injection-icon">&#128270;</div>
+    <div class="research-injection-text">
+      <strong>Livestream reliability fixes on this week's Android train.</strong> Tyler Henry diagnostic data drove client-side error handling improvements; logging flips back on Tuesday May 26 for the next livestream to validate.
+    </div>
   </div>
   <div class="research-injection">
     <div class="research-injection-icon">&#9989;</div>
@@ -504,29 +521,27 @@
       <strong>Mobile Bug System Improvements project -- wrapped May 8.</strong> Sammy's TDD-shaped flow + emulator run wiring is end-to-end on a real bug. Connecting to bug system + autofixer next. <span class="research-dates">Apr 27 -- May 8.</span>
     </div>
   </div>
-  <div class="research-injection">
-    <div class="research-injection-icon">&#127881;</div>
-    <div class="research-injection-text">
-      <strong>Tyler Henry livestream logging shipped on Android.</strong> Mobile log-tracing flag landed on Android train ahead of the 5pm PT event. 5 folks promoted to speaker -- diagnostic data captured for analysis on remaining WebSocket misses.
-    </div>
-  </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Phase 3 closeout -- final day</strong><div class="detail">Rafael / Sammy -- last complex card types and feed surfaces wrapping today.</div></div>
-      <div class="status-item"><strong>Phase 4 Integration prep</strong><div class="detail">Sammy / Rafael -- staging Phase 4 work for Monday May 18 kickoff. Global Feed, analytics, More Menu queued.</div></div>
+      <div class="status-item"><strong>Phase 4 Integration -- wraps today</strong><div class="detail">Sammy / Rafael -- Global Feed, analytics, and More Menu parity all landed this week. Phase wraps on schedule.</div></div>
+      <div class="status-item"><strong>Livestream client-side error handling</strong><div class="detail">On this week's Android train; diagnostic data from Tyler Henry shaped the fixes.</div></div>
+      <div class="status-item"><strong>Phase 5 QA &amp; Rollout prep</strong><div class="detail">Test plans staged for the Tuesday May 26 kickoff.</div></div>
       <div class="status-item"><strong>Discovery (featured) cards</strong><div class="detail">Base architecture ready; aligned with iOS card system as designs continue.</div></div>
     </div>
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
-      <div class="status-item"><strong>Phase 4 Integration kickoff</strong><div class="detail">Starts May 18 -- stitch complex feeds into app navigation.</div></div>
-      <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed -- invite buttons, live events, coaching overlays.</div></div>
-      <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events to ViewModels.</div></div>
-      <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions: edit, delete, pin, mute, report, share.</div></div>
-      <div class="status-item"><strong>Phase 5 QA &amp; Rollout</strong><div class="detail">Starts May 26 -- internal testing May 27, release-ready Jun 1, Deploy Train Jun 8.</div></div>
+      <div class="status-item"><strong>Phase 5 QA &amp; Rollout kickoff</strong><div class="detail">Starts May 26 -- internal testing May 27, release-ready Jun 1, Deploy Train Jun 8.</div></div>
+      <div class="status-item"><strong>Validate livestream fixes</strong><div class="detail">Logging flips back on May 26 to confirm the client-side error handling changes are catching the right WebSocket misses.</div></div>
+      <div class="status-item"><strong>Hot/Cold poll member-facing labels</strong><div class="detail">Align Android axis labels to Hot/Cold -- coordinated 3-platform change with the new iOS Feed (mid-July).</div></div>
+      <div class="status-item"><strong>Discovery cards completion</strong><div class="detail">Wrap the featured card variants once iOS designs solidify.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
+      <div class="status-item"><strong>Phase 4 Integration -- wraps today on schedule</strong><div class="detail">Global Feed conversion, analytics wiring, More Menu parity all in. Phase 5 starts Tuesday May 26. May 22.</div></div>
+      <div class="status-item"><strong>Global Feed conversion</strong><div class="detail">Main home feed converted to Compose -- invite buttons, live events, coaching overlays included.</div></div>
+      <div class="status-item"><strong>Analytics wiring</strong><div class="detail">Impression tracking and interaction events wired through ViewModels.</div></div>
+      <div class="status-item"><strong>More Menu system parity</strong><div class="detail">~20 actions ported (edit, delete, pin, mute, report, share, et al).</div></div>
       <div class="status-item"><strong>Tyler Henry livestream logging shipped</strong><div class="detail">Mobile log-tracing flag landed on Android train. May 13.</div></div>
       <div class="status-item"><strong>Poll parity gaps investigation -- wrapped</strong><div class="detail">Rafael -- gaps in poll component vs. view version closed out. May 14.</div></div>
       <div class="status-item"><strong>Chromecast bumped to general (SEQ-13464)</strong><div class="detail">Mate -- Cast Player promoted from alpha to general on Android train. May 11.</div></div>
@@ -542,7 +557,8 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
-    <div class="risk-item"><strong>Phase 4 Integration is a tight 1-week sprint (May 18 - 22).</strong> Global Feed, analytics, and More Menu parity all land here before QA opens. Tracking on pace.</div>
+    <div class="risk-item"><strong>Legacy Android analytics showing impossible engagement rates.</strong> Server-side fix isn't a near-term priority for Data squad. We're leaning on iOS data for feed engagement benchmarking through release -- no pre-launch decisions blocked.</div>
+    <div class="risk-item"><strong>Phase 5 QA &amp; Rollout is a tight 1-week stretch (May 26 - Jun 1)</strong> before release-ready. Test plans staged; tracking on pace.</div>
     <div class="risk-item">Invites + Plan Sharing project will draw on Sequoia bandwidth in Q2.</div>
   </div>
   <div class="platform-resources">
@@ -561,25 +577,25 @@
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">iOS</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">259</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/ios-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">292</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Adopt shared bot-pr-dual-approval workflow from mighty-common (#13265)</li>
-        <li>SEQ-12593: Document unscaled font opt-out in SemanticFonts (#13269)</li>
-        <li>Bring Show Muted Conversations setting back under Chat Settings (#13260)</li>
+        <li>CI: allow speckel-triage-bot to dispatch iOS bug-system-fix (#13412)</li>
+        <li>iOS: distinguish PLA-blocked apps in store status + verify_certs telemetry (#13401)</li>
+        <li>Docs: drop "View" suffix from non-view layers in SwiftUI arch doc (#13338)</li>
       </ul>
     </div>
     <div class="score-card">
       <div class="score-card-top">
         <div class="score-platform">Android</div>
-        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">396</a><span class="count-label">PRs</span></div>
+        <div class="score-count"><a href="https://github.com/untitledstartup/android-app/pulls?q=is%3Apr+label%3ADevEx+is%3Amerged" target="_blank">417</a><span class="count-label">PRs</span></div>
       </div>
       <div class="score-recent-label">Recent PRs</div>
       <ul class="score-pr-list">
-        <li>Adopt shared bot-pr-dual-approval workflow from mighty-common (#13081)</li>
-        <li>CI: allow speckel-triage-bot to dispatch Android bug-system-fix (#13089)</li>
-        <li>Triage fix: don't display bot login as culprit on bot-authored PRs (#13079)</li>
+        <li>Docs(BaseComposeFragment): expand class + popup-helper KDoc with cross-links (#13187)</li>
+        <li>Docs(Conversation): document group-roster stomp caveat on adoptServerData (#13186)</li>
+        <li>Docs(FullScreenContainerDialog): document sActiveInstance singleton invariant (#13183)</li>
       </ul>
     </div>
   </div>
