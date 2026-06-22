@@ -351,22 +351,22 @@
       <div class="highlight-icon">&#128200;</div>
       <div><strong>P1 bug load dropped hard this week: 19 &rarr; 5.</strong> Monday opened with 19 open P1s, all SLA-breached; by Friday it's down to 5, and the 3 still breached are all in active work (In Progress / In Review). Remaining load is concentrated in video playback and livestream. Big burndown win that frees the squad back toward feed work.</div>
     </div>
-    <div class="highlight-subheading">DevEx Platform Wins</div>
+    <div class="highlight-subheading">DevEx Platform Wins -- Squad</div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>12-month Jira automation mystery solved.</strong> Tim found why PRs stopped auto-moving tickets to In Review/In Progress across every repo and squad: Atlassian retired the webhook URL and nothing alerted on it. Repointed, rebuilt, verified live -- branch-create now moves a ticket in ~4 seconds. Plus a new skill and runbook so it's never a mystery again.</div>
+      <div><strong>iOS TDD bug system shipped end-to-end.</strong> Andrej landed the iOS TDD pipeline -- full green run plus the first autonomous auto-fix -- and merged all the PRs, so CI now builds the app and runs the full flow on every iOS run.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Bug system config decoupled from Sheets rate limits.</strong> Lucas's daily-refreshed JSON snapshot means a burst of tickets can no longer silently knock the bug system back to default config (the HTTP 429 failure mode is gone).</div>
+      <div><strong>Android mighty-fix-bug skill validated on Opus 4.7.</strong> Sammy ran the skill end-to-end locally with before/after screenshots (android-app #13061); pairs with his Android bug-repro loop -- triage &rarr; instrumented test &rarr; emulator run with structured results + video.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>Automated before/after PR demos.</strong> Luan's record-pr-demo skill drives Chrome via Claude, records bug repro and fix, and drops an auto-looping Before | After table into the PR description -- end-to-end automatable, no hands on the mouse.</div>
+      <div><strong>Figma-to-Compose AI pipeline for the feed.</strong> Sammy's android-figma-to-component skill turns extracted Figma specs into Compose components (model class + previews), on top of Feed Screen Generator and Compose Migration Expert -- feed sub-components go Figma &rarr; code without hand-wiring tokens.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS Bug System running fully autonomous end-to-end (holding).</strong> Diego's Mac mini provisioning paid off: the autofixer ran MAM-10307 completely on its own -- full fix job in ~19 minutes, opened the PR by itself. The pipeline is standing on its own.</div>
+      <div><strong>iOS codebase building on Mac mini hardware.</strong> Andrej mapped and enabled building the iOS app on a Mac mini -- the foundation that lets the mobile bug system run and validate fixes on real iOS builds.</div>
     </div>
   </div>
 </div>
