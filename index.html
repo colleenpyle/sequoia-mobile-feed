@@ -312,17 +312,17 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status timeline-risk"><span class="milestone-status-dot"></span>Resumed, split focus</div>
+        <div class="milestone-status timeline-risk"><span class="milestone-status-dot"></span>Scoping the plan</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Squad Full Feed Testing</div><div class="ms-date">Week of Jul 13</div></div>
         <div class="milestone-date-row"><div class="ms-label">Internal Release</div><div class="ms-date">Jul 20 train</div></div>
         <div class="milestone-date-row primary"><div class="ms-label">General Release</div><div class="ms-date">Aug 13</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Feed work resumed and Post Detail is the active workstream -- Henrique is scoping the web-view content component and Comments (the largest of five Post Detail pieces, ~5-8 eng-weeks, backend ~95% built). The GraphQL POC is merged behind a flag (see below). Up next: Comments and HTML rendering (Articles, Events). Livestream support and a now-merged P1 crash fix are the live drags on bandwidth; full feed-squad focus expected next week.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Two big buckets remain on the iOS feed -- <strong>Comments</strong> (all comment-related UI components) and <strong>HTML rendering</strong> (Articles, Events) -- and both are real lifts. Our immediate next step is building a solid outline of exactly what's left in each so we can plan and sequence the remaining work efficiently rather than estimate blind. Henrique is POCing the web-view content component and did a first sizing of Comments (~5-8 engineer-weeks, backend ~95% built, design spike recommended). The GraphQL POC is merged behind a flag (see below). Livestream support and a now-merged P1 crash fix are the live drags on bandwidth; full feed-squad focus expected next week.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:90%"></div></div>
-        <div class="milestone-progress-pct">~90%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:85%"></div></div>
+        <div class="milestone-progress-pct">~85%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
@@ -360,12 +360,12 @@
       <div><strong>iOS GraphQL feed POC is done and merged to develop.</strong> Andrej landed it fully gated -- the new path only runs when both the feed-refactor flag and the new GraphQL flag are on, so nothing changes for anyone today. Feed loads from GraphQL or REST behind a swappable FeedRemoteDataSource seam with REST as automatic fallback; network and space feeds use GraphQL, while member scope, writes, and single-post reads stay on REST. 61 new unit tests on the GraphQL path, 6 review bugs fixed, and the whole pattern captured as a reusable skill. We pick this back up once the feed is release-ready.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#9989;</div>
-      <div><strong>P1 launch-crash fix merged; open P1s down 6 &rarr; 2.</strong> Rodrigo merged a fix (Jun 22) that stops the risky Core Data migration and rebuilds the local cache fresh on a model change, removing the whole migration-failure crash/hang class (SEQ-14010 family). Sequoia's open P1 count fell to 2 by Jun 23: SEQ-14060 (Pro iOS join Plan with screening questions) and SEQ-14064 (Android Pro custom nav links open internally), both still in active work.</div>
+      <div class="highlight-icon">&#129518;</div>
+      <div><strong>Two big buckets remain on the iOS feed -- and we're outlining the plan now.</strong> Comments (all comment-related UI components) and HTML rendering (Articles, Events) are the two real lifts left. Rather than estimate blind, the next step is a solid outline of exactly what's left in each so we can sequence the work efficiently. Henrique's first sizing of Comments puts it at ~5-8 engineer-weeks (backend ~95% built; a design spike is the recommended next step to firm up the plan).</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#128241;</div>
-      <div><strong>Post Detail work resumed on iOS.</strong> Henrique is scoping/POCing the web-view content component (smooth resize, then a reusable component) and sized Comments -- the largest of the five Post Detail workstreams at ~5-8 engineer-weeks remaining (backend reads/pagination/realtime ~95% built). A design spike is the recommended next step. He also filed SEQ-14068 for a legacy-vs-modern post URL mismatch causing a 404.</div>
+      <div class="highlight-icon">&#9989;</div>
+      <div><strong>P1 launch-crash fix merged; open P1s down 6 &rarr; 2.</strong> Rodrigo merged a fix (Jun 22) that stops the risky Core Data migration and rebuilds the local cache fresh on a model change, removing the whole migration-failure crash/hang class (SEQ-14010 family). Sequoia's open P1 count fell to 2 by Jun 23: SEQ-14060 (Pro iOS join Plan with screening questions) and SEQ-14064 (Android Pro custom nav links open internally), both still in active work.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#128226;</div>
@@ -398,11 +398,17 @@
     <div class="phase-item"><div class="phase-dot in-progress">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun - Aug 13</div></div>
   </div>
   <div class="progress-bar-section">
-    <div class="progress-track"><div class="progress-fill phase-active" style="width:90%"></div></div>
-    <div class="progress-pct">~90%</div>
+    <div class="progress-track"><div class="progress-fill phase-active" style="width:85%"></div></div>
+    <div class="progress-pct">~85%</div>
     <a class="progress-miro" href="https://miro.com/app/board/uXjVG58aftA=/" target="_blank">View in Miro &rarr;</a>
   </div>
   <div class="research-injection" style="background:rgba(73,93,235,0.07);border-top-color:var(--blue);">
+    <div class="research-injection-icon">&#129518;</div>
+    <div class="research-injection-text">
+      <strong style="color:var(--blue);">Two big buckets remain -- next step is outlining and sequencing them.</strong> The two real lifts left on the iOS feed are <strong>Comments</strong> (all comment-related UI components) and <strong>HTML rendering</strong> (Articles, Events). Both are large enough that our immediate focus is building a solid outline of exactly what's left in each, so we can make a deliberate plan and sequence the work efficiently instead of estimating blind. Henrique's first sizing of Comments is ~5-8 engineer-weeks (backend reads/pagination/realtime ~95% built; remaining is UI + write-path wiring + integration); a design spike is the recommended next step to firm the plan to Medium-High confidence.
+    </div>
+  </div>
+  <div class="research-injection" style="background:rgba(73,93,235,0.05);border-top-color:var(--blue);">
     <div class="research-injection-icon">&#128640;</div>
     <div class="research-injection-text">
       <strong style="color:var(--blue);">GraphQL feed POC merged to develop (gated).</strong> Andrej's new path runs only when both the feed-refactor flag and the GraphQL flag are on. Feed loads from GraphQL or REST behind a swappable FeedRemoteDataSource seam (REST as automatic fallback); network + space feeds use GraphQL, member scope / writes / single-post reads stay on REST. Apollo iOS + codegen added; a pure Apollo&rarr;DTO mapper keeps GraphQL behind the data source with no UI/view-model changes. 61 new unit tests, 6 review bugs fixed, pattern captured as a reusable skill. Picks back up once the feed is release-ready.
@@ -423,21 +429,20 @@
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
+      <div class="status-item"><strong>Outlining the two remaining buckets</strong><div class="detail">Squad -- building a clear inventory of what's left in Comments and HTML rendering so we can plan and sequence efficiently before committing dates.</div></div>
       <div class="status-item"><strong>Post Detail: web-view content component</strong><div class="detail">Henrique -- POCing smooth resize, then making it a reusable component.</div></div>
-      <div class="status-item"><strong>Post Detail: Comments component (scoping)</strong><div class="detail">Largest of five Post Detail workstreams -- ~5-8 engineer-weeks remaining (~3-5 calendar weeks with two engineers), Medium-Low confidence pre-spike. Backend reads/pagination/realtime ~95% built; remaining is UI + write-path wiring + integration. Design spike recommended next.</div></div>
+      <div class="status-item"><strong>Post Detail: Comments component (sizing the plan)</strong><div class="detail">Largest of the remaining Post Detail work -- ~5-8 engineer-weeks (~3-5 calendar weeks with two engineers), Medium-Low confidence pre-spike. Backend reads/pagination/realtime ~95% built; remaining is UI + write-path wiring + integration. Design spike is the recommended next step to firm the plan.</div></div>
       <div class="status-item"><strong>GraphQL feed POC -- merged, parked</strong><div class="detail">Andrej -- gated behind feed-refactor + GraphQL flags; 61 new unit tests, reusable skill captured. Resumes once feed is release-ready.</div></div>
       <div class="status-item"><strong>P1: iOS join Plan with screening questions (SEQ-14060)</strong><div class="detail">Rodrigo -- app returns to previous screen during join flow. P1, SLA-breached, In Progress.</div></div>
       <div class="status-item"><strong>Post URL 404 mismatch (SEQ-14068)</strong><div class="detail">Henrique -- legacy post URLs lack /spaces/id scoping; filed with details, using a workaround to stay unblocked.</div></div>
-      <div class="status-item"><strong>EmbeddedLinkView remaining variants</strong><div class="detail">Rodrigo -- wrapping the ~24 link variations on the new architecture; price layer rebuilt and merged Jun 16.</div></div>
     </div>
     <div class="status-col">
-      <div class="status-col-header"><span class="indicator indicator-deck"></span>On Deck</div>
-      <div class="status-item"><strong>Comments (all comment-related components)</strong><div class="detail">First of the two big remaining lifts on iOS.</div></div>
-      <div class="status-item"><strong>HTML rendering (Articles, Events)</strong><div class="detail">Second big lift, after Comments.</div></div>
+      <div class="status-col-header"><span class="indicator indicator-deck"></span>The Two Big Buckets</div>
+      <div class="status-item"><strong>Comments (all comment-related components)</strong><div class="detail">First of the two big remaining lifts. Sizing now (~5-8 engineer-weeks); design spike to convert to a committed plan.</div></div>
+      <div class="status-item"><strong>HTML rendering (Articles, Events)</strong><div class="detail">Second big lift. To be outlined alongside Comments so we can sequence both deliberately.</div></div>
+      <div class="status-item"><strong>Next step: plan + sequence</strong><div class="detail">Mate and Colleen segmenting the remaining work; goal is an efficient order of attack across both buckets, not blind estimates.</div></div>
       <div class="status-item"><strong>Squad full feed testing</strong><div class="detail">Targeting week of July 13.</div></div>
-      <div class="status-item"><strong>Internal release</strong><div class="detail">July 20 train.</div></div>
-      <div class="status-item"><strong>Alpha &rarr; General</strong><div class="detail">Alpha July 27 train (~2 weeks); General release target Aug 13.</div></div>
-      <div class="status-item"><strong>Hot/Cold poll member-facing labels</strong><div class="detail">Align iOS axis labels to Hot/Cold to match poll title -- ships with the new iOS Feed (mid-July).</div></div>
+      <div class="status-item"><strong>Internal &rarr; Alpha &rarr; General</strong><div class="detail">Internal Jul 20 train; Alpha Jul 27 (~2 weeks); General release target Aug 13.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
@@ -454,10 +459,10 @@
   </div>
   <div class="risks-section">
     <div class="risks-header">&#9888; Risks &amp; Notes</div>
+    <div class="risk-item"><strong>Comments and HTML rendering are the two big lifts left -- and need a plan before dates firm up.</strong> Comments alone is ~5-8 engineer-weeks pre-spike at Medium-Low confidence. We're building the outline of remaining work now; a design spike is the recommended next step to commit a sequenced plan.</div>
     <div class="risk-item"><strong>Livestream/Chime support is the active drag on the iOS feed timeline.</strong> Three fixes boarded this week's train and a Chime rip-out sync is Thursday. Roadmap priority locked: feed &rarr; chat transport &rarr; livestream.</div>
-    <div class="risk-item"><strong>Comments effort is the biggest remaining unknown.</strong> ~5-8 engineer-weeks pre-spike at Medium-Low confidence; a design spike is the recommended next step to commit a plan.</div>
     <div class="risk-item"><strong>iOS trails Android on the feed.</strong> The Core Data dependency needs a deeper rewrite; squad not at full feed velocity yet (some OOO + split focus). Full focus expected next week.</div>
-    <div class="risk-item"><strong>Two-track vs. single-track sequencing still open.</strong> Feed-list-first vs. feed + Post Detail together pending Grady/Dane alignment.</div>
+    <div class="risk-item"><strong>Two-track vs. single-track sequencing still open.</strong> Feed-list-first vs. feed + Post Detail together pending Grady/Dane alignment -- part of the same planning step.</div>
   </div>
   <div class="platform-resources">
     <a class="platform-resource-link" href="https://docs.google.com/document/d/1iRVz2_vVOgq0Iy1YKrrEuZETUO2R0iA9B5rLsWMSmJk/edit?tab=t.soekqcehk96s" target="_blank">Project Doc &rarr;</a>
