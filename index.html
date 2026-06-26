@@ -301,7 +301,7 @@
 <div class="alert-banner" style="background:rgba(200,240,105,0.12);border-color:rgba(0,167,139,0.4);">
   <div class="alert-banner-icon">&#9989;</div>
   <div class="alert-banner-text">
-    <strong>iOS launch-crash family shipped; open P1s down to 2 (both Android).</strong> Rodrigo's Core Data fix for the splash-screen launch crash/hang shipped this week (SEQ-14058 / 14056 / 14059 resolved). As of Friday 6/26 the squad has 2 open P1s, both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached ~6d, Ready for Work) and SEQ-14110 (Android small post card alignment, approaching SLA, In Progress).
+    <strong>iOS launch-crash family shipped; open P1s down to 2 (both Android).</strong> Rodrigo's Core Data fix for the splash-screen launch crash/hang is now deploying (SEQ-14010). As of Friday 6/26 the squad has 2 open P1s, both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached ~6d, Ready for Work) and SEQ-14110 (Android small post card alignment, approaching SLA, In Progress).
   </div>
 </div>
 
@@ -377,7 +377,7 @@
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>iOS launch-crash family shipped; open P1s down to 2.</strong> Rodrigo's Core Data fix for the splash-screen launch crash shipped this week (SEQ-14058 / 14056 / 14059). The 2 remaining open P1s are both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached) and SEQ-14110 (small post card alignment).</div>
+      <div><strong>iOS launch-crash fix deploying; open P1s down to 2.</strong> Rodrigo's Core Data fix for the splash-screen launch crash is now deploying (SEQ-14010). The 2 remaining open P1s are both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached) and SEQ-14110 (small post card alignment).</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#128270;</div>
@@ -390,19 +390,14 @@
 <div class="highlights" style="border-color:var(--accessible-teal);">
   <div class="highlights-header" style="background:rgba(0,167,139,0.08);border-bottom-color:rgba(0,167,139,0.25);">
     <div class="highlights-title">&#128666; Bugs Shipped This Week</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Customer-facing fixes resolved June 19-26</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Customer-facing fixes deployed or deploying this week</div>
   </div>
   <div class="highlights-body">
-    <div class="highlight-item"><div class="highlight-icon">&#128241;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14058" target="_blank">SEQ-14058</a> -- iOS app crashing on launch after an update.</strong> Some Pro members could not open the app after updating; we fixed the underlying Core Data issue so it opens normally.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#128274;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14069" target="_blank">SEQ-14069</a> -- Branded iOS app blocked web-plan members.</strong> Members on a web plan saw "Plan is not on this platform" and could not get in; they can now access the app.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128241;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14010" target="_blank">SEQ-14010</a> -- iOS app hanging on launch after an update (deploying).</strong> Some Pro members had the app hang on the splash screen and crash to home after updating; Rodrigo's Core Data fix is now deploying.</div></div>
     <div class="highlight-item"><div class="highlight-icon">&#127909;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14051" target="_blank">SEQ-14051</a> -- "This livestream has ended" shown by mistake.</strong> Viewers in the waiting room saw the stream as ended right when the host went live; they now see it start correctly.</div></div>
     <div class="highlight-item"><div class="highlight-icon">&#128247;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14044" target="_blank">SEQ-14044</a> -- Camera green light stayed on after a livestream.</strong> Fixed the memory leak so the camera light turns off once the camera is released.</div></div>
     <div class="highlight-item"><div class="highlight-icon">&#128293;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13922" target="_blank">SEQ-13922</a> -- App could crash during a stream.</strong> Addressed the crash so livestreams stay stable.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#129302;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14024" target="_blank">SEQ-14024</a> -- Android poll votes not submitting.</strong> On the new Android feed, hot/cold poll percentages were not recording; votes now submit.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#128276;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14065" target="_blank">SEQ-14065</a> -- No Android push for Live events.</strong> Android members were not getting notified about live events; notifications now deliver.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#128241;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13812" target="_blank">SEQ-13812</a> -- iOS Space tabs blocked by nav bar.</strong> The navigation bar overlapped a Space's feature tabs and blocked taps; the tabs are tappable again.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#127916;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14037" target="_blank">SEQ-14037</a> -- Lesson videos stopping mid-playback.</strong> On iOS, Zoom lesson videos intermittently stopped partway; they now play through.</div></div>
-    <div class="highlight-item"><div class="highlight-icon">&#128279;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13745" target="_blank">SEQ-13745</a> -- iOS in-app browser dropped external link taps.</strong> Links that open a new window were being ignored; they now work.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#127908;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13924" target="_blank">SEQ-13924</a> -- Livestream viewers could not hear or see speakers under load.</strong> High CPU during busy streams broke audio/video; chat batching cuts the load so streams stay responsive.</div></div>
   </div>
 </div>
 
