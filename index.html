@@ -274,7 +274,7 @@
   <div class="header-top">
     <div><h1>Sequoia <span>Mobile Feed</span></h1></div>
     <div class="header-meta">
-      <div class="updated-token">Updated June 23, 2026</div>
+      <div class="updated-token">Updated June 26, 2026</div>
     </div>
   </div>
 </div>
@@ -285,15 +285,23 @@
 <div class="alert-banner">
   <div class="alert-banner-icon">&#127881;</div>
   <div class="alert-banner-text">
-    <strong>Android Compose feed goes General tomorrow (Wed 6/24).</strong> Mate boarded the mobile train Jun 22 and a server PR is prepped to trigger release once the train lands -- targeting Wednesday barring delays or release-blockers. No new bug reports from Alpha. Three fast follows are tracked (SEQ-14054 post/article truncation, new paper-plane post icon, SEQ-14039 poll results showing in row format vs. circles); Sammy tackles them when he's back in office Wednesday, then moves on to GraphQL.
+    <strong>Android Compose feed is LIVE -- shipped to General on Wed 6/24.</strong> Sammy released the redesigned feed to every member; Giada confirmed it "looks great in production." All three fast follows are done for the 6/29 train (SEQ-14054 post/article truncation, new paper-plane post icon, SEQ-14039 poll results back to circles). Sammy has now moved onto the GraphQL / headless-API project. Two Android items are in flight: SEQ-14064 (Pro custom nav links open in-app, P1, SLA-breached) and SEQ-14110 (small post card alignment, in progress).
   </div>
 </div>
 
-<!-- P1 LAUNCH CRASH BANNER -->
+<!-- iOS TIMELINE SHIFT BANNER -->
+<div class="alert-banner" style="background:rgba(73,93,235,0.08);border-color:rgba(73,93,235,0.4);">
+  <div class="alert-banner-icon">&#128197;</div>
+  <div class="alert-banner-text">
+    <strong style="color:var(--blue);">iOS feed targets move back one week (one train).</strong> Mid-week the squad broke the remaining work into a real planning stage and started POCs on the two big buckets left (Feed List integration + Post Detail). We began from a much higher, blind estimate; now that the work is broken out and POCs are underway, we are confident in dates just one train back: Squad full feed testing <strong>week of Jul 20</strong> (was Jul 13), Internal release <strong>Jul 27 train</strong> (was Jul 20), Alpha <strong>Aug 3 through Aug 14</strong> (was Jul 27-Aug 7), General release <strong>Aug 20 / Aug 17 train</strong> (was Aug 13).
+  </div>
+</div>
+
+<!-- P1 STATUS BANNER -->
 <div class="alert-banner" style="background:rgba(200,240,105,0.12);border-color:rgba(0,167,139,0.4);">
   <div class="alert-banner-icon">&#9989;</div>
   <div class="alert-banner-text">
-    <strong>P1 launch-crash fix merged; open P1s down from 6 to 2.</strong> The iOS app was hanging on the splash screen and crashing to home on launch for some Pro members after updates -- a Core Data migration failure (SEQ-14010 hub, with SEQ-14011 / 14056 / 14058 / 14059, 5 members across 4 Pro networks: Innercamp Academy, Deepak Chopra, Amanda Frances, Nourish Move Love). Rodrigo merged a fix (Jun 22) that stops migrating the local store and instead rebuilds it fresh on a model change, removing the whole migration-failure crash class at the source. Sequoia's open P1 count dropped to 2 as of Jun 23, both SLA-breached and in active work: SEQ-14060 (Pro iOS join Plan with screening questions) and SEQ-14064 (Android Pro custom nav links open internally).
+    <strong>iOS launch-crash family shipped; open P1s down to 2 (both Android).</strong> Rodrigo's Core Data fix for the splash-screen launch crash/hang shipped this week (SEQ-14058 / 14056 / 14059 resolved). As of Friday 6/26 the squad has 2 open P1s, both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached ~6d, Ready for Work) and SEQ-14110 (Android small post card alignment, approaching SLA, In Progress).
   </div>
 </div>
 
@@ -301,7 +309,7 @@
 <div class="alert-banner" style="background:rgba(255,156,50,0.08);border-color:rgba(255,156,50,0.4);">
   <div class="alert-banner-icon">&#128270;</div>
   <div class="alert-banner-text">
-    <strong style="color:var(--yellow);">Livestream stays the active risk to the feed timeline -- and the team is moving toward replacing Chime.</strong> The Jun 19 Tyler Henry stream was better than Jun 5 on our side (iOS hangs 24.2%&rarr;20.7%, IVS errors 12.1%&rarr;5.5%, no realtime issues, no client crashes) but Chime got worse (video service failures 26%&rarr;36.2%, audio hangups 24%&rarr;35.1%; ~36% of viewers hit at least one abnormal event). Root cause points squarely at Chime/Amazon, who confirmed minimal ongoing iOS support. A Chime rip-out / vendor-replacement sync is scheduled for Thursday with Grady, Dane, Mate, Alexandria, and Esteban. Latest Tyler Henry stream drew no host complaints, but logs still show Chime-side drops.
+    <strong style="color:var(--yellow);">Livestream is still the work pulling focus from the feed -- but it de-escalated this week.</strong> Friday's Chime recap: replacing Chime is "when, not if," and no longer an emergency after recent stabilization. Web (Carlos) and mobile (Mate) turn on always-on livestream monitoring for ~2 weeks, watching cost vs. usage/complaint signals; a roadmap proposal lands mid-July. AWS confirmed the June 4 drops were client-side, not server capacity. Three iOS livestream fixes also shipped this week (SEQ-14051, SEQ-14044, SEQ-13924 chat batching).
   </div>
 </div>
 
@@ -312,30 +320,30 @@
     <div class="milestone-card ios-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#128241; iOS Feed Refactor</div>
-        <div class="milestone-status timeline-risk"><span class="milestone-status-dot"></span>Scoping the plan</div>
+        <div class="milestone-status date-moved"><span class="milestone-status-dot"></span>Moved +1 week</div>
       </div>
       <div class="milestone-dates">
-        <div class="milestone-date-row"><div class="ms-label">Squad Full Feed Testing</div><div class="ms-date">Week of Jul 13</div></div>
-        <div class="milestone-date-row"><div class="ms-label">Internal Release</div><div class="ms-date">Jul 20 train</div></div>
-        <div class="milestone-date-row primary"><div class="ms-label">General Release</div><div class="ms-date">Aug 13</div></div>
+        <div class="milestone-date-row"><div class="ms-label">Squad Full Feed Testing</div><div class="ms-date">Week of Jul 20</div></div>
+        <div class="milestone-date-row"><div class="ms-label">Internal Release</div><div class="ms-date">Jul 27 train</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Release</div><div class="ms-date">Aug 20</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Two big buckets remain on the iOS feed -- <strong>Comments</strong> (all comment-related UI components) and <strong>HTML rendering</strong> (Articles, Events) -- and both are real lifts. Our immediate next step is building a solid outline of exactly what's left in each so we can plan and sequence the remaining work efficiently rather than estimate blind. Henrique is POCing the web-view content component and did a first sizing of Comments (~5-8 engineer-weeks, backend ~95% built, design spike recommended). The GraphQL POC is merged behind a flag (see below). Livestream support and a now-merged P1 crash fix are the live drags on bandwidth; full feed-squad focus expected next week.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Targets moved back one train. Mid-week we broke the remaining work into a planning stage and started POCs on the two big buckets left -- <strong>Feed List integration</strong> and <strong>Post Detail</strong>. Andrej posted the Feed Integration plan (~28 components collapsing to ~18 build tickets across 5 phases). Henrique ran Post Detail discovery (skeleton wired, work ticketed SEQ-13164-13168, ~25 days upper-bound). Rodrigo finished all embedded-link variations on the new themed card. Coming off a much higher blind estimate, the team feels good about the new dates -- one week back. Livestream support remains the live drag on bandwidth.</div>
       <div class="milestone-progress-row">
-        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:85%"></div></div>
-        <div class="milestone-progress-pct">~85%</div>
+        <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:88%"></div></div>
+        <div class="milestone-progress-pct">~88%</div>
       </div>
     </div>
     <div class="milestone-card android-milestone">
       <div class="milestone-card-header">
         <div class="milestone-platform">&#129302; Android Compose Feed</div>
-        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>General Tomorrow</div>
+        <div class="milestone-status on-pace"><span class="milestone-status-dot"></span>Live -- General</div>
       </div>
       <div class="milestone-dates">
         <div class="milestone-date-row"><div class="ms-label">Internal Testing</div><div class="ms-date">June 3 &#10003;</div></div>
         <div class="milestone-date-row"><div class="ms-label">Alpha</div><div class="ms-date">Shipped &#10003;</div></div>
-        <div class="milestone-date-row primary"><div class="ms-label">General Release</div><div class="ms-date">Wed 6/24</div></div>
+        <div class="milestone-date-row primary"><div class="ms-label">General Release</div><div class="ms-date">Live 6/24 &#10003;</div></div>
       </div>
-      <div class="milestone-detail"><strong>Now:</strong> Mate boarded the mobile train Jun 22; a server PR is prepped to trigger release once the train lands tomorrow (Wed 6/24), barring delays or blockers. No new Alpha bug reports. Three fast follows tracked; Sammy clears them Wednesday, then starts the GraphQL / headless-API work. Sammy remains the only Android dev.</div>
+      <div class="milestone-detail"><strong>Now:</strong> Shipped to General on Wed 6/24 -- the redesigned feed is live for every member, and looks great in production. All three fast follows are done for the 6/29 train. Sammy has moved onto the GraphQL / headless-API project. Sammy remains the only Android dev.</div>
       <div class="milestone-progress-row">
         <div class="milestone-progress-bar"><div class="milestone-progress-fill" style="width:100%"></div></div>
         <div class="milestone-progress-pct">~100%</div>
@@ -348,37 +356,49 @@
 <div class="highlights">
   <div class="highlights-header">
     <div class="highlights-title">This Week's Highlights</div>
-    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Tuesday, June 23</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Friday, June 26</div>
   </div>
   <div class="highlights-body">
     <div class="highlight-item">
       <div class="highlight-icon">&#127881;</div>
-      <div><strong>Android Compose feed goes General tomorrow (Wed 6/24).</strong> Mate boarded the mobile train Jun 22; a server PR is prepped to trigger release once the train lands. No new Alpha bug reports. Three fast follows tracked (SEQ-14054 truncation, paper-plane post icon, SEQ-14039 poll results row format); Sammy clears them Wednesday, then moves to GraphQL.</div>
+      <div><strong>Android Compose feed is LIVE.</strong> Sammy shipped the redesigned feed to General on Wed 6/24 -- it is now in every member's hands and "looks great in production." All three fast follows (SEQ-14054 truncation, paper-plane post icon, SEQ-14039 poll results back to circles) are done for the 6/29 train. Sammy is now onto the GraphQL / headless-API project.</div>
     </div>
     <div class="highlight-item">
-      <div class="highlight-icon">&#128640;</div>
-      <div><strong>iOS GraphQL feed POC is done and merged to develop.</strong> Andrej landed it fully gated -- the new path only runs when both the feed-refactor flag and the new GraphQL flag are on, so nothing changes for anyone today. Feed loads from GraphQL or REST behind a swappable FeedRemoteDataSource seam with REST as automatic fallback; network and space feeds use GraphQL, while member scope, writes, and single-post reads stay on REST. 61 new unit tests on the GraphQL path, 6 review bugs fixed, and the whole pattern captured as a reusable skill. We pick this back up once the feed is release-ready.</div>
+      <div class="highlight-icon">&#128197;</div>
+      <div><strong>iOS feed targets move back one week (one train).</strong> Mid-week we broke the remaining work into a planning stage and started POCs on the two big buckets left (Feed List integration + Post Detail). Coming off a much higher blind estimate, we feel good about dates one train back: squad testing week of Jul 20, Internal Jul 27 train, Alpha Aug 3-14, General release Aug 20 (Aug 17 train).</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#129518;</div>
-      <div><strong>Two big buckets remain on the iOS feed -- and we're outlining the plan now.</strong> Comments (all comment-related UI components) and HTML rendering (Articles, Events) are the two real lifts left. Rather than estimate blind, the next step is a solid outline of exactly what's left in each so we can sequence the work efficiently. Henrique's first sizing of Comments puts it at ~5-8 engineer-weeks (backend ~95% built; a design spike is the recommended next step to firm up the plan).</div>
+      <div><strong>iOS work broken out and POCs underway.</strong> Andrej posted the Feed Integration plan (~28 components to ~18 build tickets across 5 phases, with a living guide for agent autonomy). Henrique ran Post Detail discovery -- skeleton wired end-to-end, remaining work ticketed SEQ-13164-13168 (~25 days upper-bound). Rodrigo finished all embedded-link variations (Space, Collection, Bundle, Post, Poll, Event, Recognition, Announcement) on the new themed card, live everywhere behind the flag.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#9989;</div>
-      <div><strong>P1 launch-crash fix merged; open P1s down 6 &rarr; 2.</strong> Rodrigo merged a fix (Jun 22) that stops the risky Core Data migration and rebuilds the local cache fresh on a model change, removing the whole migration-failure crash/hang class (SEQ-14010 family). Sequoia's open P1 count fell to 2 by Jun 23: SEQ-14060 (Pro iOS join Plan with screening questions) and SEQ-14064 (Android Pro custom nav links open internally), both still in active work.</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128226;</div>
-      <div><strong>Three livestream fixes boarded this week's iOS train.</strong> SEQ-14051 (viewers wrongly saw "This livestream has ended" from a waiting room when the host started), SEQ-14044 (memory leak keeping the camera green light on after a stream), and SEQ-13924 (chat batching flushed every 2s to cut device heat under high chat volume, behind an internal flag). The livestream_role_polling flag is also being removed now that it's fully rolled out.</div>
+      <div><strong>iOS launch-crash family shipped; open P1s down to 2.</strong> Rodrigo's Core Data fix for the splash-screen launch crash shipped this week (SEQ-14058 / 14056 / 14059). The 2 remaining open P1s are both Android and both on Sammy: SEQ-14064 (Pro custom nav links open in-app, SLA-breached) and SEQ-14110 (small post card alignment).</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-icon">&#128270;</div>
-      <div><strong>Chime rip-out sync scheduled for Thursday.</strong> Grady, Dane, Mate, Alexandria, and Esteban will meet to weigh replacing Chime after Amazon confirmed minimal ongoing iOS support; AWS is pushing their low-latency IVS solution (white-labeled Twitch), which would still require rebuilding voice isolation, blur, and speaker management. No decision yet. Carlos also migrated the web livestream panels (participant list, speaker controls, countdown) to React with faster, more accurate attendee counts and a reliable mic-mute indicator.</div>
+      <div><strong>Livestream/Chime de-escalated but still pulling focus.</strong> Friday's recap: replacing Chime is "when, not if," no longer an emergency after recent stabilization. Web + mobile turn on always-on monitoring for ~2 weeks; a roadmap proposal lands mid-July. AWS confirmed the June 4 drops were client-side. Three iOS livestream fixes shipped this week (SEQ-14051, SEQ-14044, SEQ-13924 chat batching).</div>
     </div>
-    <div class="highlight-item">
-      <div class="highlight-icon">&#128241;</div>
-      <div><strong>iOS price layer fully rebuilt on the new architecture (last week).</strong> Rodrigo replaced the legacy PriceView/PriceData service with a Core-Data-free, fully unit-tested price layer (PriceInfoInteractor + ViewModel) to power the embedded-link bundle price -- a reusable layer now ready across the app.</div>
-    </div>
+  </div>
+</div>
+
+<!-- SHIPPED THIS WEEK -->
+<div class="highlights" style="border-color:var(--accessible-teal);">
+  <div class="highlights-header" style="background:rgba(0,167,139,0.08);border-bottom-color:rgba(0,167,139,0.25);">
+    <div class="highlights-title">&#128666; Bugs Shipped This Week</div>
+    <div style="font-size:13px;color:rgba(9,43,46,0.45);margin-top:2px;">Customer-facing fixes resolved June 19-26</div>
+  </div>
+  <div class="highlights-body">
+    <div class="highlight-item"><div class="highlight-icon">&#128241;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14058" target="_blank">SEQ-14058</a> -- iOS app crashing on launch after an update.</strong> Some Pro members could not open the app after updating; we fixed the underlying Core Data issue so it opens normally.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128274;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14069" target="_blank">SEQ-14069</a> -- Branded iOS app blocked web-plan members.</strong> Members on a web plan saw "Plan is not on this platform" and could not get in; they can now access the app.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#127909;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14051" target="_blank">SEQ-14051</a> -- "This livestream has ended" shown by mistake.</strong> Viewers in the waiting room saw the stream as ended right when the host went live; they now see it start correctly.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128247;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14044" target="_blank">SEQ-14044</a> -- Camera green light stayed on after a livestream.</strong> Fixed the memory leak so the camera light turns off once the camera is released.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128293;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13922" target="_blank">SEQ-13922</a> -- App could crash during a stream.</strong> Addressed the crash so livestreams stay stable.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#129302;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14024" target="_blank">SEQ-14024</a> -- Android poll votes not submitting.</strong> On the new Android feed, hot/cold poll percentages were not recording; votes now submit.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128276;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14065" target="_blank">SEQ-14065</a> -- No Android push for Live events.</strong> Android members were not getting notified about live events; notifications now deliver.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128241;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13812" target="_blank">SEQ-13812</a> -- iOS Space tabs blocked by nav bar.</strong> The navigation bar overlapped a Space's feature tabs and blocked taps; the tabs are tappable again.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#127916;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-14037" target="_blank">SEQ-14037</a> -- Lesson videos stopping mid-playback.</strong> On iOS, Zoom lesson videos intermittently stopped partway; they now play through.</div></div>
+    <div class="highlight-item"><div class="highlight-icon">&#128279;</div><div><strong><a href="https://mightynetworks.atlassian.net/browse/SEQ-13745" target="_blank">SEQ-13745</a> -- iOS in-app browser dropped external link taps.</strong> Links that open a new window were being ignored; they now work.</div></div>
   </div>
 </div>
 
@@ -389,13 +409,13 @@
       <div class="platform-icon ios-icon">&#128241;</div>
       <span class="platform-name">iOS Feed Refactor</span>
     </div>
-    <div class="platform-target">General Release: Aug 13</div>
+    <div class="platform-target">General Release: Aug 20</div>
   </div>
   <div class="phase-timeline">
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Discovery &amp; Architecture</div><div class="phase-dates">Mar 4 - 20</div></div>
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Component Building</div><div class="phase-dates">Mar 23 - May 8</div></div>
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Integration</div><div class="phase-dates">May 11 - 29</div></div>
-    <div class="phase-item"><div class="phase-dot in-progress">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun - Aug 13</div></div>
+    <div class="phase-item"><div class="phase-dot in-progress">4</div><div class="phase-label">QA &amp; Rollout</div><div class="phase-dates">Jun - Aug 20</div></div>
   </div>
   <div class="progress-bar-section">
     <div class="progress-track"><div class="progress-fill phase-active" style="width:85%"></div></div>
@@ -429,7 +449,7 @@
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress</div>
-      <div class="status-item"><strong>Outlining the two remaining buckets</strong><div class="detail">Squad -- building a clear inventory of what's left in Comments and HTML rendering so we can plan and sequence efficiently before committing dates.</div></div>
+      <div class="status-item"><strong>Two big buckets broken out + POCs underway</strong><div class="detail">Squad -- Feed List integration (Andrej, ~18 build tickets across 5 phases) and Post Detail (Henrique, SEQ-13164-13168) now planned; POCs running on MightyWebView and Comments. Targets moved one train back.</div></div>
       <div class="status-item"><strong>Post Detail: web-view content component</strong><div class="detail">Henrique -- POCing smooth resize, then making it a reusable component.</div></div>
       <div class="status-item"><strong>Post Detail: Comments component (sizing the plan)</strong><div class="detail">Largest of the remaining Post Detail work -- ~5-8 engineer-weeks (~3-5 calendar weeks with two engineers), Medium-Low confidence pre-spike. Backend reads/pagination/realtime ~95% built; remaining is UI + write-path wiring + integration. Design spike is the recommended next step to firm the plan.</div></div>
       <div class="status-item"><strong>GraphQL feed POC -- merged, parked</strong><div class="detail">Andrej -- gated behind feed-refactor + GraphQL flags; 61 new unit tests, reusable skill captured. Resumes once feed is release-ready.</div></div>
@@ -441,8 +461,8 @@
       <div class="status-item"><strong>Comments (all comment-related components)</strong><div class="detail">First of the two big remaining lifts. Sizing now (~5-8 engineer-weeks); design spike to convert to a committed plan.</div></div>
       <div class="status-item"><strong>HTML rendering (Articles, Events)</strong><div class="detail">Second big lift. To be outlined alongside Comments so we can sequence both deliberately.</div></div>
       <div class="status-item"><strong>Next step: plan + sequence</strong><div class="detail">Mate and Colleen segmenting the remaining work; goal is an efficient order of attack across both buckets, not blind estimates.</div></div>
-      <div class="status-item"><strong>Squad full feed testing</strong><div class="detail">Targeting week of July 13.</div></div>
-      <div class="status-item"><strong>Internal &rarr; Alpha &rarr; General</strong><div class="detail">Internal Jul 20 train; Alpha Jul 27 (~2 weeks); General release target Aug 13.</div></div>
+      <div class="status-item"><strong>Squad full feed testing</strong><div class="detail">Targeting week of July 20.</div></div>
+      <div class="status-item"><strong>Internal &rarr; Alpha &rarr; General</strong><div class="detail">Internal Jul 27 train; Alpha Aug 3 (~2 weeks, through Aug 14); General release target Aug 20.</div></div>
     </div>
     <div class="status-col status-col-completed">
       <div class="status-col-header"><span class="indicator indicator-done"></span>Completed</div>
@@ -478,7 +498,7 @@
       <div class="platform-icon android-icon">&#129302;</div>
       <span class="platform-name">Android Compose Feed</span>
     </div>
-    <div class="platform-target">Going General: Wed 6/24</div>
+    <div class="platform-target">Live -- General 6/24</div>
   </div>
   <div class="phase-timeline">
     <div class="phase-item"><div class="phase-dot completed">&#10003;</div><div class="phase-label">Foundation &amp; Saved Posts</div><div class="phase-dates">Mar 3 - 14</div></div>
@@ -494,14 +514,14 @@
   <div class="research-injection" style="background:rgba(0,167,139,0.07);border-top-color:var(--accessible-teal);">
     <div class="research-injection-icon">&#127881;</div>
     <div class="research-injection-text">
-      <strong style="color:var(--accessible-teal);">Compose feed goes General tomorrow (Wed 6/24).</strong> Mate boarded the mobile train Jun 22; a server PR is prepped to trigger release once the train lands. No new Alpha bug reports. Three fast follows tracked (SEQ-14054 truncation, paper-plane post icon, SEQ-14039 poll results row format); Sammy clears them Wednesday, then starts GraphQL.
+      <strong style="color:var(--accessible-teal);">Compose feed shipped to General on Wed 6/24.</strong> Sammy released the redesigned feed to every member; Giada confirmed it looks great in production. All three fast follows are done for the 6/29 train (SEQ-14054 truncation, paper-plane post icon, SEQ-14039 poll results back to circles). Sammy has moved onto the GraphQL / headless-API project.
     </div>
   </div>
   <div class="status-columns">
     <div class="status-col">
       <div class="status-col-header"><span class="indicator indicator-progress"></span>In Progress / Fast Follows</div>
-      <div class="status-item"><strong>General release -- train lands Wed 6/24</strong><div class="detail">Server PR prepped to trigger release once the train arrives. The redesigned Android feed reaches all members.</div></div>
-      <div class="status-item"><strong>Fast follow: post/article truncation (SEQ-14054)</strong><div class="detail">Updating truncation logic; Sammy on return Wednesday.</div></div>
+      <div class="status-item"><strong>General release -- shipped Wed 6/24</strong><div class="detail">The redesigned Android feed is live for all members.</div></div>
+      <div class="status-item"><strong>Fast follow: post/article truncation (SEQ-14054)</strong><div class="detail">Updating truncation logic; Done for 6/29 train.</div></div>
       <div class="status-item"><strong>Fast follow: paper-plane post icon</strong><div class="detail">New icon for the post button.</div></div>
       <div class="status-item"><strong>Fast follow: poll results row format (SEQ-14039)</strong><div class="detail">Results regressed to line/row format instead of pie/circle graphic.</div></div>
       <div class="status-item"><strong>P1: custom nav links open internally (SEQ-14064)</strong><div class="detail">Android Pro apps -- custom navigation links open inside the app. P1, Ready for Work.</div></div>
